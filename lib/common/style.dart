@@ -1,52 +1,74 @@
 import 'package:flutter/material.dart';
-// import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-// final TextTheme myTextTheme = TextTheme(
-//   displayLarge: GoogleFonts.roboto(
-//     fontSize: 20,
-//     fontWeight: FontWeight.w700,
-//   ), //headline 1
-//   displayMedium: GoogleFonts.roboto(
-//     fontSize: 18,
-//     fontWeight: FontWeight.w600,
-//   ), //headline 2
-//   displaySmall: GoogleFonts.roboto(
-//     fontSize: 16,
-//     fontWeight: FontWeight.w600,
-//   ), //headline 3
-//   headlineMedium: GoogleFonts.roboto(
-//     fontSize: 16,
-//     fontWeight: FontWeight.w500,
-//   ), //headline 4
-//   headlineSmall: GoogleFonts.roboto(
-//     fontSize: 14,
-//     fontWeight: FontWeight.w600,
-//   ), //headline 5
-//   titleLarge: GoogleFonts.roboto(
-//     fontSize: 12,
-//     fontWeight: FontWeight.w600,
-//   ), //headline 6
-//   titleMedium: GoogleFonts.roboto(
-//     fontSize: 12,
-//     fontWeight: FontWeight.w400,
-//   ), //subtitle 1
-//   titleSmall: GoogleFonts.roboto(
-//     fontSize: 10,
-//     fontWeight: FontWeight.w400,
-//   ), //subtitle 2
-//   bodyLarge: GoogleFonts.roboto(
-//     fontSize: 16,
-//     fontWeight: FontWeight.w400,
-//   ), //body text 1
-//   bodyMedium: GoogleFonts.roboto(
-//     fontSize: 14,
-//     fontWeight: FontWeight.w400,
-//   ), //body text 2
-//   bodySmall: GoogleFonts.lato(
-//     fontSize: 14,
-//     fontWeight: FontWeight.w700,
-//   ), //caption
-// );
+// Text Styles
+// Reguler
+final TextStyle reguler10 = GoogleFonts.inter(
+  fontSize: 10,
+  fontWeight: FontWeight.normal,
+);
+final TextStyle reguler12 = GoogleFonts.inter(
+  fontSize: 12,
+  fontWeight: FontWeight.normal,
+);
+final TextStyle reguler14 = GoogleFonts.inter(
+  fontSize: 14,
+  fontWeight: FontWeight.normal,
+);
+final TextStyle reguler16 = GoogleFonts.inter(
+  fontSize: 16,
+  fontWeight: FontWeight.normal,
+);
+final TextStyle reguler20 = GoogleFonts.inter(
+  fontSize: 20,
+  fontWeight: FontWeight.normal,
+);
+final TextStyle reguler24 = GoogleFonts.inter(
+  fontSize: 24,
+  fontWeight: FontWeight.normal,
+);
+final TextStyle reguler32 = GoogleFonts.inter(
+  fontSize: 32,
+  fontWeight: FontWeight.normal,
+);
+final TextStyle reguler40 = GoogleFonts.inter(
+  fontSize: 40,
+  fontWeight: FontWeight.normal,
+);
+
+// Senu Bold
+final TextStyle semiBold10 = GoogleFonts.inter(
+  fontSize: 10,
+  fontWeight: FontWeight.w600,
+);
+final TextStyle semiBold12 = GoogleFonts.inter(
+  fontSize: 12,
+  fontWeight: FontWeight.w600,
+);
+final TextStyle semiBold14 = GoogleFonts.inter(
+  fontSize: 14,
+  fontWeight: FontWeight.w600,
+);
+final TextStyle semiBold16 = GoogleFonts.inter(
+  fontSize: 16,
+  fontWeight: FontWeight.w600,
+);
+final TextStyle semiBold20 = GoogleFonts.inter(
+  fontSize: 20,
+  fontWeight: FontWeight.w600,
+);
+final TextStyle semiBold24 = GoogleFonts.inter(
+  fontSize: 24,
+  fontWeight: FontWeight.w600,
+);
+final TextStyle semiBold32 = GoogleFonts.inter(
+  fontSize: 32,
+  fontWeight: FontWeight.w600,
+);
+final TextStyle semiBold40 = GoogleFonts.inter(
+  fontSize: 40,
+  fontWeight: FontWeight.w600,
+);
 
 //Primary Pallete
 const Color primaryPurple = Color(0xff5C3FCB);
