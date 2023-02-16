@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
-import 'package:geomath_app/module/auth/sign_in/widget/form_password.dart';
 
 class SignInView extends StatefulWidget {
   const SignInView({Key? key}) : super(key: key);
@@ -62,14 +61,15 @@ class SignInView extends StatefulWidget {
               height: 8.0,
             ),
             FormPassword(
-                onChanged: (value) {
-                  controller.password = value;
-                },
-                onTapObscure: () {
-                  controller.obscure = !controller.obscure;
-                  controller.update();
-                },
-                obscure: controller.obscure),
+              onChanged: (value) {
+                controller.password = value;
+              },
+              onTapObscure: () {
+                controller.obscure = !controller.obscure;
+                controller.update();
+              },
+              obscure: controller.obscure,
+            ),
             const SizedBox(
               height: 16.0,
             ),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
-import 'package:geomath_app/state_util.dart';
 
 class SignUpView extends StatefulWidget {
   const SignUpView({Key? key}) : super(key: key);
@@ -29,104 +28,116 @@ class SignUpView extends StatefulWidget {
         backgroundColor: neutral50,
         elevation: 0,
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 32.0,
-              ),
-              Text(
-                "Daftar",
-                style: semiBold32.copyWith(color: neutral900),
-              ),
-              const SizedBox(
-                height: 32.0,
-              ),
-              Text(
-                "Email",
-                style: semiBold16.copyWith(color: primaryPurple),
-              ),
-              const SizedBox(
-                height: 8.0,
-              ),
-              TextFormField(
-                decoration: InputDecoration(
-                  prefixIcon: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 4,
-                      horizontal: 10,
+      body: controller.loading
+          ? const Center(
+              child: CircularProgressIndicator(),
+            )
+          : SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(
+                      height: 32.0,
                     ),
-                    child: SvgPicture.asset(
-                      'assets/icon/account_inactive.svg',
+                    Text(
+                      "Daftar",
+                      style: semiBold32.copyWith(color: neutral900),
                     ),
-                  ),
-                  enabledBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: neutral500, width: 2),
-                  ),
-                  focusedBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: primaryPurple, width: 2),
-                  ),
-                  hintText: "Masukkan email anda disini",
-                  hintStyle: semiBold14.copyWith(
-                    color: neutral500,
-                  ),
-                  focusColor: neutral500,
-                  fillColor: neutral500,
-                  hoverColor: neutral500,
+                    const SizedBox(
+                      height: 32.0,
+                    ),
+                    Text(
+                      "Email",
+                      style: semiBold16.copyWith(color: primaryPurple),
+                    ),
+                    const SizedBox(
+                      height: 8.0,
+                    ),
+                    FormEmail(onChanged: (value) {
+                      controller.email = value;
+                    }),
+                    const SizedBox(
+                      height: 24.0,
+                    ),
+                    Text(
+                      "Password",
+                      style: semiBold16.copyWith(color: primaryPurple),
+                    ),
+                    const SizedBox(
+                      height: 8.0,
+                    ),
+                    FormPassword(
+                      onChanged: (value) {
+                        controller.password = value;
+                      },
+                      onTapObscure: () {
+                        controller.obscure = !controller.obscure;
+                        controller.update();
+                      },
+                      obscure: controller.obscure,
+                    ),
+                    const SizedBox(
+                      height: 32.0,
+                    ),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: primaryPurple,
+                          shape: RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.circular(8), // <-- Radius
+                          ),
+                        ),
+                        onPressed: () {
+                          controller.signUpWithEmail(
+                            controller.email,
+                            controller.password,
+                          );
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            top: 12,
+                            bottom: 12,
+                          ),
+                          child: Text(
+                            "Daftar",
+                            style: semiBold16.copyWith(
+                              color: neutral50,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 32.0,
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "Sudah punya akun?",
+                          style: semiBold16,
+                        ),
+                        const SizedBox(
+                          width: 8.0,
+                        ),
+                        InkWell(
+                          onTap: () => Get.to(
+                            const SignInView(),
+                          ),
+                          child: Text(
+                            "Masuk",
+                            style: semiBold16.copyWith(color: primaryPurple),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-                onChanged: (value) {},
               ),
-              const SizedBox(
-                height: 24.0,
-              ),
-              Text(
-                "Password",
-                style: semiBold16.copyWith(color: primaryPurple),
-              ),
-              const SizedBox(
-                height: 8.0,
-              ),
-              TextFormField(
-                decoration: InputDecoration(
-                  prefixIcon: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 12,
-                    ),
-                    child: SvgPicture.asset(
-                      'assets/icon/lock.svg',
-                    ),
-                  ),
-                  suffixIcon: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 12,
-                    ),
-                    child: SvgPicture.asset(
-                      'assets/icon/eye.svg',
-                    ),
-                  ),
-                  enabledBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: neutral500, width: 2),
-                  ),
-                  focusedBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: primaryPurple, width: 2),
-                  ),
-                  hintText: "Masukkan kata sandi anda disini",
-                  hintStyle: semiBold14.copyWith(
-                    color: neutral500,
-                  ),
-                  focusColor: neutral500,
-                  fillColor: neutral500,
-                  hoverColor: neutral500,
-                ),
-                onChanged: (value) {},
-              ),
-            ],
-          ),
-        ),
-      ),
+            ),
     );
   }
 

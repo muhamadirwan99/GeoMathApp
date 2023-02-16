@@ -14,26 +14,6 @@ class SignInController extends State<SignInView> implements MvcController {
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  Future signUpWithEmail(String email, String password) async {
-    try {
-      UserCredential userCredential =
-          await _auth.createUserWithEmailAndPassword(
-        email: email,
-        password: password,
-      );
-      User user = userCredential.user!;
-      return user.uid;
-    } on FirebaseAuthException catch (e) {
-      return ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(e.message.toString()),
-        ),
-      );
-    } catch (e) {
-      return e.toString();
-    }
-  }
-
   Future signInWithEmail(String email, String password) async {
     try {
       UserCredential userCredential = await _auth.signInWithEmailAndPassword(
