@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:geomath_app/module/beranda/view/beranda_view.dart';
 import 'package:geomath_app/state_util.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import '../view/sign_in_view.dart';
@@ -11,16 +12,21 @@ class SignInController extends State<SignInView> implements MvcController {
   String email = "";
   String password = "";
   bool obscure = true;
+  bool loading = false;
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   Future signInWithEmail(String email, String password) async {
     try {
-      UserCredential userCredential = await _auth.signInWithEmailAndPassword(
+      loading = true;
+      update();
+      await _auth.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
-      return userCredential.user;
+      loading = false;
+      update();
+      Get.offAll(const BerandaView());
     } on FirebaseAuthException catch (e) {
       return ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -51,10 +57,14 @@ class SignInController extends State<SignInView> implements MvcController {
         accessToken: googleSignInAuthentication.accessToken,
         idToken: googleSignInAuthentication.idToken,
       );
+      loading = true;
+      update();
       var userCredential = await _auth.signInWithCredential(credential);
       debugPrint("userCredential: $userCredential");
-      //TODO: on login success
-      //------------------
+      loading = false;
+      update();
+
+      Get.offAll(const BerandaView());
     } catch (_) {}
   }
 

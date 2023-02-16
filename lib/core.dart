@@ -7,6 +7,8 @@ export 'package:geomath_app/module/auth/sign_in/controller/sign_in_controller.da
 export 'package:geomath_app/module/auth/sign_in/view/sign_in_view.dart';
 export 'package:geomath_app/module/auth/sign_up/controller/sign_up_controller.dart';
 export 'package:geomath_app/module/auth/sign_up/view/sign_up_view.dart';
+export 'package:geomath_app/module/beranda/controller/beranda_controller.dart';
+export 'package:geomath_app/module/beranda/view/beranda_view.dart';
 export 'package:geomath_app/shared/widget/form_email.dart';
 export 'package:geomath_app/shared/widget/form_password.dart';
 export 'state_util.dart';

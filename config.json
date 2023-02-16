@@ -1,7 +1,4 @@
 {
-    "openai_key": "",
-    "modules": [
-        "auth/sign_in",
-        "auth/sign_up"
-    ]
+  "openai_key": "",
+  "modules": ["auth/sign_in", "auth/sign_up", "beranda"]
 }
