@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "862898499355",
+    "project_id": "geomathapp-7b721",
+    "storage_bucket": "geomathapp-7b721.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862898499355:android:38b9120c99383ade0cedbe",
+        "android_client_info": {
+          "package_name": "com.example.geomath_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "862898499355-2av5uh4pp194tivnqqs4jv2r1t6bfof7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.geomath_app",
+            "certificate_hash": "35c70f5989d7ed356950a02a4433a6a8714616cb"
+          }
+        },
+        {
+          "client_id": "862898499355-7bhkjg0fb1jfvfkkeb3rn7qgatni720s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYT4h9eaDMItdl2ailREmvDDMZBrmYXpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "862898499355-7aoo4kjtj9oi5c7vtr35mp0c8r8c8o9d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "862898499355-f4fkrlrcj0g48im2suh9cio3nsspas7f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.geomathApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

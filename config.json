@@ -1,4 +1,7 @@
 {
     "openai_key": "",
-    "modules": []
+    "modules": [
+        "auth/sign_in",
+        "auth/sign_up"
+    ]
 }
