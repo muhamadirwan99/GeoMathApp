@@ -27,7 +27,9 @@ class _FormEmailState extends State<FormEmail> {
             horizontal: 10,
           ),
           child: SvgPicture.asset(
-            'assets/icon/account_inactive.svg',
+            'assets/icon/update/mail.svg',
+            width: 24,
+            height: 24,
           ),
         ),
         enabledBorder: const UnderlineInputBorder(

@@ -41,10 +41,14 @@ class _FormPasswordState extends State<FormPassword> {
             ),
             child: widget.obscure
                 ? SvgPicture.asset(
-                    'assets/icon/eye.svg',
+                    'assets/icon/update/mata_tutup.svg',
+                    width: 24,
+                    height: 24,
                   )
                 : SvgPicture.asset(
-                    'assets/icon/category.svg',
+                    'assets/icon/update/mata_buka.svg',
+                    width: 24,
+                    height: 24,
                   ),
           ),
         ),

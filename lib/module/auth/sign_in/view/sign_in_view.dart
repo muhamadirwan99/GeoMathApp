@@ -58,7 +58,7 @@ class SignInView extends StatefulWidget {
                     height: 24.0,
                   ),
                   Text(
-                    "Password",
+                    "Kata Sandi",
                     style: semiBold16.copyWith(color: primaryPurple),
                   ),
                   const SizedBox(

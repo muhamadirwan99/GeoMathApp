@@ -1,4 +1,3 @@
-import 'package:geomath_app/state_util.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:geomath_app/common/style.dart';
 import 'package:flutter/material.dart';
