@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.geomath_app">
+    package="com.digital.learning.geomath.app">
    <application
-        android:label="geomath_app"
+        android:label="Geomath App"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

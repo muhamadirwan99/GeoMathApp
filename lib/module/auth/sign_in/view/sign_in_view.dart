@@ -51,9 +51,17 @@ class SignInView extends StatefulWidget {
                   const SizedBox(
                     height: 8.0,
                   ),
-                  FormEmail(onChanged: (value) {
-                    controller.email = value;
-                  }),
+                  FormBase(
+                    hintText: "Masukkan email anda disini",
+                    icon: "assets/icon/update/mail.svg",
+                    onChanged: (value) {
+                      controller.emptyEmail =
+                          controller.checkEmptyField(controller.email);
+                      controller.update();
+                      controller.email = value;
+                    },
+                    statusForm: controller.emptyEmail,
+                  ),
                   const SizedBox(
                     height: 24.0,
                   ),
@@ -66,6 +74,9 @@ class SignInView extends StatefulWidget {
                   ),
                   FormPassword(
                     onChanged: (value) {
+                      controller.emptyPassword =
+                          controller.checkEmptyField(controller.password);
+                      controller.update();
                       controller.password = value;
                     },
                     onTapObscure: () {
@@ -73,6 +84,8 @@ class SignInView extends StatefulWidget {
                       controller.update();
                     },
                     obscure: controller.obscure,
+                    statusPassword: controller.emptyPassword,
+                    statusForm: controller.emptyPassword,
                   ),
                   const SizedBox(
                     height: 16.0,
@@ -97,10 +110,12 @@ class SignInView extends StatefulWidget {
                         ),
                       ),
                       onPressed: () {
-                        controller.signInWithEmail(
-                          controller.email,
-                          controller.password,
-                        );
+                        controller.emptyEmail =
+                            controller.checkEmptyField(controller.email);
+                        controller.emptyPassword =
+                            controller.checkEmptyField(controller.password);
+                        controller.update();
+                        controller.onSubmit();
                       },
                       child: Padding(
                         padding: const EdgeInsets.only(
@@ -130,7 +145,7 @@ class SignInView extends StatefulWidget {
                       ),
                       InkWell(
                         onTap: () {
-                          Get.to(const SignUpView());
+                          Get.to(const DataAkunView());
                         },
                         child: Text(
                           "Daftar Disini",

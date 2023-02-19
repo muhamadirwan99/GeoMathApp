@@ -8,12 +8,18 @@ class FormPassword extends StatefulWidget {
   final Function(String value) onChanged;
   final Function() onTapObscure;
   final bool obscure;
+  final bool statusPassword;
+  final bool statusForm;
+  final String? initialValue;
 
   const FormPassword({
     Key? key,
     required this.onChanged,
     required this.onTapObscure,
     required this.obscure,
+    required this.statusPassword,
+    required this.statusForm,
+    this.initialValue,
   }) : super(key: key);
 
   @override
@@ -24,6 +30,7 @@ class _FormPasswordState extends State<FormPassword> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      initialValue: widget.initialValue,
       decoration: InputDecoration(
         prefixIcon: Padding(
           padding: const EdgeInsets.symmetric(
@@ -52,14 +59,27 @@ class _FormPasswordState extends State<FormPassword> {
                   ),
           ),
         ),
-        enabledBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(color: neutral500, width: 2),
-        ),
-        focusedBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(color: primaryPurple, width: 2),
+        enabledBorder: widget.statusForm
+            ? UnderlineInputBorder(
+                borderSide: BorderSide(
+                  color: widget.statusForm ? neutral500 : danger500,
+                  width: 2,
+                ),
+              )
+            : UnderlineInputBorder(
+                borderSide: BorderSide(
+                  color: widget.statusPassword ? neutral500 : danger500,
+                  width: 2,
+                ),
+              ),
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: widget.statusPassword ? primaryPurple : danger500,
+            width: 2,
+          ),
         ),
         hintText: "Masukkan kata sandi anda disini",
-        hintStyle: semiBold14.copyWith(
+        hintStyle: reguler14.copyWith(
           color: neutral500,
         ),
       ),

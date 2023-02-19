@@ -7,17 +7,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:862898499355:android:38b9120c99383ade0cedbe",
+        "mobilesdk_app_id": "1:862898499355:android:6f5053139476d4df0cedbe",
         "android_client_info": {
-          "package_name": "com.example.geomath_app"
+          "package_name": "com.digital.learning.geomath.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "862898499355-2av5uh4pp194tivnqqs4jv2r1t6bfof7.apps.googleusercontent.com",
+          "client_id": "862898499355-1u4bkm39rv6tubc6na70i824mnq7nlbi.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.geomath_app",
+            "package_name": "com.digital.learning.geomath.app",
             "certificate_hash": "35c70f5989d7ed356950a02a4433a6a8714616cb"
           }
         },

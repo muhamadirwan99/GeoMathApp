@@ -14,18 +14,43 @@ class SignInController extends State<SignInView> implements MvcController {
   bool obscure = true;
   bool loading = false;
 
+  bool emptyEmail = true;
+  bool emptyPassword = true;
+
   final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  checkEmptyField(String value) {
+    if (value.isNotEmpty) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  isAllFieldIsFilled() {
+    if (email.isNotEmpty && password.isNotEmpty) {
+      return true;
+    }
+    return false;
+  }
+
+  void onSubmit() {
+    if (isAllFieldIsFilled()) {
+      signInWithEmail(email, password);
+    }
+  }
 
   Future signInWithEmail(String email, String password) async {
     try {
       loading = true;
       update();
-      await _auth.signInWithEmailAndPassword(
+      UserCredential result = await _auth.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
       loading = false;
       update();
+      print(result);
       Get.offAll(const BerandaView());
     } on FirebaseAuthException catch (e) {
       return ScaffoldMessenger.of(context).showSnackBar(
