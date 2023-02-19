@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:geomath_app/core.dart';
 
@@ -22,8 +21,6 @@ class DataAkunController extends State<DataAkunView> implements MvcController {
   bool emptyConfirmPassword = true;
 
   bool loading = false;
-
-  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   late String _password;
   late String _confirmPassword;
@@ -80,42 +77,6 @@ class DataAkunController extends State<DataAkunView> implements MvcController {
       Get.to(
         DataDiriView(email: email.toString(), password: password.toString()),
       );
-    }
-  }
-
-  Future signUpWithEmail(String email, String password) async {
-    try {
-      loading = true;
-      update();
-
-      UserCredential result = await _auth.createUserWithEmailAndPassword(
-        email: email,
-        password: password,
-      );
-      // User user = result.user!;
-      // user.updateDisplayName(nama);
-
-      loading = false;
-      update();
-
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text("Akun telah berhasil dibuat, silahkan login!"),
-        ),
-      );
-
-      Get.to(const SignInView());
-
-      // User user = userCredential.user!;
-      // return user.uid;
-    } on FirebaseAuthException catch (e) {
-      return ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(e.message.toString()),
-        ),
-      );
-    } catch (e) {
-      return e.toString();
     }
   }
 

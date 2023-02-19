@@ -145,6 +145,7 @@ class SignInView extends StatefulWidget {
                       ),
                       InkWell(
                         onTap: () {
+                          UserDatabase.save("", "", "", "", "");
                           Get.to(const DataAkunView());
                         },
                         child: Text(

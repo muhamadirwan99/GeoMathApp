@@ -138,6 +138,7 @@ class DataDiriView extends StatefulWidget {
                   controller.nis = value;
                 },
                 statusForm: true,
+                initialValue: controller.nis,
               ),
               const SizedBox(
                 height: 4.0,
@@ -168,6 +169,7 @@ class DataDiriView extends StatefulWidget {
                   controller.nama = value;
                 },
                 statusForm: true,
+                initialValue: controller.nama,
               ),
               const SizedBox(
                 height: 4.0,
@@ -192,7 +194,7 @@ class DataDiriView extends StatefulWidget {
               ),
               DropdownButton<String>(
                 isExpanded: true,
-                value: controller.kelas,
+                value: controller.kelas == "" ? null : controller.kelas,
                 hint: Text(
                   'Pilih Kelas',
                   style: reguler14.copyWith(color: neutral500),
@@ -210,12 +212,8 @@ class DataDiriView extends StatefulWidget {
                   ),
                 ),
                 onChanged: (value) {
-                  if (value == null) {
-                    controller.emptyKelas = false;
-                  }
-
-                  print(controller.emptyKelas);
-
+                  controller.emptyKelas =
+                      controller.checkEmptyField(value.toString());
                   controller.kelas = value.toString();
                   controller.update();
                 },
@@ -291,14 +289,15 @@ class DataDiriView extends StatefulWidget {
                               },
                               onPressedFilled: () {
                                 controller.emptyNis =
-                                    controller.checkEmptyField(controller.nis);
-                                controller.emptyNama =
-                                    controller.checkEmptyField(controller.nama);
-                                controller.emptyKelas =
-                                    controller.checkEmptyField(
-                                  controller.kelas.toString(),
-                                );
+                                    controller.checkEmptyField(controller.nis!);
+                                controller.emptyNama = controller
+                                    .checkEmptyField(controller.nama!);
+                                if (controller.kelas == null) {
+                                  controller.emptyKelas = false;
+                                }
                                 controller.update();
+
+                                controller.onSubmit();
                               },
                             );
                           },

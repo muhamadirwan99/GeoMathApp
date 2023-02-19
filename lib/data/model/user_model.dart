@@ -1,11 +1,11 @@
-class User {
+class UserModel {
   final String id;
   final String email;
   final String nama;
   final String nis;
   final String kelas;
 
-  User({
+  UserModel({
     required this.id,
     required this.email,
     required this.nama,
@@ -13,7 +13,7 @@ class User {
     required this.kelas,
   });
 
-  User.fromData(Map<String, dynamic> data)
+  UserModel.fromData(Map<String, dynamic> data)
       : id = data['id'],
         email = data['email'],
         nama = data['nama'],
