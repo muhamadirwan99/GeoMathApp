@@ -12,10 +12,12 @@ class DataDiriController extends State<DataDiriView> implements MvcController {
 
   String? nis = UserDatabase.nis;
   String? nama = UserDatabase.nama;
+  String? noTel = "";
 
   bool emptyNis = true;
   bool emptyNama = true;
   bool emptyKelas = true;
+  bool emptyNoTel = true;
 
   bool loading = false;
 
@@ -32,7 +34,7 @@ class DataDiriController extends State<DataDiriView> implements MvcController {
   }
 
   isAllFieldIsFilled() {
-    if (nis != "" && nama != "" && kelas != null) {
+    if (nis != "" && nama != "" && kelas != null && noTel != "") {
       return true;
     }
     return false;
@@ -63,6 +65,7 @@ class DataDiriController extends State<DataDiriView> implements MvcController {
         nama: nama.toString(),
         nis: nis.toString(),
         kelas: kelas.toString(),
+        noTel: noTel.toString(),
       );
 
       try {
@@ -80,8 +83,6 @@ class DataDiriController extends State<DataDiriView> implements MvcController {
           return const DialogPendaftaranSukses();
         },
       );
-
-      // Get.to(const SignInView());
     } on FirebaseAuthException catch (e) {
       return ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(

@@ -4,6 +4,7 @@ class UserModel {
   final String nama;
   final String nis;
   final String kelas;
+  final String noTel;
 
   UserModel({
     required this.id,
@@ -11,6 +12,7 @@ class UserModel {
     required this.nama,
     required this.nis,
     required this.kelas,
+    required this.noTel,
   });
 
   UserModel.fromData(Map<String, dynamic> data)
@@ -18,7 +20,8 @@ class UserModel {
         email = data['email'],
         nama = data['nama'],
         nis = data['nis'],
-        kelas = data['kelas'];
+        kelas = data['kelas'],
+        noTel = data['noTel'];
 
   Map<String, dynamic> toJson() {
     return {
@@ -27,6 +30,7 @@ class UserModel {
       'nama': nama,
       'nis': nis,
       'kelas': kelas,
+      'noTel': noTel,
     };
   }
 }

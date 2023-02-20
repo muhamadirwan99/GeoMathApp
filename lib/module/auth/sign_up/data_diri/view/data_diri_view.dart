@@ -18,7 +18,8 @@ class DataDiriView extends StatefulWidget {
       appBar: AppBar(
         leading: IconButton(
           icon: SvgPicture.asset(
-            'assets/icon/arrow_left.svg',
+            'assets/icon/update/left.svg',
+            color: neutral900,
           ),
           onPressed: () {
             Get.to(const DataAkunView());
@@ -186,6 +187,37 @@ class DataDiriView extends StatefulWidget {
                 height: 18.0,
               ),
               Text(
+                "Nomor Telepon",
+                style: semiBold16.copyWith(color: primaryPurple),
+              ),
+              const SizedBox(
+                height: 8.0,
+              ),
+              FormBase(
+                hintText: "Masukkan nomor telepon anda disini",
+                icon: "assets/icon/update/whatsapp.svg",
+                onChanged: (value) {
+                  controller.emptyNoTel = controller.checkEmptyField(value);
+                  controller.noTel = value;
+                },
+                statusForm: true,
+                initialValue: controller.noTel,
+              ),
+              const SizedBox(
+                height: 4.0,
+              ),
+              controller.emptyNoTel
+                  ? Container()
+                  : Text(
+                      "Nomor telepon tidak boleh kosong",
+                      style: reguler14.copyWith(
+                        color: danger500,
+                      ),
+                    ),
+              const SizedBox(
+                height: 18.0,
+              ),
+              Text(
                 "Pilih Kelas",
                 style: semiBold16.copyWith(color: primaryPurple),
               ),
@@ -292,6 +324,8 @@ class DataDiriView extends StatefulWidget {
                                     controller.checkEmptyField(controller.nis!);
                                 controller.emptyNama = controller
                                     .checkEmptyField(controller.nama!);
+                                controller.emptyNoTel = controller
+                                    .checkEmptyField(controller.noTel!);
                                 if (controller.kelas == null) {
                                   controller.emptyKelas = false;
                                 }

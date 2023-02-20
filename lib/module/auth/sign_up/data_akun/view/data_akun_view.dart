@@ -13,7 +13,8 @@ class DataAkunView extends StatefulWidget {
       appBar: AppBar(
         leading: IconButton(
           icon: SvgPicture.asset(
-            'assets/icon/arrow_left.svg',
+            'assets/icon/update/left.svg',
+            color: neutral900,
           ),
           onPressed: () {
             Get.to(const SignInView());

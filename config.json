@@ -1,9 +1,9 @@
 {
-  "openai_key": "",
-  "modules": [
-    "auth/sign_in",
-    "auth/sign_up/data_akun",
-    "auth/sign_up/data_diri",
-    "beranda"
-  ]
+    "openai_key": "",
+    "modules": [
+        "auth/sign_in",
+        "auth/sign_up/data_akun",
+        "auth/sign_up/data_diri",
+        "beranda"
+    ]
 }
