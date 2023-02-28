@@ -15,6 +15,14 @@ export 'package:geomath_app/module/auth/sign_up/data_diri/widget/dialog_konfirma
 export 'package:geomath_app/module/auth/sign_up/data_diri/widget/dialog_pendaftaran_sukses.dart';
 export 'package:geomath_app/module/beranda/controller/beranda_controller.dart';
 export 'package:geomath_app/module/beranda/view/beranda_view.dart';
+export 'package:geomath_app/module/evaluasi/controller/evaluasi_controller.dart';
+export 'package:geomath_app/module/evaluasi/view/evaluasi_view.dart';
+export 'package:geomath_app/module/informasi/controller/informasi_controller.dart';
+export 'package:geomath_app/module/informasi/view/informasi_view.dart';
+export 'package:geomath_app/module/menu_nav/controller/menu_nav_controller.dart';
+export 'package:geomath_app/module/menu_nav/view/menu_nav_view.dart';
+export 'package:geomath_app/module/profil/controller/profil_controller.dart';
+export 'package:geomath_app/module/profil/view/profil_view.dart';
 export 'package:geomath_app/module/sign_up/controller/sign_up_controller.dart';
 export 'package:geomath_app/module/sign_up/view/sign_up_view.dart';
 export 'package:geomath_app/services/db_service.dart';
