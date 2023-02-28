@@ -48,11 +48,14 @@ class SignInController extends State<SignInView> implements MvcController {
         email: email,
         password: password,
       );
+      print(result);
+
       loading = false;
       update();
-      print(result);
       Get.offAll(const BerandaView());
     } on FirebaseAuthException catch (e) {
+      loading = false;
+      update();
       return ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(e.message.toString()),
