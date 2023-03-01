@@ -44,13 +44,10 @@ class ProfilView extends StatefulWidget {
                 bottomRight: Radius.circular(32),
               ),
             ),
-            title: Padding(
-              padding: const EdgeInsets.only(left: 5),
-              child: Text(
-                "Profil",
-                style: semiBold24.copyWith(
-                  color: neutral100,
-                ),
+            title: Text(
+              "Profil",
+              style: semiBold24.copyWith(
+                color: neutral100,
               ),
             ),
             flexibleSpace: Stack(
