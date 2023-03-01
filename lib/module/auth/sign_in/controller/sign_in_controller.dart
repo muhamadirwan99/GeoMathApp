@@ -1,9 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:geomath_app/module/beranda/view/beranda_view.dart';
-import 'package:geomath_app/state_util.dart';
+import 'package:geomath_app/core.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import '../view/sign_in_view.dart';
 
 class SignInController extends State<SignInView> implements MvcController {
   static late SignInController instance;
@@ -52,7 +50,7 @@ class SignInController extends State<SignInView> implements MvcController {
 
       loading = false;
       update();
-      Get.offAll(const BerandaView());
+      Get.offAll(const MenuNavView());
     } on FirebaseAuthException catch (e) {
       loading = false;
       update();
@@ -92,7 +90,7 @@ class SignInController extends State<SignInView> implements MvcController {
       loading = false;
       update();
 
-      Get.offAll(const BerandaView());
+      Get.offAll(const MenuNavView());
     } catch (_) {}
   }
 

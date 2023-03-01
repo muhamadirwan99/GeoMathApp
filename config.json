@@ -4,6 +4,11 @@
         "auth/sign_in",
         "auth/sign_up/data_akun",
         "auth/sign_up/data_diri",
+        "auth/sign_up/data_diri",
+        "evaluasi",
+        "informasi",
+        "profil",
+        "menu_nav",
         "beranda"
     ]
 }
