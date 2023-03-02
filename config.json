@@ -1,14 +1,18 @@
 {
-    "openai_key": "",
-    "modules": [
-        "auth/sign_in",
-        "auth/sign_up/data_akun",
-        "auth/sign_up/data_diri",
-        "auth/sign_up/data_diri",
-        "evaluasi",
-        "informasi",
-        "profil",
-        "menu_nav",
-        "beranda"
-    ]
+  "openai_key": "",
+  "modules": [
+    "auth/sign_in",
+    "auth/sign_up/data_akun",
+    "auth/sign_up/data_diri",
+    "auth/sign_up/data_diri",
+    "materi/limas/bagian",
+    "materi/limas/jaring",
+    "materi/limas/rumus",
+    "materi/limas/latihan",
+    "evaluasi",
+    "informasi",
+    "profil",
+    "menu_nav",
+    "beranda"
+  ]
 }

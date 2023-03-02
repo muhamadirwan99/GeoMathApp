@@ -21,6 +21,14 @@ export 'package:geomath_app/module/informasi/controller/informasi_controller.dar
 export 'package:geomath_app/module/informasi/view/informasi_view.dart';
 export 'package:geomath_app/module/informasi/widget/content_petunjuk.dart';
 export 'package:geomath_app/module/informasi/widget/content_tentang_app.dart';
+export 'package:geomath_app/module/materi/limas/bagian/controller/bagian_controller.dart';
+export 'package:geomath_app/module/materi/limas/bagian/view/bagian_view.dart';
+export 'package:geomath_app/module/materi/limas/jaring/controller/jaring_controller.dart';
+export 'package:geomath_app/module/materi/limas/jaring/view/jaring_view.dart';
+export 'package:geomath_app/module/materi/limas/latihan/controller/latihan_controller.dart';
+export 'package:geomath_app/module/materi/limas/latihan/view/latihan_view.dart';
+export 'package:geomath_app/module/materi/limas/rumus/controller/rumus_controller.dart';
+export 'package:geomath_app/module/materi/limas/rumus/view/rumus_view.dart';
 export 'package:geomath_app/module/menu_nav/controller/menu_nav_controller.dart';
 export 'package:geomath_app/module/menu_nav/view/menu_nav_view.dart';
 export 'package:geomath_app/module/profil/controller/profil_controller.dart';
