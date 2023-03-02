@@ -255,11 +255,12 @@ class ProfilView extends StatefulWidget {
                                 ),
                                 const ContentCardDataDiri(
                                   value: "085697780009",
-                                  icon: "assets/icon/update/whatsapp.svg",
+                                  icon:
+                                      "assets/icon/update/whatsapp_circle.svg",
                                 ),
                                 const ContentCardDataDiri(
                                   value: "ayu.kinanti@gmail.com",
-                                  icon: "assets/icon/update/mail.svg",
+                                  icon: "assets/icon/update/mail_circle.svg",
                                 ),
                                 const SizedBox(
                                   height: 16.0,

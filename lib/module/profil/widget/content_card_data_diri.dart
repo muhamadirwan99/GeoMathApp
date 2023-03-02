@@ -32,7 +32,6 @@ class _ContentCardDataDiriState extends State<ContentCardDataDiri> {
             widget.icon,
             width: 36,
             height: 36,
-            color: primaryPurple,
           ),
           const SizedBox(
             width: 8.0,

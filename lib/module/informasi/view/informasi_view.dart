@@ -186,7 +186,7 @@ class InformasiView extends StatefulWidget {
                               ),
                             ),
                             leading: SvgPicture.asset(
-                              "assets/icon/update/app_shortcut.svg",
+                              "assets/icon/update/touch.svg",
                             ),
                             children: [
                               Padding(
