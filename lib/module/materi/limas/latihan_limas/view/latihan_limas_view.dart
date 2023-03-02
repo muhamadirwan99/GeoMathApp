@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:geomath_app/core.dart';
-import '../controller/jaring_controller.dart';
+import '../controller/latihan_limas_controller.dart';
 
-class JaringView extends StatefulWidget {
-  const JaringView({Key? key}) : super(key: key);
+class LatihanLimasView extends StatefulWidget {
+  const LatihanLimasView({Key? key}) : super(key: key);
 
-  Widget build(context, JaringController controller) {
+  Widget build(context, LatihanLimasController controller) {
     controller.view = this;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Jaring"),
+        title: const Text("LatihanLimas"),
         actions: const [],
       ),
       body: SingleChildScrollView(
@@ -25,5 +25,5 @@ class JaringView extends StatefulWidget {
   }
 
   @override
-  State<JaringView> createState() => JaringController();
+  State<LatihanLimasView> createState() => LatihanLimasController();
 }

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:geomath_app/state_util.dart';
-import '../view/jaring_view.dart';
+import '../view/jaring_limas_view.dart';
 
-class JaringController extends State<JaringView> implements MvcController {
-  static late JaringController instance;
-  late JaringView view;
+class JaringLimasController extends State<JaringLimasView> implements MvcController {
+  static late JaringLimasController instance;
+  late JaringLimasView view;
 
   @override
   void initState() {

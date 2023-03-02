@@ -102,8 +102,11 @@ class BerandaView extends StatefulWidget {
                               width: 16.0,
                             ),
                             Expanded(
-                              child: Image.asset(
-                                "assets/illustration/limas.png",
+                              child: InkWell(
+                                onTap: () {},
+                                child: Image.asset(
+                                  "assets/illustration/limas.png",
+                                ),
                               ),
                             ),
                           ],

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:geomath_app/core.dart';
-import '../controller/rumus_controller.dart';
+import '../controller/rumus_limas_controller.dart';
 
-class RumusView extends StatefulWidget {
-  const RumusView({Key? key}) : super(key: key);
+class RumusLimasView extends StatefulWidget {
+  const RumusLimasView({Key? key}) : super(key: key);
 
-  Widget build(context, RumusController controller) {
+  Widget build(context, RumusLimasController controller) {
     controller.view = this;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Rumus"),
+        title: const Text("RumusLimas"),
         actions: const [],
       ),
       body: SingleChildScrollView(
@@ -25,5 +25,5 @@ class RumusView extends StatefulWidget {
   }
 
   @override
-  State<RumusView> createState() => RumusController();
+  State<RumusLimasView> createState() => RumusLimasController();
 }

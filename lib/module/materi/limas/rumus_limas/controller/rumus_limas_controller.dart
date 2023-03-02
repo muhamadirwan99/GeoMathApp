@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:geomath_app/state_util.dart';
-import '../view/rumus_view.dart';
+import '../view/rumus_limas_view.dart';
 
-class RumusController extends State<RumusView> implements MvcController {
-  static late RumusController instance;
-  late RumusView view;
+class RumusLimasController extends State<RumusLimasView> implements MvcController {
+  static late RumusLimasController instance;
+  late RumusLimasView view;
 
   @override
   void initState() {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:geomath_app/state_util.dart';
-import '../view/latihan_view.dart';
+import '../view/bagian_limas_view.dart';
 
-class LatihanController extends State<LatihanView> implements MvcController {
-  static late LatihanController instance;
-  late LatihanView view;
+class BagianLimasController extends State<BagianLimasView> implements MvcController {
+  static late BagianLimasController instance;
+  late BagianLimasView view;
 
   @override
   void initState() {
