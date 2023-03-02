@@ -19,6 +19,8 @@ export 'package:geomath_app/module/evaluasi/controller/evaluasi_controller.dart'
 export 'package:geomath_app/module/evaluasi/view/evaluasi_view.dart';
 export 'package:geomath_app/module/informasi/controller/informasi_controller.dart';
 export 'package:geomath_app/module/informasi/view/informasi_view.dart';
+export 'package:geomath_app/module/informasi/widget/content_petunjuk.dart';
+export 'package:geomath_app/module/informasi/widget/content_tentang_app.dart';
 export 'package:geomath_app/module/menu_nav/controller/menu_nav_controller.dart';
 export 'package:geomath_app/module/menu_nav/view/menu_nav_view.dart';
 export 'package:geomath_app/module/profil/controller/profil_controller.dart';
