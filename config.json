@@ -1,18 +1,18 @@
 {
-  "openai_key": "",
-  "modules": [
-    "auth/sign_in",
-    "auth/sign_up/data_akun",
-    "auth/sign_up/data_diri",
-    "auth/sign_up/data_diri",
-    "materi/limas/bagian_limas",
-    "materi/limas/jaring_limas",
-    "materi/limas/rumus_limas",
-    "materi/limas/latihan_limas",
-    "evaluasi",
-    "informasi",
-    "profil",
-    "menu_nav",
-    "beranda"
-  ]
+    "openai_key": "",
+    "modules": [
+        "auth/sign_in",
+        "auth/sign_up/data_akun",
+        "auth/sign_up/data_diri",
+        "auth/sign_up/data_diri",
+        "materi/limas/bagian_limas",
+        "materi/limas/jaring_limas",
+        "materi/limas/rumus_limas",
+        "materi/limas/latihan_limas",
+        "evaluasi",
+        "informasi",
+        "profil",
+        "menu_nav",
+        "beranda"
+    ]
 }
