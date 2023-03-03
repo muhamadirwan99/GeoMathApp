@@ -29,6 +29,7 @@ export 'package:geomath_app/module/materi/limas/jaring_limas/view/jaring_limas_v
 export 'package:geomath_app/module/materi/limas/jaring_limas/widget/content_jaring_limas.dart';
 export 'package:geomath_app/module/materi/limas/latihan_limas/controller/latihan_limas_controller.dart';
 export 'package:geomath_app/module/materi/limas/latihan_limas/view/latihan_limas_view.dart';
+export 'package:geomath_app/module/materi/limas/latihan_limas/widget/fab_evaluasi_limas.dart';
 export 'package:geomath_app/module/materi/limas/rumus_limas/controller/rumus_limas_controller.dart';
 export 'package:geomath_app/module/materi/limas/rumus_limas/view/rumus_limas_view.dart';
 export 'package:geomath_app/module/materi/limas/rumus_limas/widget/container_rumus.dart';
