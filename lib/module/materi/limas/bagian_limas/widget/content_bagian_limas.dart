@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:geomath_app/common/style.dart';
+import 'package:geomath_app/core.dart';
 
 class ContentBagianLimas extends StatefulWidget {
   const ContentBagianLimas({
@@ -37,99 +38,29 @@ class _ContentBagianLimasState extends State<ContentBagianLimas> {
           const SizedBox(
             height: 8.0,
           ),
-          Column(
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "1.",
-                    style: reguler16.copyWith(color: neutral900),
-                  ),
-                  const SizedBox(
-                    width: 8.0,
-                  ),
-                  Expanded(
-                    child: Text(
-                      "Sisi : ABCD = sisi alas, sisi yang lain adalah TAB, TBC, TCD, TDA.",
-                      style: reguler16.copyWith(color: neutral900),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "2.",
-                    style: reguler16.copyWith(color: neutral900),
-                  ),
-                  const SizedBox(
-                    width: 5.0,
-                  ),
-                  Expanded(
-                    child: Text(
-                      "Rusuk : TA, TB, TC dan TD adalah rusuk tegak. Rusuk yang lain AB, BC, CD dan AD.",
-                      style: reguler16.copyWith(color: neutral900),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "3.",
-                    style: reguler16.copyWith(color: neutral900),
-                  ),
-                  const SizedBox(
-                    width: 5.0,
-                  ),
-                  Expanded(
-                    child: Text(
-                      "Titik sudut : T, A, B, C dan D merupakan titik sudut dan T dinamakan titik puncak limas.",
-                      style: reguler16.copyWith(color: neutral900),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "4.",
-                    style: reguler16.copyWith(color: neutral900),
-                  ),
-                  const SizedBox(
-                    width: 5.0,
-                  ),
-                  Expanded(
-                    child: Text(
-                      "Tinggi limas : Garis yang ditarik dari T tegak lurus bidang alas disebut tinggi limas. Pada gambar tinggi limas adalah TO.",
-                      style: reguler16.copyWith(color: neutral900),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "5.",
-                    style: reguler16.copyWith(color: neutral900),
-                  ),
-                  const SizedBox(
-                    width: 5.0,
-                  ),
-                  Expanded(
-                    child: Text(
-                      "Bidang Diagonal : TAC dan TBD adalah bidang diagonal.",
-                      style: reguler16.copyWith(color: neutral900),
-                    ),
-                  ),
-                ],
-              ),
-            ],
+          const TextNumber(
+            number: "1.",
+            value:
+                "Sisi : ABCD = sisi alas, sisi yang lain adalah TAB, TBC, TCD, TDA.",
+          ),
+          const TextNumber(
+            number: "2.",
+            value:
+                "Rusuk : TA, TB, TC dan TD adalah rusuk tegak. Rusuk yang lain AB, BC, CD dan AD.",
+          ),
+          const TextNumber(
+            number: "3.",
+            value:
+                "Titik sudut : T, A, B, C dan D merupakan titik sudut dan T dinamakan titik puncak limas.",
+          ),
+          const TextNumber(
+            number: "4.",
+            value:
+                "Tinggi limas : Garis yang ditarik dari T tegak lurus bidang alas disebut tinggi limas. Pada gambar tinggi limas adalah TO.",
+          ),
+          const TextNumber(
+            number: "5.",
+            value: "Bidang Diagonal : TAC dan TBD adalah bidang diagonal.",
           ),
         ],
       ),
