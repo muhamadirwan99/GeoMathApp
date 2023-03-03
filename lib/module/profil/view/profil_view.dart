@@ -58,8 +58,9 @@ class ProfilView extends StatefulWidget {
                 Container(
                   color: primaryPurple,
                   child: Container(
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: neutral50),
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(16),
                         topRight: Radius.circular(16),
                       ),
