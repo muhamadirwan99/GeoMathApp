@@ -51,7 +51,84 @@ class BagianLimasView extends StatefulWidget {
                     borderRadius: BorderRadius.circular(8), // <-- Radius
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  showGeneralDialog(
+                    context: context,
+                    barrierColor: Colors.black54,
+                    barrierDismissible: true,
+                    barrierLabel: 'Daftar',
+                    pageBuilder: (_, __, ___) {
+                      return Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 24, bottom: 84),
+                          child: Container(
+                            height: 160.0,
+                            decoration: const BoxDecoration(
+                              color: neutral50,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(
+                                  8,
+                                ),
+                              ),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(16),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  TextDaftarIsi(
+                                    value: "Bagian - Bagian Limas",
+                                    onTap: () {
+                                      Get.to(
+                                        const BagianLimasView(),
+                                      );
+                                    },
+                                  ),
+                                  const SizedBox(
+                                    height: 16.0,
+                                  ),
+                                  TextDaftarIsi(
+                                    value: "Jaring - Jaring Limas",
+                                    onTap: () {
+                                      Get.to(
+                                        const JaringLimasView(),
+                                      );
+                                    },
+                                  ),
+                                  const SizedBox(
+                                    height: 16.0,
+                                  ),
+                                  TextDaftarIsi(
+                                    value: "Rumus Limas",
+                                    onTap: () {
+                                      Get.to(
+                                        const RumusLimasView(),
+                                      );
+                                    },
+                                  ),
+                                  const SizedBox(
+                                    height: 16.0,
+                                  ),
+                                  TextDaftarIsi(
+                                    value: "Latihan Soal",
+                                    onTap: () {
+                                      Get.to(
+                                        const LatihanLimasView(),
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  );
+                  // showDialogDetail(context);
+                },
                 child: SvgPicture.asset(
                   "assets/icon/daftar_isi.svg",
                   color: primaryPurple,
