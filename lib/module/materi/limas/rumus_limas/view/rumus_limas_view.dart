@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
-import '../controller/rumus_limas_controller.dart';
 
 class RumusLimasView extends StatefulWidget {
   const RumusLimasView({Key? key}) : super(key: key);
@@ -10,14 +11,58 @@ class RumusLimasView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("RumusLimas"),
-        actions: const [],
+        elevation: 0,
+        title: Text(
+          "Materi Pembelajaran",
+          style: semiBold24.copyWith(
+            color: neutral100,
+          ),
+        ),
+        leading: IconButton(
+          icon: SvgPicture.asset(
+            "assets/icon/update/left.svg",
+            color: neutral50,
+          ),
+          onPressed: () {
+            Get.back();
+          },
+        ),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: const [],
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FabMateriLimas(
+        onPressedSelanjutnya: () {
+          Get.to(
+            const LatihanLimasView(),
+          );
+        },
+      ),
+      body: Padding(
+        padding: const EdgeInsets.only(bottom: 38),
+        child: SingleChildScrollView(
+          controller: ScrollController(),
+          child: Container(
+            color: primaryPurple,
+            child: Container(
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(16),
+                  topRight: Radius.circular(16),
+                ),
+                color: neutral50,
+              ),
+              child: Column(
+                children: const [
+                  ContentRumusLimas(),
+                  SizedBox(
+                    height: 24.0,
+                  ),
+                  VideoTutorialLimas(),
+                  SizedBox(
+                    height: 32.0,
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
       ),
