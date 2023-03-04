@@ -1,4 +1,4 @@
-import 'package:geomath_app/state_util.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:geomath_app/common/style.dart';
@@ -18,11 +18,19 @@ void main() async {
   mainStorage = await Hive.openBox('mainStorage');
 
   await UserDatabase.load();
-  runApp(const MyApp());
+
+  bool user = true;
+
+  if (FirebaseAuth.instance.currentUser != null) {
+    user = false;
+  }
+
+  runApp(MyApp(user: user));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  bool user;
+  MyApp({super.key, required this.user});
 
   // This widget is the root of your application.
   @override
@@ -38,7 +46,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: primaryPurple,
         ),
       ),
-      home: const SignInView(),
+      home: user ? const SignInView() : const BerandaView(),
     );
   }
 }
