@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:geomath_app/core.dart';
-import '../controller/daftar_limas_controller.dart';
 
 class DaftarLimasView extends StatefulWidget {
   const DaftarLimasView({Key? key}) : super(key: key);
@@ -8,19 +7,22 @@ class DaftarLimasView extends StatefulWidget {
   Widget build(context, DaftarLimasController controller) {
     controller.view = this;
 
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("DaftarLimas"),
-        actions: const [],
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: const [],
-          ),
-        ),
-      ),
+    return ListView.builder(
+      itemCount: 3,
+      physics: const ScrollPhysics(),
+      shrinkWrap: true,
+      padding: const EdgeInsets.symmetric(horizontal: 24),
+      itemBuilder: (BuildContext context, int index) {
+        return CardVideo(
+          onTap: () {
+            Get.to(const DetailPrismaView());
+          },
+          imgUrl: "https://i.ibb.co/sym6ybs/Limas1.png",
+          title: "Matematika Dasar : Pendahuluan Limas",
+          desc:
+              "Video ini menceritakan mengenai pengenalan bentuk limas dalam BAB Geometri.",
+        );
+      },
     );
   }
 
