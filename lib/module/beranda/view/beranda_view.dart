@@ -1,8 +1,6 @@
-import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
-import '../controller/beranda_controller.dart';
 
 class BerandaView extends StatefulWidget {
   const BerandaView({Key? key}) : super(key: key);
@@ -129,7 +127,9 @@ class BerandaView extends StatefulWidget {
                               ),
                             ),
                             InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Get.to(const VideoPembelajaranView());
+                              },
                               child: Text(
                                 "Lainnya",
                                 style: semiBold14.copyWith(
@@ -149,51 +149,12 @@ class BerandaView extends StatefulWidget {
                         physics: const ScrollPhysics(),
                         padding: const EdgeInsets.symmetric(horizontal: 23),
                         itemBuilder: (BuildContext context, int index) {
-                          return Card(
-                            shape: RoundedRectangleBorder(
-                              side:
-                                  const BorderSide(color: neutral100, width: 1),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Row(
-                              children: [
-                                ClipRRect(
-                                  borderRadius: const BorderRadius.only(
-                                    topLeft: Radius.circular(12),
-                                    bottomLeft: Radius.circular(12),
-                                  ),
-                                  child: FancyShimmerImage(
-                                    imageUrl:
-                                        "https://i.ibb.co/sym6ybs/Limas1.png",
-                                    width: 150,
-                                    height: 116,
-                                  ),
-                                ),
-                                Expanded(
-                                  flex: 2,
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(12),
-                                    child: Column(
-                                      children: [
-                                        Text(
-                                          "Matematika Dasar : Pendahuluan Limas",
-                                          style: semiBold14.copyWith(
-                                              color: neutral900),
-                                        ),
-                                        const SizedBox(
-                                          height: 4.0,
-                                        ),
-                                        Text(
-                                          "Video ini menceritakan mengenai pengenalan bentuk limas dalam BAB Geometri.",
-                                          style: reguler12.copyWith(
-                                              color: neutral600),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
+                          return CardVideo(
+                            onTap: () {},
+                            imgUrl: "https://i.ibb.co/sym6ybs/Limas1.png",
+                            title: "Matematika Dasar : Pendahuluan Limas",
+                            desc:
+                                "Video ini menceritakan mengenai pengenalan bentuk limas dalam BAB Geometri.",
                           );
                         },
                       ),

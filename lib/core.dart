@@ -58,6 +58,7 @@ export 'package:geomath_app/module/video/video_pembelajaran/view/video_pembelaja
 export 'package:geomath_app/services/db_service.dart';
 export 'package:geomath_app/shared/widget/button_filled.dart';
 export 'package:geomath_app/shared/widget/button_outline.dart';
+export 'package:geomath_app/shared/widget/card_video.dart';
 export 'package:geomath_app/shared/widget/fab_materi_limas.dart';
 export 'package:geomath_app/shared/widget/form_base.dart';
 export 'package:geomath_app/shared/widget/form_password.dart';
