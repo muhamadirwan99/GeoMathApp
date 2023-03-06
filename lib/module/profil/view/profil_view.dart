@@ -8,6 +8,7 @@ class ProfilView extends StatefulWidget {
 
   Widget build(context, ProfilController controller) {
     controller.view = this;
+    controller.getDataUser();
 
     return Scaffold(
       body: CustomScrollView(
@@ -50,7 +51,7 @@ class ProfilView extends StatefulWidget {
                 color: neutral100,
               ),
             ),
-            flexibleSpace: const ContentAppBar(),
+            flexibleSpace: ContentAppBar(controller: controller),
           ),
           SliverList(
             delegate: SliverChildListDelegate(
@@ -77,7 +78,7 @@ class ProfilView extends StatefulWidget {
                           const SizedBox(
                             height: 24.0,
                           ),
-                          const CardDataDiri(),
+                          CardDataDiri(controller: controller),
                           const SizedBox(
                             height: 24.0,
                           ),

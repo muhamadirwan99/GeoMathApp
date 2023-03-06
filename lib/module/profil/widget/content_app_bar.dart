@@ -2,10 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:geomath_app/common/style.dart';
+import 'package:geomath_app/core.dart';
 
 class ContentAppBar extends StatefulWidget {
-  const ContentAppBar({
+  ProfilController controller;
+  ContentAppBar({
     Key? key,
+    required this.controller,
   }) : super(key: key);
 
   @override
@@ -43,7 +46,7 @@ class _ContentAppBarState extends State<ContentAppBar> {
                       children: [
                         Expanded(
                           child: Text(
-                            "Kinanti Ayu",
+                            widget.controller.nama,
                             style: semiBold24.copyWith(
                               color: neutral50,
                             ),
@@ -54,7 +57,7 @@ class _ContentAppBarState extends State<ContentAppBar> {
                         ),
                         Expanded(
                           child: Text(
-                            "0001290310",
+                            widget.controller.nis,
                             style: reguler16.copyWith(
                               color: neutral50,
                             ),
