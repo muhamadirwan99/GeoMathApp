@@ -7,6 +7,7 @@ class BerandaView extends StatefulWidget {
 
   Widget build(context, BerandaController controller) {
     controller.view = this;
+    controller.getDataUser();
 
     return Scaffold(
       body: CustomScrollView(
@@ -28,7 +29,7 @@ class BerandaView extends StatefulWidget {
             title: Padding(
               padding: const EdgeInsets.only(left: 5),
               child: Text(
-                "Hi, Kinanti Ayu 👋",
+                "Hi, ${controller.nama} 👋",
                 style: semiBold24.copyWith(
                   color: neutral100,
                 ),
