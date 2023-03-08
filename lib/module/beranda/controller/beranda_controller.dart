@@ -11,6 +11,8 @@ class BerandaController extends State<BerandaView> implements MvcController {
   User? id = FirebaseAuth.instance.currentUser;
   String nama = "";
 
+  dynamic videos = FirebaseFirestore.instance.collection("videos").snapshots();
+
   getDataUser() async {
     var user =
         await FirebaseFirestore.instance.collection("users").doc(id?.uid).get();

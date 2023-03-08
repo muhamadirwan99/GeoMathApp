@@ -144,18 +144,32 @@ class BerandaView extends StatefulWidget {
                       const SizedBox(
                         height: 8.0,
                       ),
-                      ListView.builder(
-                        itemCount: 10,
-                        shrinkWrap: true,
-                        physics: const ScrollPhysics(),
-                        padding: const EdgeInsets.symmetric(horizontal: 23),
-                        itemBuilder: (BuildContext context, int index) {
-                          return CardVideo(
-                            onTap: () {},
-                            imgUrl: "https://i.ibb.co/sym6ybs/Limas1.png",
-                            title: "Matematika Dasar : Pendahuluan Limas",
-                            desc:
-                                "Video ini menceritakan mengenai pengenalan bentuk limas dalam BAB Geometri.",
+                      StreamBuilder(
+                        stream: controller.videos,
+                        builder:
+                            (BuildContext context, AsyncSnapshot snapshot) {
+                          if (!snapshot.hasData) {
+                            return const Text('Please Wait');
+                          }
+                          final data = snapshot.data.docs
+                              .map((doc) => doc.data())
+                              .toList();
+                          return ListView.builder(
+                            itemCount: data.length,
+                            shrinkWrap: true,
+                            physics: const ScrollPhysics(),
+                            padding: const EdgeInsets.symmetric(horizontal: 23),
+                            itemBuilder: (context, index) {
+                              VideosResult video =
+                                  VideosResult.fromJson(data[index]);
+
+                              return CardVideo(
+                                onTap: () {},
+                                imgUrl: video.thumbnail,
+                                title: video.title,
+                                desc: video.desc,
+                              );
+                            },
                           );
                         },
                       ),

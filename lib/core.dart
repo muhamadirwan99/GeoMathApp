@@ -5,6 +5,7 @@ it means you have to rename it to something more unique.
 */
 export 'package:geomath_app/data/db/user_db.dart';
 export 'package:geomath_app/data/model/user_model.dart';
+export 'package:geomath_app/data/model/videos_model.dart';
 export 'package:geomath_app/module/auth/sign_in/controller/sign_in_controller.dart';
 export 'package:geomath_app/module/auth/sign_in/view/sign_in_view.dart';
 export 'package:geomath_app/module/auth/sign_up/data_akun/controller/data_akun_controller.dart';
