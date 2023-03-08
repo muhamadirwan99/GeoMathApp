@@ -1,22 +1,61 @@
-import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class DetailVideoPembelajaranView extends StatefulWidget {
   VideosResult video;
+
   DetailVideoPembelajaranView({Key? key, required this.video})
       : super(key: key);
 
-  Widget build(context, DetailVideoPembelajaranController controller) {
-    controller.view = this;
+  @override
+  State<DetailVideoPembelajaranView> createState() =>
+      _DetailVideoPembelajaranViewState();
+}
+
+class _DetailVideoPembelajaranViewState
+    extends State<DetailVideoPembelajaranView> {
+  late YoutubePlayerController ytController;
+
+  @override
+  void initState() {
+    super.initState();
+
+    var url = widget.video.linkVideo;
+
+    ytController = YoutubePlayerController(
+      initialVideoId: YoutubePlayer.convertUrlToId(url)!,
+      flags: const YoutubePlayerFlags(
+        mute: false,
+        loop: false,
+        autoPlay: true,
+      ),
+    );
+  }
+
+  @override
+  void deactivate() {
+    ytController.pause();
+
+    super.deactivate();
+  }
+
+  @override
+  void dispose() {
+    ytController.dispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     bool statusMateri = false;
 
-    if (video.kdVideo == "1") {
+    if (widget.video.kdVideo == "1") {
       statusMateri = true;
     }
-
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -81,82 +120,79 @@ class DetailVideoPembelajaranView extends StatefulWidget {
           ),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.only(bottom: 38),
-        child: SingleChildScrollView(
-          controller: ScrollController(),
-          child: Container(
-            color: primaryPurple,
+      body: YoutubePlayerBuilder(
+        player: YoutubePlayer(
+          controller: ytController,
+        ),
+        builder: (context, player) => Padding(
+          padding: const EdgeInsets.only(bottom: 38),
+          child: SingleChildScrollView(
+            controller: ScrollController(),
             child: Container(
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(16),
-                  topRight: Radius.circular(16),
+              color: primaryPurple,
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(16),
+                    topRight: Radius.circular(16),
+                  ),
+                  color: neutral50,
                 ),
-                color: neutral50,
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 32,
-                  horizontal: 24,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width,
-                      child: ClipRRect(
-                        borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(12),
-                          bottomLeft: Radius.circular(12),
-                        ),
-                        child: FancyShimmerImage(
-                          imageUrl: "https://i.ibb.co/sym6ybs/Limas1.png",
-                          boxFit: BoxFit.fitWidth,
-                          height: 214,
-                        ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 32,
+                    horizontal: 24,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: player,
                       ),
-                    ),
-                    const SizedBox(
-                      height: 24.0,
-                    ),
-                    Text(
-                      video.title,
-                      style: semiBold20.copyWith(color: neutral900),
-                    ),
-                    const SizedBox(
-                      height: 16.0,
-                    ),
-                    Text(
-                      video.desc,
-                      style: reguler16.copyWith(color: neutral900, height: 1.5),
-                    ),
-                    const SizedBox(
-                      height: 16.0,
-                    ),
-                    Text(
-                      "Rumus",
-                      style: semiBold20.copyWith(color: neutral900),
-                    ),
-                    const SizedBox(
-                      height: 16.0,
-                    ),
-                    ListView.builder(
-                      itemCount: video.rumus.length,
-                      shrinkWrap: true,
-                      physics: const ScrollPhysics(),
-                      itemBuilder: (BuildContext context, int index) {
-                        return Column(
-                          children: [
-                            ContainerRumus(value: video.rumus[index]),
-                            const SizedBox(
-                              height: 16.0,
-                            ),
-                          ],
-                        );
-                      },
-                    ),
-                  ],
+                      const SizedBox(
+                        height: 24.0,
+                      ),
+                      Text(
+                        widget.video.title,
+                        style: semiBold20.copyWith(color: neutral900),
+                      ),
+                      const SizedBox(
+                        height: 16.0,
+                      ),
+                      Text(
+                        widget.video.desc,
+                        style:
+                            reguler16.copyWith(color: neutral900, height: 1.5),
+                      ),
+                      const SizedBox(
+                        height: 16.0,
+                      ),
+                      Text(
+                        "Rumus",
+                        style: semiBold20.copyWith(color: neutral900),
+                      ),
+                      const SizedBox(
+                        height: 16.0,
+                      ),
+                      ListView.builder(
+                        itemCount: widget.video.rumus.length,
+                        shrinkWrap: true,
+                        physics: const ScrollPhysics(),
+                        itemBuilder: (BuildContext context, int index) {
+                          return Column(
+                            children: [
+                              ContainerRumus(value: widget.video.rumus[index]),
+                              const SizedBox(
+                                height: 16.0,
+                              ),
+                            ],
+                          );
+                        },
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -165,8 +201,4 @@ class DetailVideoPembelajaranView extends StatefulWidget {
       ),
     );
   }
-
-  @override
-  State<DetailVideoPembelajaranView> createState() =>
-      DetailVideoPembelajaranController();
 }

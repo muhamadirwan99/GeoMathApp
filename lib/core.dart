@@ -46,7 +46,6 @@ export 'package:geomath_app/module/profil/widget/content_app_bar.dart';
 export 'package:geomath_app/module/profil/widget/content_card_data_diri.dart';
 export 'package:geomath_app/module/sign_up/controller/sign_up_controller.dart';
 export 'package:geomath_app/module/sign_up/view/sign_up_view.dart';
-export 'package:geomath_app/module/video/detail_video_pembelajaran/controller/detail_video_pembelajaran_controller.dart';
 export 'package:geomath_app/module/video/detail_video_pembelajaran/view/detail_video_pembelajaran_view.dart';
 export 'package:geomath_app/module/video/limas/daftar_limas/controller/daftar_limas_controller.dart';
 export 'package:geomath_app/module/video/limas/daftar_limas/view/daftar_limas_view.dart';

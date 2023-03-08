@@ -44,7 +44,11 @@ class DaftarLimasView extends StatefulWidget {
             VideosResult video = VideosResult.fromJson(data[index]);
 
             return CardVideo(
-              onTap: () {},
+              onTap: () {
+                Get.to(
+                  DetailVideoPembelajaranView(video: video),
+                );
+              },
               imgUrl: video.thumbnail,
               title: video.title,
               desc: video.desc,
