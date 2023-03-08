@@ -7,20 +7,28 @@ class DaftarLimasView extends StatefulWidget {
   Widget build(context, DaftarLimasController controller) {
     controller.view = this;
 
-    return ListView.builder(
-      itemCount: 3,
-      physics: const ScrollPhysics(),
-      shrinkWrap: true,
-      padding: const EdgeInsets.symmetric(horizontal: 24),
-      itemBuilder: (BuildContext context, int index) {
-        return CardVideo(
-          onTap: () {
-            Get.to(const DetailPrismaView());
+    return StreamBuilder(
+      stream: controller.limas,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        if (!snapshot.hasData) {
+          return const Text('Please Wait');
+        }
+        final data = snapshot.data.docs.map((doc) => doc.data()).toList();
+        return ListView.builder(
+          itemCount: data.length,
+          shrinkWrap: true,
+          physics: const ScrollPhysics(),
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          itemBuilder: (context, index) {
+            VideosResult video = VideosResult.fromJson(data[index]);
+
+            return CardVideo(
+              onTap: () {},
+              imgUrl: video.thumbnail,
+              title: video.title,
+              desc: video.desc,
+            );
           },
-          imgUrl: "https://i.ibb.co/sym6ybs/Limas1.png",
-          title: "Matematika Dasar : Pendahuluan Limas",
-          desc:
-              "Video ini menceritakan mengenai pengenalan bentuk limas dalam BAB Geometri.",
         );
       },
     );

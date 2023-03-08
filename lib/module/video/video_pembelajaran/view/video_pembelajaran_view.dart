@@ -78,8 +78,8 @@ class VideoPembelajaranView extends StatefulWidget {
             const Expanded(
               child: TabBarView(
                 children: [
-                  DaftarLimasView(),
                   DaftarPrismaView(),
+                  DaftarLimasView(),
                 ],
               ),
             ),
