@@ -28,8 +28,26 @@ class MenuNavView extends StatefulWidget {
           type: BottomNavigationBarType.fixed,
           currentIndex: controller.currentIndex,
           onTap: (index) {
-            controller.currentIndex = index;
-            controller.update();
+            switch (index) {
+              case 0:
+                controller.currentIndex = index;
+                controller.update();
+                break;
+              case 1:
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const EvaluasiView()),
+                );
+                break;
+              case 2:
+                controller.currentIndex = index;
+                controller.update();
+                break;
+              case 3:
+                controller.currentIndex = index;
+                controller.update();
+                break;
+            }
           },
           selectedLabelStyle: semiBold10.copyWith(color: primaryPurple),
           unselectedLabelStyle: reguler10.copyWith(color: neutral200),
