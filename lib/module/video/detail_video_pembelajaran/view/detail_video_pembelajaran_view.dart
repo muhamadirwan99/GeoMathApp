@@ -11,6 +11,11 @@ class DetailVideoPembelajaranView extends StatefulWidget {
 
   Widget build(context, DetailVideoPembelajaranController controller) {
     controller.view = this;
+    bool statusMateri = false;
+
+    if (video.kdVideo == "1") {
+      statusMateri = true;
+    }
 
     return Scaffold(
       appBar: AppBar(
@@ -50,7 +55,7 @@ class DetailVideoPembelajaranView extends StatefulWidget {
               ),
             ),
             onPressed: () {
-              // Get.to(const LatihanLimasView());
+              statusMateri ? Get.to(const LatihanLimasView()) : () {};
             },
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 12),
@@ -136,13 +141,21 @@ class DetailVideoPembelajaranView extends StatefulWidget {
                     const SizedBox(
                       height: 16.0,
                     ),
-                    const ContainerRumus(
-                        value: "Volume : ⅓ x luas alas x tinggi"),
-                    const SizedBox(
-                      height: 16.0,
+                    ListView.builder(
+                      itemCount: video.rumus.length,
+                      shrinkWrap: true,
+                      physics: const ScrollPhysics(),
+                      itemBuilder: (BuildContext context, int index) {
+                        return Column(
+                          children: [
+                            ContainerRumus(value: video.rumus[index]),
+                            const SizedBox(
+                              height: 16.0,
+                            ),
+                          ],
+                        );
+                      },
                     ),
-                    const ContainerRumus(
-                        value: "LP : Luas alas + jumlah luas sisi tegak"),
                   ],
                 ),
               ),
