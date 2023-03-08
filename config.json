@@ -14,6 +14,7 @@
         "video/limas/daftar_limas",
         "video/limas/detail_limas",
         "video/video_pembelajaran",
+        "video/detail_video_pembelajaran",
         "evaluasi",
         "informasi",
         "profil",
