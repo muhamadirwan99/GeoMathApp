@@ -56,7 +56,9 @@ class MainEvaluasiView extends StatefulWidget {
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Get.to(const SoalEvaluasiView());
+              },
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 12),
                 child: Row(
