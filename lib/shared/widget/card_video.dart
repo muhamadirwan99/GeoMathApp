@@ -62,6 +62,8 @@ class _CardVideoState extends State<CardVideo> {
                     ),
                     Text(
                       widget.desc,
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis,
                       style: reguler12.copyWith(color: neutral600),
                     )
                   ],
