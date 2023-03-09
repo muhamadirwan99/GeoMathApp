@@ -3,10 +3,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 
-class EvaluasiView extends StatefulWidget {
-  const EvaluasiView({Key? key}) : super(key: key);
+class MainEvaluasiView extends StatefulWidget {
+  const MainEvaluasiView({Key? key}) : super(key: key);
 
-  Widget build(context, EvaluasiController controller) {
+  Widget build(context, MainEvaluasiController controller) {
     controller.view = this;
 
     return Scaffold(
@@ -84,5 +84,5 @@ class EvaluasiView extends StatefulWidget {
   }
 
   @override
-  State<EvaluasiView> createState() => EvaluasiController();
+  State<MainEvaluasiView> createState() => MainEvaluasiController();
 }

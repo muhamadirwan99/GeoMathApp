@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:geomath_app/state_util.dart';
-import '../view/evaluasi_view.dart';
+import '../view/soal_evaluasi_view.dart';
 
-class EvaluasiController extends State<EvaluasiView> implements MvcController {
-  static late EvaluasiController instance;
-  late EvaluasiView view;
+class SoalEvaluasiController extends State<SoalEvaluasiView> implements MvcController {
+  static late SoalEvaluasiController instance;
+  late SoalEvaluasiView view;
 
   @override
   void initState() {

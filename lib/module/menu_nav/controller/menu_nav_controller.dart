@@ -8,7 +8,7 @@ class MenuNavController extends State<MenuNavView> implements MvcController {
   int currentIndex = 0;
   List<Widget> screens = [
     const BerandaView(),
-    const EvaluasiView(),
+    const MainEvaluasiView(),
     const InformasiView(),
     const ProfilView(),
   ];

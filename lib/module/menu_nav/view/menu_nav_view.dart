@@ -36,7 +36,8 @@ class MenuNavView extends StatefulWidget {
               case 1:
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const EvaluasiView()),
+                  MaterialPageRoute(
+                      builder: (context) => const MainEvaluasiView()),
                 );
                 break;
               case 2:
