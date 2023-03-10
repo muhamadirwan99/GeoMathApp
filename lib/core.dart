@@ -43,6 +43,14 @@ export 'package:geomath_app/module/materi/limas/rumus_limas/controller/rumus_lim
 export 'package:geomath_app/module/materi/limas/rumus_limas/view/rumus_limas_view.dart';
 export 'package:geomath_app/module/materi/limas/rumus_limas/widget/container_rumus.dart';
 export 'package:geomath_app/module/materi/limas/rumus_limas/widget/content_rumus_limas.dart';
+export 'package:geomath_app/module/materi/prisma/bagian_prisma/controller/bagian_prisma_controller.dart';
+export 'package:geomath_app/module/materi/prisma/bagian_prisma/view/bagian_prisma_view.dart';
+export 'package:geomath_app/module/materi/prisma/jaring_prisma/controller/jaring_prisma_controller.dart';
+export 'package:geomath_app/module/materi/prisma/jaring_prisma/view/jaring_prisma_view.dart';
+export 'package:geomath_app/module/materi/prisma/latihan_prisma/controller/latihan_prisma_controller.dart';
+export 'package:geomath_app/module/materi/prisma/latihan_prisma/view/latihan_prisma_view.dart';
+export 'package:geomath_app/module/materi/prisma/rumus_prisma/controller/rumus_prisma_controller.dart';
+export 'package:geomath_app/module/materi/prisma/rumus_prisma/view/rumus_prisma_view.dart';
 export 'package:geomath_app/module/menu_nav/controller/menu_nav_controller.dart';
 export 'package:geomath_app/module/menu_nav/view/menu_nav_view.dart';
 export 'package:geomath_app/module/profil/controller/profil_controller.dart';
