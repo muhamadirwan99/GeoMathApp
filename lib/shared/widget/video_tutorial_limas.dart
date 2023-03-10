@@ -120,6 +120,8 @@ class _VideoTutorialLimasState extends State<VideoTutorialLimas> {
                               children: [
                                 Text(
                                   video.title,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
                                   style: semiBold10.copyWith(color: neutral900),
                                 ),
                                 const SizedBox(
