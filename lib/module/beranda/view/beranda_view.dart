@@ -180,7 +180,7 @@ class BerandaView extends StatefulWidget {
                               .toList();
 
                           return ListView.builder(
-                            itemCount: data.length,
+                            itemCount: 5,
                             shrinkWrap: true,
                             physics: const ScrollPhysics(),
                             padding: const EdgeInsets.symmetric(horizontal: 23),

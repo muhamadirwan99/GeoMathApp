@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
+import 'package:lottie/lottie.dart';
 
 class MainEvaluasiView extends StatefulWidget {
   const MainEvaluasiView({Key? key}) : super(key: key);
@@ -35,6 +36,10 @@ class MainEvaluasiView extends StatefulWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Spacer(),
+            Lottie.asset('assets/json/evaluasi.json'),
+            const SizedBox(
+              height: 48.0,
+            ),
             Text(
               "Apakah Anda siap?",
               style: semiBold32.copyWith(color: neutral50),

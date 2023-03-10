@@ -4,6 +4,7 @@ If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
 export 'package:geomath_app/data/db/user_db.dart';
+export 'package:geomath_app/data/model/question_model.dart';
 export 'package:geomath_app/data/model/user_model.dart';
 export 'package:geomath_app/data/model/videos_model.dart';
 export 'package:geomath_app/module/auth/sign_in/controller/sign_in_controller.dart';
@@ -24,6 +25,7 @@ export 'package:geomath_app/module/evaluasi/ringkasan_evaluasi/controller/ringka
 export 'package:geomath_app/module/evaluasi/ringkasan_evaluasi/view/ringkasan_evaluasi_view.dart';
 export 'package:geomath_app/module/evaluasi/soal_evaluasi/controller/soal_evaluasi_controller.dart';
 export 'package:geomath_app/module/evaluasi/soal_evaluasi/view/soal_evaluasi_view.dart';
+export 'package:geomath_app/module/evaluasi/soal_evaluasi/widget/button_soal.dart';
 export 'package:geomath_app/module/informasi/controller/informasi_controller.dart';
 export 'package:geomath_app/module/informasi/view/informasi_view.dart';
 export 'package:geomath_app/module/informasi/widget/content_petunjuk.dart';
@@ -63,6 +65,7 @@ export 'package:geomath_app/module/video/prisma/detail_prisma/controller/detail_
 export 'package:geomath_app/module/video/prisma/detail_prisma/view/detail_prisma_view.dart';
 export 'package:geomath_app/module/video/video_pembelajaran/controller/video_pembelajaran_controller.dart';
 export 'package:geomath_app/module/video/video_pembelajaran/view/video_pembelajaran_view.dart';
+export 'package:geomath_app/services/api_service.dart';
 export 'package:geomath_app/services/db_service.dart';
 export 'package:geomath_app/shared/widget/button_filled.dart';
 export 'package:geomath_app/shared/widget/button_outline.dart';
@@ -70,6 +73,10 @@ export 'package:geomath_app/shared/widget/card_video.dart';
 export 'package:geomath_app/shared/widget/fab_materi_limas.dart';
 export 'package:geomath_app/shared/widget/form_base.dart';
 export 'package:geomath_app/shared/widget/form_password.dart';
+export 'package:geomath_app/shared/widget/next_button.dart';
+export 'package:geomath_app/shared/widget/option_card.dart';
+export 'package:geomath_app/shared/widget/question_widget.dart';
+export 'package:geomath_app/shared/widget/result_box.dart';
 export 'package:geomath_app/shared/widget/text_daftar_isi.dart';
 export 'package:geomath_app/shared/widget/text_number.dart';
 export 'package:geomath_app/shared/widget/video_tutorial_limas.dart';

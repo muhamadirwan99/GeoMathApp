@@ -70,6 +70,10 @@ final TextStyle semiBold40 = GoogleFonts.inter(
   fontWeight: FontWeight.w600,
 );
 
+const Color correct = Color(0xFF32AB58);
+// set color for incorrect answer
+const Color incorrect = Color(0xFFAB3232);
+
 //Primary Pallete
 const Color primaryPurple = Color(0xff5C3FCB);
 const Color primaryYellow = Color(0xffF9C14C);
