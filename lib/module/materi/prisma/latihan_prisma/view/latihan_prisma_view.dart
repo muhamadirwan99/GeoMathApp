@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
-import '../controller/latihan_prisma_controller.dart';
 
 class LatihanPrismaView extends StatefulWidget {
   const LatihanPrismaView({Key? key}) : super(key: key);
@@ -10,14 +11,155 @@ class LatihanPrismaView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("LatihanPrisma"),
-        actions: const [],
+        elevation: 0,
+        title: Text(
+          "Latihan",
+          style: semiBold24.copyWith(
+            color: neutral100,
+          ),
+        ),
+        leading: IconButton(
+          icon: SvgPicture.asset(
+            "assets/icon/update/left.svg",
+            color: neutral50,
+          ),
+          onPressed: () {
+            Get.back();
+          },
+        ),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: const [],
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: const FabEvaluasiLimas(),
+      body: Padding(
+        padding: const EdgeInsets.only(bottom: 38),
+        child: SingleChildScrollView(
+          controller: ScrollController(),
+          child: Container(
+            color: primaryPurple,
+            child: Container(
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(16),
+                  topRight: Radius.circular(16),
+                ),
+                color: neutral50,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 32,
+                  horizontal: 24,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: Image.asset(
+                        "assets/materi/latihan_prisma.png",
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 32.0,
+                    ),
+                    Text(
+                      "Contoh Soal Volume Prisma Segiempat",
+                      style: semiBold20.copyWith(color: neutral900),
+                    ),
+                    const SizedBox(
+                      height: 16.0,
+                    ),
+                    Text(
+                      "Tentukan luas permukaan dan volume prisma tersebut.",
+                      style: reguler16.copyWith(color: neutral900),
+                    ),
+                    const SizedBox(
+                      height: 16.0,
+                    ),
+                    Text(
+                      "Pembahasan",
+                      style: semiBold20.copyWith(color: neutral900),
+                    ),
+                    const SizedBox(
+                      height: 8.0,
+                    ),
+                    Text(
+                      "Rumus:",
+                      style: reguler16.copyWith(color: neutral900),
+                    ),
+                    const SizedBox(
+                      height: 8.0,
+                    ),
+                    const ContainerRumus(
+                        value:
+                            "Luas permukaan = (2 x luas alas) + (keliling alas x tinggi)"),
+                    const SizedBox(
+                      height: 8.0,
+                    ),
+                    Text(
+                      '''
+Luas alas = ½ x alas x tinggi 
+Luas alas = ½ x 6 x 4 
+Luas alas = 12 cm persegi.
+
+Keliling alas = 6 + 5 + 5 
+Keliling alas = 16 cm.
+
+Jadi, LP= (2 x 12) + (16 x 12) 
+LP = 24 + 192 
+LP = 216 cm persegi.
+              ''',
+                      style: reguler16.copyWith(color: neutral900),
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      decoration: const BoxDecoration(
+                        color: blue50,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(
+                            8,
+                          ),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          vertical: 16,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Center(
+                              child: Text(
+                                "Volume prisma = Luas alas x tinggi",
+                                style: semiBold16.copyWith(
+                                  color: neutral900,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 8.0,
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 24),
+                              child: Text(
+                                '''
+V = 12 x 12 
+V = 144 cm3
+                                  ''',
+                                style: reguler16.copyWith(color: neutral900),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 36.0,
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         ),
       ),

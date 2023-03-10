@@ -207,6 +207,9 @@ class BerandaView extends StatefulWidget {
                           );
                         },
                       ),
+                      const SizedBox(
+                        height: 24.0,
+                      ),
                     ],
                   ),
                 )
