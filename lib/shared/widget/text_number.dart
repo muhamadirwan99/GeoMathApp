@@ -24,7 +24,7 @@ class _TextNumberState extends State<TextNumber> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
-          width: 16,
+          width: 20,
           child: Text(
             widget.number,
             style: reguler16.copyWith(color: neutral900),

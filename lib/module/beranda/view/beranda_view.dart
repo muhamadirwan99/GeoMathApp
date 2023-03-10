@@ -94,8 +94,13 @@ class BerandaView extends StatefulWidget {
                         child: Row(
                           children: [
                             Expanded(
-                              child: Image.asset(
-                                "assets/illustration/prisma.png",
+                              child: InkWell(
+                                onTap: () {
+                                  Get.to(const BagianPrismaView());
+                                },
+                                child: Image.asset(
+                                  "assets/illustration/prisma.png",
+                                ),
                               ),
                             ),
                             const SizedBox(

@@ -52,7 +52,7 @@ class BagianLimasView extends StatefulWidget {
               ),
               child: Column(
                 children: const [
-                  ContentBagianLimas(),
+                  ContentBagianPrisma(),
                   SizedBox(
                     height: 24.0,
                   ),
