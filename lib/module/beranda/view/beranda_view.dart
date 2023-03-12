@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
@@ -8,7 +9,6 @@ class BerandaView extends StatefulWidget {
 
   Widget build(context, BerandaController controller) {
     controller.view = this;
-    controller.getDataUser();
 
     return Scaffold(
       body: CustomScrollView(
@@ -27,14 +27,26 @@ class BerandaView extends StatefulWidget {
                 bottomRight: Radius.circular(32),
               ),
             ),
-            title: Padding(
-              padding: const EdgeInsets.only(left: 5),
-              child: Text(
-                "Hi, ${controller.nama} 👋",
-                style: semiBold24.copyWith(
-                  color: neutral100,
-                ),
-              ),
+            title: FutureBuilder<DocumentSnapshot>(
+              future: controller.user,
+              builder: (BuildContext context,
+                  AsyncSnapshot<DocumentSnapshot> snapshot) {
+                if (snapshot.connectionState == ConnectionState.done) {
+                  Map<String, dynamic> data =
+                      snapshot.data!.data() as Map<String, dynamic>;
+
+                  return Padding(
+                    padding: const EdgeInsets.only(left: 5),
+                    child: Text(
+                      "Hi, ${data["nama"]} 👋",
+                      style: semiBold24.copyWith(
+                        color: neutral100,
+                      ),
+                    ),
+                  );
+                }
+                return Container();
+              },
             ),
             flexibleSpace: Stack(
               children: <Widget>[

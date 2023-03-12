@@ -8,22 +8,18 @@ class BerandaController extends State<BerandaView> implements MvcController {
   static late BerandaController instance;
   late BerandaView view;
 
-  User? id = FirebaseAuth.instance.currentUser;
   String nama = "";
 
   dynamic videos = FirebaseFirestore.instance.collection("videos").snapshots();
-
-  getDataUser() async {
-    var user =
-        await FirebaseFirestore.instance.collection("users").doc(id?.uid).get();
-    nama = user.data()!["nama"];
-
-    update();
-  }
+  dynamic user = FirebaseFirestore.instance
+      .collection("users")
+      .doc(FirebaseAuth.instance.currentUser?.uid)
+      .get();
 
   @override
   void initState() {
     instance = this;
+
     super.initState();
   }
 
