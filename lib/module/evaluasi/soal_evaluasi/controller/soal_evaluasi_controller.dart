@@ -28,7 +28,7 @@ class SoalEvaluasiController extends State<SoalEvaluasiView>
       // this is the block where the questions end.
       print("score");
       print(score);
-      Get.to(const HasilEvaluasiView());
+      Get.to(const RingkasanEvaluasiView());
       // showDialog(
       //     context: context,
       //     barrierDismissible:

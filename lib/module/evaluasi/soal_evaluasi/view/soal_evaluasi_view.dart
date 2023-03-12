@@ -1,3 +1,4 @@
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:geomath_app/common/style.dart';
@@ -22,7 +23,7 @@ class SoalEvaluasiView extends StatefulWidget {
             var extractedData = snapshot.data as List<Question>;
             return Scaffold(
               // change the background
-              backgroundColor: neutral100,
+              backgroundColor: neutral50,
               appBar: AppBar(
                 title: const Text("Kembali"),
                 leading: IconButton(
@@ -34,6 +35,7 @@ class SoalEvaluasiView extends StatefulWidget {
                     Get.back();
                   },
                 ),
+                elevation: 0,
                 actions: [
                   Padding(
                     padding: const EdgeInsets.only(
@@ -54,7 +56,7 @@ class SoalEvaluasiView extends StatefulWidget {
               floatingActionButton: Container(
                 color: neutral50,
                 padding: const EdgeInsets.symmetric(
-                  vertical: 32,
+                  vertical: 20,
                   horizontal: 40,
                 ),
                 child: SizedBox(
@@ -91,6 +93,7 @@ class SoalEvaluasiView extends StatefulWidget {
                   ),
                 ),
               ),
+
               body: SingleChildScrollView(
                 child: Container(
                   color: primaryPurple,
@@ -109,9 +112,13 @@ class SoalEvaluasiView extends StatefulWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Image.network(
-                            extractedData[controller.index].image,
+                          FancyShimmerImage(
+                            imageUrl: extractedData[controller.index].image,
+                            boxFit: BoxFit.fitHeight,
+                            height: 250,
+                            width: MediaQuery.of(context).size.width,
                           ),
+
                           Text(
                             extractedData[controller.index].title,
                             style: reguler16.copyWith(

@@ -23,6 +23,7 @@ export 'package:geomath_app/module/evaluasi/main_evaluasi/controller/main_evalua
 export 'package:geomath_app/module/evaluasi/main_evaluasi/view/main_evaluasi_view.dart';
 export 'package:geomath_app/module/evaluasi/ringkasan_evaluasi/controller/ringkasan_evaluasi_controller.dart';
 export 'package:geomath_app/module/evaluasi/ringkasan_evaluasi/view/ringkasan_evaluasi_view.dart';
+export 'package:geomath_app/module/evaluasi/ringkasan_evaluasi/widget/container_number.dart';
 export 'package:geomath_app/module/evaluasi/soal_evaluasi/controller/soal_evaluasi_controller.dart';
 export 'package:geomath_app/module/evaluasi/soal_evaluasi/view/soal_evaluasi_view.dart';
 export 'package:geomath_app/module/evaluasi/soal_evaluasi/widget/button_soal.dart';
