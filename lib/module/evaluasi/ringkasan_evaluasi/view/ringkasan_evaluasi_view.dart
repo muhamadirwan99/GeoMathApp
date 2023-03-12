@@ -5,7 +5,9 @@ import 'package:geomath_app/core.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class RingkasanEvaluasiView extends StatefulWidget {
-  const RingkasanEvaluasiView({Key? key}) : super(key: key);
+  int questionLength;
+  RingkasanEvaluasiView({Key? key, required this.questionLength})
+      : super(key: key);
 
   Widget build(context, RingkasanEvaluasiController controller) {
     controller.view = this;
@@ -96,25 +98,19 @@ class RingkasanEvaluasiView extends StatefulWidget {
                   const SizedBox(
                     height: 24.0,
                   ),
-                  const ContainerNumber(value: "No. 1"),
-                  const SizedBox(
-                    height: 16.0,
-                  ),
-                  const ContainerNumber(value: "No. 2"),
-                  const SizedBox(
-                    height: 16.0,
-                  ),
-                  const ContainerNumber(value: "No. 3"),
-                  const SizedBox(
-                    height: 16.0,
-                  ),
-                  const ContainerNumber(value: "No. 4"),
-                  const SizedBox(
-                    height: 16.0,
-                  ),
-                  const ContainerNumber(value: "No. 5"),
-                  const SizedBox(
-                    height: 24.0,
+                  ListView.builder(
+                    itemCount: questionLength,
+                    shrinkWrap: true,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Column(
+                        children: [
+                          ContainerNumber(value: "No. ${index + 1}"),
+                          const SizedBox(
+                            height: 16.0,
+                          ),
+                        ],
+                      );
+                    },
                   ),
                   Row(
                     children: [

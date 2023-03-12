@@ -26,9 +26,10 @@ class SoalEvaluasiController extends State<SoalEvaluasiView>
   void nextQuestion(int questionLength) {
     if (index == questionLength - 1) {
       // this is the block where the questions end.
-      print("score");
-      print(score);
-      Get.to(const RingkasanEvaluasiView());
+      print("questionLength");
+      print(questionLength);
+
+      Get.to(RingkasanEvaluasiView(questionLength: questionLength));
       // showDialog(
       //     context: context,
       //     barrierDismissible:
