@@ -29,7 +29,12 @@ class SoalEvaluasiController extends State<SoalEvaluasiView>
       print("questionLength");
       print(questionLength);
 
-      Get.to(RingkasanEvaluasiView(questionLength: questionLength));
+      Get.to(
+        RingkasanEvaluasiView(
+          questionLength: questionLength,
+          questionRight: score,
+        ),
+      );
       // showDialog(
       //     context: context,
       //     barrierDismissible:

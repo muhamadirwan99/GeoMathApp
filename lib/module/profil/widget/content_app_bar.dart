@@ -2,13 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:geomath_app/common/style.dart';
-import 'package:geomath_app/core.dart';
 
 class ContentAppBar extends StatefulWidget {
-  ProfilController controller;
+  Map<String, dynamic> data;
   ContentAppBar({
     Key? key,
-    required this.controller,
+    required this.data,
   }) : super(key: key);
 
   @override
@@ -46,7 +45,7 @@ class _ContentAppBarState extends State<ContentAppBar> {
                       children: [
                         Expanded(
                           child: Text(
-                            widget.controller.nama,
+                            widget.data["nama"],
                             style: semiBold24.copyWith(
                               color: neutral50,
                             ),
@@ -57,7 +56,7 @@ class _ContentAppBarState extends State<ContentAppBar> {
                         ),
                         Expanded(
                           child: Text(
-                            widget.controller.nis,
+                            widget.data["nis"],
                             style: reguler16.copyWith(
                               color: neutral50,
                             ),

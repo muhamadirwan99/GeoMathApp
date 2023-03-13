@@ -6,11 +6,11 @@ import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 
 class CardDataDiri extends StatefulWidget {
-  ProfilController controller;
+  Map<String, dynamic> data;
 
   CardDataDiri({
     Key? key,
-    required this.controller,
+    required this.data,
   }) : super(key: key);
 
   @override
@@ -42,15 +42,15 @@ class _CardDataDiriState extends State<CardDataDiri> {
             ),
           ),
           ContentCardDataDiri(
-            value: widget.controller.kelas,
+            value: widget.data["kelas"],
             icon: "assets/icon/update/class.svg",
           ),
           ContentCardDataDiri(
-            value: widget.controller.noTel,
+            value: widget.data["noTel"],
             icon: "assets/icon/update/whatsapp_circle.svg",
           ),
           ContentCardDataDiri(
-            value: widget.controller.email,
+            value: widget.data["email"],
             icon: "assets/icon/update/mail_circle.svg",
           ),
           const SizedBox(

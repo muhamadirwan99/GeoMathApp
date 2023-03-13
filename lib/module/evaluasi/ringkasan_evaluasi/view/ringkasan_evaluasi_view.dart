@@ -5,9 +5,12 @@ import 'package:geomath_app/core.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class RingkasanEvaluasiView extends StatefulWidget {
-  int questionLength;
-  RingkasanEvaluasiView({Key? key, required this.questionLength})
-      : super(key: key);
+  int questionLength, questionRight;
+  RingkasanEvaluasiView({
+    Key? key,
+    required this.questionLength,
+    required this.questionRight,
+  }) : super(key: key);
 
   Widget build(context, RingkasanEvaluasiController controller) {
     controller.view = this;
@@ -44,7 +47,12 @@ class RingkasanEvaluasiView extends StatefulWidget {
               ),
             ),
             onPressed: () {
-              Get.offAll(const HasilEvaluasiView());
+              Get.offAll(
+                HasilEvaluasiView(
+                  questionLength: questionLength,
+                  questionRight: questionRight,
+                ),
+              );
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,

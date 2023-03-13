@@ -1,14 +1,17 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:geomath_app/state_util.dart';
-import '../view/profil_view.dart';
+import 'package:geomath_app/core.dart';
 
 class ProfilController extends State<ProfilView> implements MvcController {
   static late ProfilController instance;
   late ProfilView view;
 
   User? id = FirebaseAuth.instance.currentUser;
+  dynamic user = FirebaseFirestore.instance
+      .collection("users")
+      .doc(FirebaseAuth.instance.currentUser?.uid)
+      .get();
   String nama = "";
   String kelas = "";
   String nis = "";
@@ -24,6 +27,11 @@ class ProfilController extends State<ProfilView> implements MvcController {
     noTel = user.data()!["noTel"];
     email = user.data()!["email"];
     update();
+  }
+
+  Future<void> signOut() async {
+    await FirebaseAuth.instance.signOut();
+    Get.offAll(const SignInView());
   }
 
   @override

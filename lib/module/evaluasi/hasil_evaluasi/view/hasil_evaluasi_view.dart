@@ -6,10 +6,17 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class HasilEvaluasiView extends StatefulWidget {
-  const HasilEvaluasiView({Key? key}) : super(key: key);
+  int questionRight, questionLength;
+  HasilEvaluasiView({
+    Key? key,
+    required this.questionRight,
+    required this.questionLength,
+  }) : super(key: key);
 
   Widget build(context, HasilEvaluasiController controller) {
     controller.view = this;
+
+    double percent = questionRight / questionLength;
 
     return Scaffold(
       backgroundColor: neutral50,
@@ -109,7 +116,7 @@ class HasilEvaluasiView extends StatefulWidget {
                       CircularPercentIndicator(
                         radius: 100.0,
                         lineWidth: 25.0,
-                        percent: 1,
+                        percent: percent,
                         center: CircleAvatar(
                           radius: 55.0,
                           backgroundColor: blue50,
@@ -117,7 +124,7 @@ class HasilEvaluasiView extends StatefulWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                "100",
+                                "${(percent * 100).round()}",
                                 style: semiBold32.copyWith(color: neutral800),
                               ),
                               Text(
@@ -128,7 +135,7 @@ class HasilEvaluasiView extends StatefulWidget {
                             ],
                           ),
                         ),
-                        backgroundColor: Colors.grey,
+                        backgroundColor: neutral50,
                         progressColor: primaryYellow,
                       ),
                     ],
@@ -177,7 +184,7 @@ class HasilEvaluasiView extends StatefulWidget {
                               height: 8.0,
                             ),
                             Text(
-                              "5 Pertanyaan",
+                              "$questionRight Pertanyaan",
                               style: semiBold20.copyWith(color: neutral800),
                             ),
                           ],
@@ -223,7 +230,7 @@ class HasilEvaluasiView extends StatefulWidget {
                               height: 8.0,
                             ),
                             Text(
-                              "100%",
+                              "${(percent * 100).round()}%",
                               style: semiBold20.copyWith(color: neutral800),
                             ),
                           ],
