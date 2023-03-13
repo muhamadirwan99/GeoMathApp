@@ -18,6 +18,15 @@ class ProfilController extends State<ProfilView> implements MvcController {
   String noTel = "";
   String email = "";
 
+  void handleClick(int item) {
+    switch (item) {
+      case 0:
+        FirebaseAuth.instance.signOut();
+        Get.offAll(const SignInView());
+        break;
+    }
+  }
+
   getDataUser() async {
     var user =
         await FirebaseFirestore.instance.collection("users").doc(id?.uid).get();

@@ -36,12 +36,12 @@ class ProfilView extends StatefulWidget {
                     },
                   ),
                   actions: [
-                    IconButton(
-                      icon: SvgPicture.asset(
-                        "assets/icon/update/triple_dot.svg",
-                        color: neutral50,
-                      ),
-                      onPressed: () {},
+                    PopupMenuButton<int>(
+                      onSelected: (item) => controller.handleClick(item),
+                      itemBuilder: (context) => [
+                        const PopupMenuItem<int>(
+                            value: 0, child: Text('Keluar')),
+                      ],
                     ),
                   ],
                   shape: const RoundedRectangleBorder(
