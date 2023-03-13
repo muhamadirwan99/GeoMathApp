@@ -23,6 +23,10 @@ class SoalEvaluasiController extends State<SoalEvaluasiView>
   bool isPressed = false;
   // create a function to display the next question
   bool isAlreadySelected = false;
+
+  bool answer = false;
+
+  String onSelected = "";
   void nextQuestion(int questionLength) {
     if (index == questionLength - 1) {
       // this is the block where the questions end.
@@ -61,21 +65,19 @@ class SoalEvaluasiController extends State<SoalEvaluasiView>
     }
   }
 
-  // create a function for changing color
-  void checkAnswerAndUpdate(bool value) {
-    print("value");
-    print(value);
-    if (isAlreadySelected) {
-      return;
-    } else {
-      if (value == true) {
-        score++;
-      }
-      setState(() {
-        isPressed = true;
-        isAlreadySelected = true;
-      });
+  void submitAnswer(bool value) {
+    if (value == true) {
+      score++;
     }
+  }
+
+  // create a function for changing color
+  void checkAnswerAndUpdate(bool value, String key) {
+    onSelected = key;
+    isPressed = true;
+    isAlreadySelected = true;
+    answer = value;
+    update();
   }
 
   // create a function to start over
