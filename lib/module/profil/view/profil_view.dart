@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:geomath_app/common/style.dart';
@@ -10,11 +9,10 @@ class ProfilView extends StatefulWidget {
   Widget build(context, ProfilController controller) {
     controller.view = this;
 
-    return FutureBuilder<DocumentSnapshot>(
-      future: controller.user,
-      builder:
-          (BuildContext context, AsyncSnapshot<DocumentSnapshot> snapshot) {
-        if (snapshot.connectionState == ConnectionState.done) {
+    return StreamBuilder(
+      stream: controller.user,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        if (snapshot.hasData) {
           Map<String, dynamic> data =
               snapshot.data!.data() as Map<String, dynamic>;
           return Scaffold(
@@ -34,7 +32,7 @@ class ProfilView extends StatefulWidget {
                       color: neutral50,
                     ),
                     onPressed: () {
-                      Get.back();
+                      Get.to(const MenuNavView());
                     },
                   ),
                   actions: [
@@ -81,7 +79,7 @@ class ProfilView extends StatefulWidget {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const CardStatus(),
+                                CardStatus(data: data),
                                 const SizedBox(
                                   height: 24.0,
                                 ),
@@ -96,11 +94,20 @@ class ProfilView extends StatefulWidget {
                                 const SizedBox(
                                   height: 8.0,
                                 ),
-                                InkWell(
-                                    onTap: () {
-                                      controller.signOut();
-                                    },
-                                    child: const CardEvaluasi()),
+                                data["riwayatEvaluasi"] != null
+                                    ? ListView.builder(
+                                        itemCount:
+                                            data["riwayatEvaluasi"].length,
+                                        shrinkWrap: true,
+                                        padding: const EdgeInsets.all(0),
+                                        itemBuilder:
+                                            (BuildContext context, int index) {
+                                          return CardEvaluasi(
+                                              data: data["riwayatEvaluasi"]
+                                                  [index]);
+                                        },
+                                      )
+                                    : Container(),
                               ],
                             ),
                           ),
@@ -113,6 +120,7 @@ class ProfilView extends StatefulWidget {
             ),
           );
         }
+
         return Container();
       },
     );

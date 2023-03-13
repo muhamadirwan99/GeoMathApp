@@ -102,8 +102,6 @@ class SignUpController extends State<SignnUpView> implements MvcController {
       loading = false;
       update();
 
-      print(user);
-
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text("Akun telah berhasil dibuat, silahkan login!"),

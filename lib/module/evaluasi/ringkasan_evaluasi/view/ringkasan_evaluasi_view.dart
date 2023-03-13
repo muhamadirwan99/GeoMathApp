@@ -1,8 +1,10 @@
+import 'package:easy_image_viewer/easy_image_viewer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 
 class RingkasanEvaluasiView extends StatefulWidget {
   int questionLength, questionRight;
@@ -47,6 +49,10 @@ class RingkasanEvaluasiView extends StatefulWidget {
               ),
             ),
             onPressed: () {
+              controller.submitData(
+                questionLength,
+                questionRight,
+              );
               Get.offAll(
                 HasilEvaluasiView(
                   questionLength: questionLength,
@@ -143,34 +149,91 @@ class RingkasanEvaluasiView extends StatefulWidget {
                   const SizedBox(
                     height: 16.0,
                   ),
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      children: [
-                        SvgPicture.asset(
-                          "assets/icon/update/add_plus.svg",
-                        ),
-                        const SizedBox(
-                          height: 8.0,
-                        ),
-                        Text(
-                          "klik untuk upload",
-                          style: semiBold14.copyWith(
-                            color: primaryPurple,
-                          ),
+                  controller.imagePath != ""
+                      ? Stack(
+                          children: [
+                            SizedBox(
+                              width: 176,
+                              height: 148,
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Image.network(
+                                    controller.imagePath,
+                                    fit: BoxFit.fitHeight,
+                                    height: 130,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Positioned.fill(
+                              child: Align(
+                                child: GestureDetector(
+                                  onTap: () {
+                                    showImageViewer(
+                                        context,
+                                        Image.network(
+                                          controller.imagePath,
+                                        ).image,
+                                        swipeDismissible: true,
+                                        doubleTapZoomable: true);
+                                  },
+                                  child: SizedBox(
+                                    height: 43.23,
+                                    width: 43.23,
+                                    child: CircleAvatar(
+                                      backgroundColor:
+                                          const Color.fromRGBO(0, 0, 0, 0.45),
+                                      child: SvgPicture.asset(
+                                        'assets/icon/update/zoom.svg',
+                                        color: neutral50,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         )
-                      ],
-                    ),
-                  ),
+                      : InkWell(
+                          onTap: () async {
+                            XFile file = await getImage();
+                            controller.imagePath =
+                                await ApiService.uploadImage(file);
+                            controller.update();
+                          },
+                          child: Container(
+                            alignment: Alignment.center,
+                            child: Column(
+                              children: [
+                                SvgPicture.asset(
+                                  "assets/icon/update/add_plus.svg",
+                                ),
+                                const SizedBox(
+                                  height: 8.0,
+                                ),
+                                Text(
+                                  "klik untuk upload",
+                                  style: semiBold14.copyWith(
+                                    color: primaryPurple,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
                   const SizedBox(
                     height: 16.0,
                   ),
-                  Text(
-                    "Belum ada file terpilih.",
-                    style: reguler14.copyWith(
-                      color: blue850,
-                    ),
-                  )
+                  controller.imagePath == ""
+                      ? Text("Belum ada file terpilih.",
+                          style: reguler14.copyWith(
+                            color: blue850,
+                          ))
+                      : Container(),
                 ],
               ),
             ),

@@ -30,8 +30,6 @@ class SoalEvaluasiController extends State<SoalEvaluasiView>
   void nextQuestion(int questionLength) {
     if (index == questionLength - 1) {
       // this is the block where the questions end.
-      print("questionLength");
-      print(questionLength);
 
       Get.to(
         RingkasanEvaluasiView(

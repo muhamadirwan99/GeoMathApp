@@ -77,6 +77,7 @@ export 'package:geomath_app/module/video/video_pembelajaran/controller/video_pem
 export 'package:geomath_app/module/video/video_pembelajaran/view/video_pembelajaran_view.dart';
 export 'package:geomath_app/services/api_service.dart';
 export 'package:geomath_app/services/db_service.dart';
+export 'package:geomath_app/shared/utils/get_image.dart';
 export 'package:geomath_app/shared/widget/button_filled.dart';
 export 'package:geomath_app/shared/widget/button_outline.dart';
 export 'package:geomath_app/shared/widget/card_video.dart';

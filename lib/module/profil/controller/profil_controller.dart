@@ -11,7 +11,7 @@ class ProfilController extends State<ProfilView> implements MvcController {
   dynamic user = FirebaseFirestore.instance
       .collection("users")
       .doc(FirebaseAuth.instance.currentUser?.uid)
-      .get();
+      .snapshots();
   String nama = "";
   String kelas = "";
   String nis = "";

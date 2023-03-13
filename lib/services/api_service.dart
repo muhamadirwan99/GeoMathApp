@@ -1,6 +1,11 @@
+import 'dart:io';
+
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:geomath_app/core.dart';
 import 'package:http/http.dart' as http; // the http package
+import 'package:image_picker/image_picker.dart';
 import 'dart:convert';
+import 'package:path/path.dart';
 
 class ApiService {
   // let's first create  a function to add a question to our database.
@@ -29,5 +34,15 @@ class ApiService {
 
       return newQuestions;
     });
+  }
+
+  static Future<String> uploadImage(XFile imageFile) async {
+    String fileName = basename(imageFile.path);
+
+    Reference ref = FirebaseStorage.instance.ref().child(fileName);
+    UploadTask task = ref.putFile(File(imageFile.path));
+    TaskSnapshot snapshot = await task;
+
+    return await snapshot.ref.getDownloadURL();
   }
 }

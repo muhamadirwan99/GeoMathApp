@@ -2,10 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:geomath_app/common/style.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:intl/intl.dart';
 
 class CardEvaluasi extends StatefulWidget {
-  const CardEvaluasi({
+  dynamic data;
+  CardEvaluasi({
     Key? key,
+    required this.data,
   }) : super(key: key);
 
   @override
@@ -15,6 +19,8 @@ class CardEvaluasi extends StatefulWidget {
 class _CardEvaluasiState extends State<CardEvaluasi> {
   @override
   Widget build(BuildContext context) {
+    initializeDateFormatting('id_ID', null);
+
     return Card(
       shape: RoundedRectangleBorder(
         side: const BorderSide(color: neutral100, width: 1),
@@ -29,7 +35,9 @@ class _CardEvaluasiState extends State<CardEvaluasi> {
               bottomLeft: Radius.circular(12),
             ),
             child: Image.asset(
-              "assets/illustration/thumbnail_limas.png",
+              widget.data["kdMateri"] == "0"
+                  ? "assets/illustration/thumbnail_prisma.png"
+                  : "assets/illustration/thumbnail_limas.png",
               width: 80,
               height: 80,
             ),
@@ -42,14 +50,16 @@ class _CardEvaluasiState extends State<CardEvaluasi> {
                 Row(
                   children: [
                     Text(
-                      "Materi Limas",
+                      widget.data["kdMateri"] == "0"
+                          ? "Materi Prisma"
+                          : "Materi Limas",
                       style: semiBold16.copyWith(color: neutral900),
                     ),
                     const SizedBox(
                       width: 80,
                     ),
                     Text(
-                      "100%",
+                      "${(widget.data["akurasi"] * 100).round()}%",
                       style: semiBold16.copyWith(
                         color: primaryPurple,
                       ),
@@ -60,7 +70,9 @@ class _CardEvaluasiState extends State<CardEvaluasi> {
                   height: 17.0,
                 ),
                 Text(
-                  "14/12/2023",
+                  DateFormat("d MMMM yyyy", "id_ID")
+                      .format(widget.data["date"].toDate())
+                      .toString(),
                   style: reguler10.copyWith(color: neutral900),
                 ),
               ],

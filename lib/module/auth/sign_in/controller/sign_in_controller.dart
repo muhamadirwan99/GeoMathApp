@@ -46,7 +46,6 @@ class SignInController extends State<SignInView> implements MvcController {
         email: email,
         password: password,
       );
-      print(result);
 
       loading = false;
       update();

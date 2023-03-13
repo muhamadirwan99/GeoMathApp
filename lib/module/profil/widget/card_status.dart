@@ -5,8 +5,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:geomath_app/common/style.dart';
 
 class CardStatus extends StatefulWidget {
-  const CardStatus({
+  Map<String, dynamic> data;
+
+  CardStatus({
     Key? key,
+    required this.data,
   }) : super(key: key);
 
   @override
@@ -16,6 +19,16 @@ class CardStatus extends StatefulWidget {
 class _CardStatusState extends State<CardStatus> {
   @override
   Widget build(BuildContext context) {
+    dynamic pertanyaan = 0;
+    dynamic point = 0;
+    dynamic akurasi = 0;
+    List riwayat = widget.data["riwayatEvaluasi"];
+    for (var objek in riwayat) {
+      pertanyaan += objek['jawabanBenar'];
+      point += objek['point'];
+      akurasi += objek['akurasi'];
+    }
+
     return Container(
       decoration: const BoxDecoration(
         color: primaryPurple,
@@ -45,7 +58,7 @@ class _CardStatusState extends State<CardStatus> {
                     height: 4.0,
                   ),
                   Text(
-                    "100",
+                    "${point.round()}",
                     style: semiBold20.copyWith(color: neutral50),
                   ),
                 ],
@@ -68,7 +81,7 @@ class _CardStatusState extends State<CardStatus> {
                     height: 4.0,
                   ),
                   Text(
-                    "5",
+                    "$pertanyaan",
                     style: semiBold20.copyWith(color: neutral50),
                   ),
                 ],
@@ -91,7 +104,7 @@ class _CardStatusState extends State<CardStatus> {
                     height: 4.0,
                   ),
                   Text(
-                    "100%",
+                    "${(akurasi * 100).round()}%",
                     style: semiBold20.copyWith(color: neutral50),
                   ),
                 ],
