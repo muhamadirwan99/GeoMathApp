@@ -8,27 +8,60 @@ import 'dart:convert';
 import 'package:path/path.dart';
 
 class ApiService {
-  // let's first create  a function to add a question to our database.
-// declare the name of the table you want to create and add .json as suffix
-  final url = Uri.parse(
+  final umum = Uri.parse(
+      'https://geomathapp-7b721-default-rtdb.asia-southeast1.firebasedatabase.app/umum.json');
+  final limas = Uri.parse(
       'https://geomathapp-7b721-default-rtdb.asia-southeast1.firebasedatabase.app/limas.json');
+  final prisma = Uri.parse(
+      'https://geomathapp-7b721-default-rtdb.asia-southeast1.firebasedatabase.app/prisma.json');
 
-  // fetch the data from database
-  Future<List<Question>> fetchQuestions() async {
-    // we got the data from just using this. now let's print it to see what we got.
-    return http.get(url).then((response) {
-      // the 'then' method returns a 'response' which is our data.
-      // to whats inside we have to decode it first.
+  Future<List<Question>> fetchQuestionsUmum() async {
+    return http.get(umum).then((response) {
       var data = json.decode(response.body) as Map<String, dynamic>;
       List<Question> newQuestions = [];
       data.forEach((key, value) {
         var newQuestion = Question(
-          id: key, // the encrypted key/the title we gave to our data
-          title: value['title'], // title of the question
-          options: Map.castFrom(value['options']), // options of the question
-          image: value['image'], // options of the question
+          id: key,
+          title: value['title'],
+          options: Map.castFrom(value['options']),
+          image: value['image'],
         );
-        // add to newQuestions
+        newQuestions.add(newQuestion);
+      });
+
+      return newQuestions;
+    });
+  }
+
+  Future<List<Question>> fetchQuestionsLimas() async {
+    return http.get(limas).then((response) {
+      var data = json.decode(response.body) as Map<String, dynamic>;
+      List<Question> newQuestions = [];
+      data.forEach((key, value) {
+        var newQuestion = Question(
+          id: key,
+          title: value['title'],
+          options: Map.castFrom(value['options']),
+          image: value['image'],
+        );
+        newQuestions.add(newQuestion);
+      });
+
+      return newQuestions;
+    });
+  }
+
+  Future<List<Question>> fetchQuestionsPrisma() async {
+    return http.get(prisma).then((response) {
+      var data = json.decode(response.body) as Map<String, dynamic>;
+      List<Question> newQuestions = [];
+      data.forEach((key, value) {
+        var newQuestion = Question(
+          id: key,
+          title: value['title'],
+          options: Map.castFrom(value['options']),
+          image: value['image'],
+        );
         newQuestions.add(newQuestion);
       });
 

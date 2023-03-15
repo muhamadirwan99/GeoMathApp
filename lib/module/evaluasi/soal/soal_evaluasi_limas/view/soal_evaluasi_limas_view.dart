@@ -5,10 +5,11 @@ import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SoalEvaluasiView extends StatefulWidget {
-  const SoalEvaluasiView({Key? key}) : super(key: key);
+class SoalEvaluasiLimasView extends StatefulWidget {
+  int kdMateri;
+  SoalEvaluasiLimasView({Key? key, required this.kdMateri}) : super(key: key);
 
-  Widget build(context, SoalEvaluasiController controller) {
+  Widget build(context, SoalEvaluasiLimasController controller) {
     controller.view = this;
 
     return FutureBuilder(
@@ -70,7 +71,10 @@ class SoalEvaluasiView extends StatefulWidget {
                     onPressed: controller.isAlreadySelected
                         ? () {
                             controller.submitAnswer(controller.answer);
-                            controller.nextQuestion(extractedData.length);
+                            controller.nextQuestion(
+                              extractedData.length,
+                              kdMateri,
+                            );
                           }
                         : null,
                     child: Row(
@@ -202,5 +206,5 @@ class SoalEvaluasiView extends StatefulWidget {
   }
 
   @override
-  State<SoalEvaluasiView> createState() => SoalEvaluasiController();
+  State<SoalEvaluasiLimasView> createState() => SoalEvaluasiLimasController();
 }

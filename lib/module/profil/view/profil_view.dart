@@ -103,6 +103,14 @@ class ProfilView extends StatefulWidget {
                                         padding: const EdgeInsets.all(0),
                                         itemBuilder:
                                             (BuildContext context, int index) {
+                                          List riwayatEval =
+                                              data["riwayatEvaluasi"];
+                                          List reversedEval =
+                                              riwayatEval.reversed.toList();
+
+                                          controller.getEvaluasiImage(
+                                            reversedEval[index]["kdMateri"],
+                                          );
                                           return CardEvaluasi(
                                               data: data["riwayatEvaluasi"]
                                                   [index]);
@@ -121,7 +129,7 @@ class ProfilView extends StatefulWidget {
                                             InkWell(
                                               onTap: () {
                                                 Get.to(
-                                                  const MainEvaluasiView(),
+                                                  MainEvaluasiView(kdMateri: 2),
                                                 );
                                               },
                                               child: Text(

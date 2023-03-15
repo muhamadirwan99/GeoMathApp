@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:geomath_app/common/style.dart';
+import 'package:geomath_app/module/profil/controller/profil_controller.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
 
@@ -35,9 +36,7 @@ class _CardEvaluasiState extends State<CardEvaluasi> {
               bottomLeft: Radius.circular(12),
             ),
             child: Image.asset(
-              widget.data["kdMateri"] == "0"
-                  ? "assets/illustration/thumbnail_prisma.png"
-                  : "assets/illustration/thumbnail_limas.png",
+              ProfilController.instance.image,
               width: 80,
               height: 80,
             ),

@@ -5,7 +5,8 @@ import 'package:geomath_app/core.dart';
 import 'package:lottie/lottie.dart';
 
 class MainEvaluasiView extends StatefulWidget {
-  const MainEvaluasiView({Key? key}) : super(key: key);
+  int kdMateri;
+  MainEvaluasiView({Key? key, required this.kdMateri}) : super(key: key);
 
   Widget build(context, MainEvaluasiController controller) {
     controller.view = this;
@@ -62,7 +63,7 @@ class MainEvaluasiView extends StatefulWidget {
                 ),
               ),
               onPressed: () {
-                Get.to(const SoalEvaluasiView());
+                controller.navSoal(kdMateri);
               },
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 12),

@@ -1,10 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:geomath_app/state_util.dart';
-import '../view/main_evaluasi_view.dart';
+import 'package:geomath_app/core.dart';
 
-class MainEvaluasiController extends State<MainEvaluasiView> implements MvcController {
+class MainEvaluasiController extends State<MainEvaluasiView>
+    implements MvcController {
   static late MainEvaluasiController instance;
   late MainEvaluasiView view;
+
+  navSoal(kdMateri) {
+    switch (kdMateri) {
+      case 0:
+        return Get.to(SoalEvaluasiPrismaView(kdMateri: kdMateri));
+      case 1:
+        return Get.to(SoalEvaluasiLimasView(kdMateri: kdMateri));
+      case 2:
+        return Get.to(SoalEvaluasiUmumView(kdMateri: kdMateri));
+
+      default:
+    }
+  }
 
   @override
   void initState() {

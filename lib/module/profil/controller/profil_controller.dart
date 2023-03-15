@@ -18,11 +18,27 @@ class ProfilController extends State<ProfilView> implements MvcController {
   String noTel = "";
   String email = "";
 
+  String image = "";
+
   void handleClick(int item) {
     switch (item) {
       case 0:
         FirebaseAuth.instance.signOut();
         Get.offAll(const SignInView());
+        break;
+    }
+  }
+
+  getEvaluasiImage(int kdMateri) {
+    switch (kdMateri) {
+      case 0:
+        image = "assets/illustration/thumbnail_prisma.png";
+        break;
+      case 1:
+        image = "assets/illustration/thumbnail_limas.png";
+        break;
+      case 2:
+        image = "assets/illustration/thumbnail_umum.png";
         break;
     }
   }

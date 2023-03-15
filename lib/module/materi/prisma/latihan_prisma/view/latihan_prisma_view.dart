@@ -29,7 +29,7 @@ class LatihanPrismaView extends StatefulWidget {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: const FabEvaluasiLimas(),
+      floatingActionButton: const FabEvaluasiPrisma(),
       body: Padding(
         padding: const EdgeInsets.only(bottom: 38),
         child: SingleChildScrollView(

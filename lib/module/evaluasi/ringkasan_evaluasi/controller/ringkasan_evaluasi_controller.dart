@@ -12,7 +12,8 @@ class RingkasanEvaluasiController extends State<RingkasanEvaluasiView>
   String imagePath = "";
   User? id = FirebaseAuth.instance.currentUser;
 
-  Future<void> submitData(int questionLength, int questionRight) async {
+  Future<void> submitData(
+      int questionLength, int questionRight, int kdMateri) async {
     await FirebaseFirestore.instance.collection("users").doc(id!.uid).update(
       {
         'riwayatEvaluasi': FieldValue.arrayUnion(
@@ -21,7 +22,7 @@ class RingkasanEvaluasiController extends State<RingkasanEvaluasiView>
               'akurasi': questionRight / questionLength,
               'date': DateTime.now(),
               'jawabanBenar': questionRight,
-              'kdMateri': "1",
+              'kdMateri': kdMateri,
               'point': questionRight / questionLength,
               'gambar': imagePath,
             },

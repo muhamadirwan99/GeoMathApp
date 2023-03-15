@@ -7,11 +7,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 
 class RingkasanEvaluasiView extends StatefulWidget {
-  int questionLength, questionRight;
+  int questionLength, questionRight, kdMateri;
   RingkasanEvaluasiView({
     Key? key,
     required this.questionLength,
     required this.questionRight,
+    required this.kdMateri,
   }) : super(key: key);
 
   Widget build(context, RingkasanEvaluasiController controller) {
@@ -54,6 +55,7 @@ class RingkasanEvaluasiView extends StatefulWidget {
                     controller.submitData(
                       questionLength,
                       questionRight,
+                      kdMateri,
                     );
                     Get.offAll(
                       HasilEvaluasiView(
