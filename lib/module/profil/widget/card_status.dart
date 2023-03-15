@@ -22,7 +22,8 @@ class _CardStatusState extends State<CardStatus> {
     dynamic pertanyaan = 0;
     dynamic point = 0;
     dynamic akurasi = 0;
-    List riwayat = widget.data["riwayatEvaluasi"];
+    List riwayat = widget.data["riwayatEvaluasi"] ?? [];
+
     for (var objek in riwayat) {
       pertanyaan += objek['jawabanBenar'];
       point += objek['point'];
@@ -58,7 +59,7 @@ class _CardStatusState extends State<CardStatus> {
                     height: 4.0,
                   ),
                   Text(
-                    "${point.round()}",
+                    "${widget.data["riwayatEvaluasi"] != null ? point.round() * 100 : 0}",
                     style: semiBold20.copyWith(color: neutral50),
                   ),
                 ],
@@ -81,7 +82,7 @@ class _CardStatusState extends State<CardStatus> {
                     height: 4.0,
                   ),
                   Text(
-                    "$pertanyaan",
+                    "${widget.data["riwayatEvaluasi"] != null ? pertanyaan : 0}",
                     style: semiBold20.copyWith(color: neutral50),
                   ),
                 ],
@@ -104,7 +105,7 @@ class _CardStatusState extends State<CardStatus> {
                     height: 4.0,
                   ),
                   Text(
-                    "${(akurasi * 100).round()}%",
+                    "${widget.data["riwayatEvaluasi"] != null ? ((akurasi * 100) / riwayat.length).round() : 0}%",
                     style: semiBold20.copyWith(color: neutral50),
                   ),
                 ],

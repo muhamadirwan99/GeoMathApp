@@ -2,8 +2,8 @@
     "openai_key": "",
     "modules": [
         "auth/sign_in",
+        "auth/data_diri_google",
         "auth/sign_up/data_akun",
-        "auth/sign_up/data_diri",
         "auth/sign_up/data_diri",
         "materi/limas/bagian_limas",
         "materi/limas/jaring_limas",

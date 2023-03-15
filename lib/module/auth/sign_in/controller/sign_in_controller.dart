@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:geomath_app/core.dart';
@@ -89,7 +90,14 @@ class SignInController extends State<SignInView> implements MvcController {
       loading = false;
       update();
 
-      Get.offAll(const MenuNavView());
+      var col = FirebaseFirestore.instance
+          .collection("users")
+          .doc(FirebaseAuth.instance.currentUser!.uid);
+      DocumentSnapshot docSnap = await col.get();
+
+      docSnap.exists
+          ? Get.offAll(const MenuNavView())
+          : Get.offAll(const DataDiriGoogleView());
     } catch (_) {}
   }
 

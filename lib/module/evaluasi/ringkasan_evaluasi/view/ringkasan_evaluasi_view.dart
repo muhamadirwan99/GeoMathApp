@@ -48,18 +48,20 @@ class RingkasanEvaluasiView extends StatefulWidget {
                 borderRadius: BorderRadius.circular(8),
               ),
             ),
-            onPressed: () {
-              controller.submitData(
-                questionLength,
-                questionRight,
-              );
-              Get.offAll(
-                HasilEvaluasiView(
-                  questionLength: questionLength,
-                  questionRight: questionRight,
-                ),
-              );
-            },
+            onPressed: controller.imagePath == ""
+                ? null
+                : () {
+                    controller.submitData(
+                      questionLength,
+                      questionRight,
+                    );
+                    Get.offAll(
+                      HasilEvaluasiView(
+                        questionLength: questionLength,
+                        questionRight: questionRight,
+                      ),
+                    );
+                  },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

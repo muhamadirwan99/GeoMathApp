@@ -7,6 +7,8 @@ export 'package:geomath_app/data/db/user_db.dart';
 export 'package:geomath_app/data/model/question_model.dart';
 export 'package:geomath_app/data/model/user_model.dart';
 export 'package:geomath_app/data/model/videos_model.dart';
+export 'package:geomath_app/module/auth/data_diri_google/controller/data_diri_google_controller.dart';
+export 'package:geomath_app/module/auth/data_diri_google/view/data_diri_google_view.dart';
 export 'package:geomath_app/module/auth/sign_in/controller/sign_in_controller.dart';
 export 'package:geomath_app/module/auth/sign_in/view/sign_in_view.dart';
 export 'package:geomath_app/module/auth/sign_up/data_akun/controller/data_akun_controller.dart';

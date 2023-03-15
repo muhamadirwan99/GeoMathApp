@@ -99,6 +99,7 @@ class ProfilView extends StatefulWidget {
                                         itemCount:
                                             data["riwayatEvaluasi"].length,
                                         shrinkWrap: true,
+                                        physics: const ScrollPhysics(),
                                         padding: const EdgeInsets.all(0),
                                         itemBuilder:
                                             (BuildContext context, int index) {
@@ -107,7 +108,32 @@ class ProfilView extends StatefulWidget {
                                                   [index]);
                                         },
                                       )
-                                    : Container(),
+                                    : Container(
+                                        alignment: Alignment.center,
+                                        child: Column(
+                                          children: [
+                                            SvgPicture.asset(
+                                              "assets/illustration/tidak_ada_evaluasi.svg",
+                                            ),
+                                            const SizedBox(
+                                              height: 8.0,
+                                            ),
+                                            InkWell(
+                                              onTap: () {
+                                                Get.to(
+                                                  const MainEvaluasiView(),
+                                                );
+                                              },
+                                              child: Text(
+                                                "Mulai Evaluasi?",
+                                                style: semiBold16.copyWith(
+                                                  color: primaryPurple,
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
                               ],
                             ),
                           ),
