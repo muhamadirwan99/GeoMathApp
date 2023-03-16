@@ -49,9 +49,7 @@ class _CardEvaluasiState extends State<CardEvaluasi> {
                 Row(
                   children: [
                     Text(
-                      widget.data["kdMateri"] == "0"
-                          ? "Materi Prisma"
-                          : "Materi Limas",
+                      ProfilController.instance.textCard,
                       style: semiBold16.copyWith(color: neutral900),
                     ),
                     const SizedBox(

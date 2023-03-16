@@ -95,51 +95,58 @@ class _VideoTutorialPrismaState extends State<VideoTutorialPrisma> {
 
                   return SizedBox(
                     width: 180,
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                        side: const BorderSide(color: neutral100, width: 1),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Column(
-                        children: [
-                          ClipRRect(
-                            borderRadius: const BorderRadius.only(
-                              topLeft: Radius.circular(12),
-                              topRight: Radius.circular(12),
+                    child: InkWell(
+                      onTap: () {
+                        Get.to(DetailVideoPembelajaranView(video: video));
+                      },
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          side: const BorderSide(color: neutral100, width: 1),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                          children: [
+                            ClipRRect(
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(12),
+                                topRight: Radius.circular(12),
+                              ),
+                              child: FancyShimmerImage(
+                                imageUrl: video.thumbnail,
+                                boxFit: BoxFit.fitWidth,
+                                height: 90,
+                              ),
                             ),
-                            child: FancyShimmerImage(
-                              imageUrl: video.thumbnail,
-                              boxFit: BoxFit.fitWidth,
-                              height: 90,
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    video.title,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                    style:
+                                        semiBold10.copyWith(color: neutral900),
+                                  ),
+                                  const SizedBox(
+                                    height: 8.0,
+                                  ),
+                                  Text(
+                                    video.desc,
+                                    style:
+                                        reguler10.copyWith(color: neutral900),
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                  const SizedBox(
+                                    height: 8.0,
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  video.title,
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: semiBold10.copyWith(color: neutral900),
-                                ),
-                                const SizedBox(
-                                  height: 8.0,
-                                ),
-                                Text(
-                                  video.desc,
-                                  style: reguler10.copyWith(color: neutral900),
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                                const SizedBox(
-                                  height: 8.0,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   );

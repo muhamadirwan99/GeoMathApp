@@ -35,10 +35,15 @@ class BerandaView extends StatefulWidget {
                   Map<String, dynamic> data =
                       snapshot.data!.data() as Map<String, dynamic>;
 
+                  String nama = data["nama"];
+                  List listNama = nama.split(" ");
+                  String firstName = listNama[0];
+                  String lastName = listNama[1];
+
                   return Padding(
                     padding: const EdgeInsets.only(left: 5),
                     child: Text(
-                      "Hi, ${data["nama"]} 👋",
+                      "Hi, $firstName $lastName 👋",
                       style: semiBold24.copyWith(
                         color: neutral100,
                       ),

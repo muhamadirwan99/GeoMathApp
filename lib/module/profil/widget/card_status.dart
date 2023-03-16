@@ -28,6 +28,8 @@ class _CardStatusState extends State<CardStatus> {
       pertanyaan += objek['jawabanBenar'];
       point += objek['point'];
       akurasi += objek['akurasi'];
+      print("point");
+      print(point);
     }
 
     return Container(
@@ -59,7 +61,7 @@ class _CardStatusState extends State<CardStatus> {
                     height: 4.0,
                   ),
                   Text(
-                    "${widget.data["riwayatEvaluasi"] != null ? point.round() * 100 : 0}",
+                    "${widget.data["riwayatEvaluasi"] != null ? (point * 100).round() : 0}",
                     style: semiBold20.copyWith(color: neutral50),
                   ),
                 ],

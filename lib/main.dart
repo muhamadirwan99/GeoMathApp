@@ -1,4 +1,3 @@
-import 'package:geomath_app/state_util.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -33,7 +32,6 @@ class MyApp extends StatelessWidget {
   bool user;
   MyApp({super.key, required this.user});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

@@ -19,6 +19,7 @@ class ProfilController extends State<ProfilView> implements MvcController {
   String email = "";
 
   String image = "";
+  String textCard = "";
 
   void handleClick(int item) {
     switch (item) {
@@ -29,16 +30,19 @@ class ProfilController extends State<ProfilView> implements MvcController {
     }
   }
 
-  getEvaluasiImage(int kdMateri) {
+  getRiwayatEvaluasi(int kdMateri) {
     switch (kdMateri) {
       case 0:
         image = "assets/illustration/thumbnail_prisma.png";
+        textCard = "Materi Prisma";
         break;
       case 1:
         image = "assets/illustration/thumbnail_limas.png";
+        textCard = "Materi Limas";
         break;
       case 2:
         image = "assets/illustration/thumbnail_umum.png";
+        textCard = "Materi Umum";
         break;
     }
   }

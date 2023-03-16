@@ -94,7 +94,9 @@ class _DetailVideoPembelajaranViewState
               ),
             ),
             onPressed: () {
-              statusMateri ? Get.to(const LatihanLimasView()) : () {};
+              statusMateri
+                  ? Get.to(const LatihanLimasView())
+                  : Get.to(const LatihanPrismaView());
             },
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 12),

@@ -107,13 +107,13 @@ class ProfilView extends StatefulWidget {
                                               data["riwayatEvaluasi"];
                                           List reversedEval =
                                               riwayatEval.reversed.toList();
+                                          print(reversedEval);
 
-                                          controller.getEvaluasiImage(
+                                          controller.getRiwayatEvaluasi(
                                             reversedEval[index]["kdMateri"],
                                           );
                                           return CardEvaluasi(
-                                              data: data["riwayatEvaluasi"]
-                                                  [index]);
+                                              data: reversedEval[index]);
                                         },
                                       )
                                     : Container(
