@@ -5,6 +5,7 @@ import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// ignore: must_be_immutable
 class SoalEvaluasiLimasView extends StatefulWidget {
   int kdMateri;
   SoalEvaluasiLimasView({Key? key, required this.kdMateri}) : super(key: key);
@@ -29,6 +30,7 @@ class SoalEvaluasiLimasView extends StatefulWidget {
                 leading: IconButton(
                   icon: SvgPicture.asset(
                     "assets/icon/update/left.svg",
+                    // ignore: deprecated_member_use
                     color: neutral50,
                   ),
                   onPressed: () {
@@ -92,6 +94,7 @@ class SoalEvaluasiLimasView extends StatefulWidget {
                         ),
                         SvgPicture.asset(
                           "assets/icon/arrow_right.svg",
+                          // ignore: deprecated_member_use
                           color: neutral50,
                         ),
                       ],

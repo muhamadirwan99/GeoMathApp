@@ -1,8 +1,9 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
-import 'package:geomath_app/module/materi/prisma/jaring_prisma/widget/content_jaring_prisma.dart';
 
 class JaringPrismaView extends StatefulWidget {
   const JaringPrismaView({Key? key}) : super(key: key);

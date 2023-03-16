@@ -77,6 +77,7 @@ class DataDiriController extends State<DataDiriView> implements MvcController {
       loading = false;
       update();
 
+      // ignore: use_build_context_synchronously
       showDialog(
         context: context,
         builder: (BuildContext context) {

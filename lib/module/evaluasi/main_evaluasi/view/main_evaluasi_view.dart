@@ -4,6 +4,7 @@ import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 import 'package:lottie/lottie.dart';
 
+// ignore: must_be_immutable
 class MainEvaluasiView extends StatefulWidget {
   int kdMateri;
   MainEvaluasiView({Key? key, required this.kdMateri}) : super(key: key);
@@ -23,6 +24,7 @@ class MainEvaluasiView extends StatefulWidget {
         leading: IconButton(
           icon: SvgPicture.asset(
             "assets/icon/update/left.svg",
+            // ignore: deprecated_member_use
             color: neutral50,
           ),
           onPressed: () {

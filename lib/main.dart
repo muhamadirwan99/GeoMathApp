@@ -28,6 +28,7 @@ void main() async {
   runApp(MyApp(user: user));
 }
 
+// ignore: must_be_immutable
 class MyApp extends StatelessWidget {
   bool user;
   MyApp({super.key, required this.user});

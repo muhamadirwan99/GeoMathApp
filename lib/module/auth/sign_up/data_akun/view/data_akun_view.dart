@@ -14,6 +14,7 @@ class DataAkunView extends StatefulWidget {
         leading: IconButton(
           icon: SvgPicture.asset(
             'assets/icon/update/left.svg',
+            // ignore: deprecated_member_use
             color: neutral900,
           ),
           onPressed: () {

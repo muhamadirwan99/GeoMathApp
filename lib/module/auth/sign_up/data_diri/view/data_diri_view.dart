@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 
+// ignore: must_be_immutable
 class DataDiriView extends StatefulWidget {
   String email, password;
   DataDiriView({
@@ -19,6 +20,7 @@ class DataDiriView extends StatefulWidget {
         leading: IconButton(
           icon: SvgPicture.asset(
             'assets/icon/update/left.svg',
+            // ignore: deprecated_member_use
             color: neutral900,
           ),
           onPressed: () {
@@ -240,6 +242,7 @@ class DataDiriView extends StatefulWidget {
                   child: SvgPicture.asset(
                     "assets/icon/update/down.svg",
                     width: 24,
+                    // ignore: deprecated_member_use
                     color: primaryPurple,
                   ),
                 ),

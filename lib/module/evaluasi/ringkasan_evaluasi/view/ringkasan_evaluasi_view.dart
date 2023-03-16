@@ -6,6 +6,7 @@ import 'package:geomath_app/core.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 
+// ignore: must_be_immutable
 class RingkasanEvaluasiView extends StatefulWidget {
   int questionLength, questionRight, kdMateri;
   RingkasanEvaluasiView({
@@ -25,6 +26,7 @@ class RingkasanEvaluasiView extends StatefulWidget {
         leading: IconButton(
           icon: SvgPicture.asset(
             "assets/icon/update/left.svg",
+            // ignore: deprecated_member_use
             color: neutral50,
           ),
           onPressed: () {
@@ -79,6 +81,7 @@ class RingkasanEvaluasiView extends StatefulWidget {
                 ),
                 SvgPicture.asset(
                   "assets/icon/send_active.svg",
+                  // ignore: deprecated_member_use
                   color: neutral50,
                   height: 20,
                   width: 20,
@@ -193,6 +196,7 @@ class RingkasanEvaluasiView extends StatefulWidget {
                                           const Color.fromRGBO(0, 0, 0, 0.45),
                                       child: SvgPicture.asset(
                                         'assets/icon/update/zoom.svg',
+                                        // ignore: deprecated_member_use
                                         color: neutral50,
                                       ),
                                     ),

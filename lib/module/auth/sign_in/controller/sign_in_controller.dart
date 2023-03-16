@@ -43,7 +43,7 @@ class SignInController extends State<SignInView> implements MvcController {
     try {
       loading = true;
       update();
-      UserCredential result = await _auth.signInWithEmailAndPassword(
+      await _auth.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
