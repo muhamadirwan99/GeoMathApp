@@ -1,10 +1,7 @@
 // ignore_for_file: must_be_immutable, deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class DetailVideoPembelajaranView extends StatefulWidget {
   VideosResult video;
@@ -96,6 +93,7 @@ class _DetailVideoPembelajaranViewState
               ),
             ),
             onPressed: () {
+              ytController.pause();
               statusMateri
                   ? Get.to(const LatihanLimasView())
                   : Get.to(const LatihanPrismaView());
