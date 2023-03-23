@@ -1,8 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
-import 'package:skeletons/skeletons.dart';
 
 class BerandaView extends StatefulWidget {
   const BerandaView({Key? key}) : super(key: key);
@@ -80,6 +77,19 @@ class BerandaView extends StatefulWidget {
                     ),
                   ),
                 ),
+                Positioned.fill(
+                  child: SafeArea(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 83, left: 23),
+                      child: Text(
+                        "di Geomath Bangun Ruang Sisi Datar",
+                        style: reguler16.copyWith(
+                          color: neutral100,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
@@ -141,88 +151,146 @@ class BerandaView extends StatefulWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 23),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              "Video Pembelajaran 🔥",
-                              style: semiBold16.copyWith(
-                                color: neutral900,
-                              ),
-                            ),
-                            InkWell(
-                              onTap: () {
-                                Get.to(const VideoPembelajaranView());
-                              },
-                              child: Text(
-                                "Lainnya",
-                                style: semiBold14.copyWith(
-                                  color: primaryPurple,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 8.0,
-                      ),
-                      StreamBuilder(
-                        stream: controller.videos,
-                        builder:
-                            (BuildContext context, AsyncSnapshot snapshot) {
-                          if (!snapshot.hasData) {
-                            return ListView.builder(
-                              itemCount: 4,
-                              shrinkWrap: true,
-                              physics: const ScrollPhysics(),
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 23),
-                              itemBuilder: (BuildContext context, int index) {
-                                return Column(
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16.0),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(16),
+                            child: Column(
+                              children: [
+                                Row(
                                   children: [
-                                    SkeletonLine(
-                                      style: SkeletonLineStyle(
-                                          height: 116,
-                                          width:
-                                              MediaQuery.of(context).size.width,
-                                          borderRadius:
-                                              BorderRadius.circular(10)),
+                                    SvgPicture.asset(
+                                      "assets/icon/update/info_2.svg",
                                     ),
                                     const SizedBox(
-                                      height: 8.0,
+                                      width: 10.0,
+                                    ),
+                                    Text(
+                                      "Informasi",
+                                      style: semiBold20.copyWith(
+                                          color: neutral900),
+                                    )
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 12.0,
+                                ),
+                                ExpansionTile(
+                                  iconColor: primaryPurple,
+                                  collapsedIconColor: primaryPurple,
+                                  title: Text(
+                                    "Kata Pengantar",
+                                    style: semiBold16.copyWith(
+                                      color: blue900,
+                                    ),
+                                  ),
+                                  leading: SvgPicture.asset(
+                                    "assets/icon/update/info.svg",
+                                  ),
+                                  children: const [
+                                    Padding(
+                                      padding: EdgeInsets.symmetric(
+                                        vertical: 16,
+                                        horizontal: 10,
+                                      ),
+                                      child: ContentKataPengatar(),
                                     ),
                                   ],
-                                );
-                              },
-                            );
-                          }
-                          final data = snapshot.data.docs
-                              .map((doc) => doc.data())
-                              .toList();
-
-                          return ListView.builder(
-                            itemCount: 5,
-                            shrinkWrap: true,
-                            physics: const ScrollPhysics(),
-                            padding: const EdgeInsets.symmetric(horizontal: 23),
-                            itemBuilder: (context, index) {
-                              VideosResult video =
-                                  VideosResult.fromJson(data[index]);
-
-                              return CardVideo(
-                                onTap: () {
-                                  Get.to(
-                                    DetailVideoPembelajaranView(video: video),
-                                  );
-                                },
-                                imgUrl: video.thumbnail,
-                                title: video.title,
-                                desc: video.desc,
-                              );
-                            },
-                          );
-                        },
+                                ),
+                                ExpansionTile(
+                                  iconColor: primaryPurple,
+                                  collapsedIconColor: primaryPurple,
+                                  title: Text(
+                                    "Kompetensi Dasar",
+                                    style: semiBold16.copyWith(
+                                      color: blue900,
+                                    ),
+                                  ),
+                                  leading: SvgPicture.asset(
+                                    "assets/icon/update/book_2.svg",
+                                  ),
+                                  children: const [
+                                    Padding(
+                                      padding: EdgeInsets.symmetric(
+                                        vertical: 16,
+                                        horizontal: 10,
+                                      ),
+                                      child: ContentKompetensiDasar(),
+                                    ),
+                                  ],
+                                ),
+                                ExpansionTile(
+                                  iconColor: primaryPurple,
+                                  collapsedIconColor: primaryPurple,
+                                  title: Text(
+                                    "Tujuan Pembelajaran",
+                                    style: semiBold16.copyWith(
+                                      color: blue900,
+                                    ),
+                                  ),
+                                  leading: SvgPicture.asset(
+                                    "assets/icon/update/book.svg",
+                                  ),
+                                  children: const [
+                                    Padding(
+                                      padding: EdgeInsets.symmetric(
+                                        vertical: 16,
+                                        horizontal: 10,
+                                      ),
+                                      child: ContentTujuanPembelajaran(),
+                                    ),
+                                  ],
+                                ),
+                                ExpansionTile(
+                                  iconColor: primaryPurple,
+                                  collapsedIconColor: primaryPurple,
+                                  title: Text(
+                                    "Petunjuk Pengunaan",
+                                    style: semiBold16.copyWith(
+                                      color: blue900,
+                                    ),
+                                  ),
+                                  leading: SvgPicture.asset(
+                                    "assets/icon/update/touch.svg",
+                                  ),
+                                  children: const [
+                                    Padding(
+                                      padding: EdgeInsets.symmetric(
+                                        vertical: 16,
+                                        horizontal: 10,
+                                      ),
+                                      child: ContentPetunjuk(),
+                                    ),
+                                  ],
+                                ),
+                                ExpansionTile(
+                                  iconColor: primaryPurple,
+                                  collapsedIconColor: primaryPurple,
+                                  title: Text(
+                                    "Tentang Aplikasi",
+                                    style: semiBold16.copyWith(
+                                      color: blue900,
+                                    ),
+                                  ),
+                                  leading: SvgPicture.asset(
+                                    "assets/icon/update/app_shortcut.svg",
+                                  ),
+                                  children: const [
+                                    Padding(
+                                      padding: EdgeInsets.symmetric(
+                                        vertical: 16,
+                                        horizontal: 10,
+                                      ),
+                                      child: ContentTentangApp(),
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ),
                       const SizedBox(
                         height: 24.0,

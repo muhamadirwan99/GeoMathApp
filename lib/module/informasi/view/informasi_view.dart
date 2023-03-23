@@ -109,7 +109,7 @@ class InformasiView extends StatefulWidget {
                                   vertical: 16,
                                   horizontal: 10,
                                 ),
-                                child: ContentPetunjuk(),
+                                child: ContentKompetensiDasar(),
                               ),
                             ],
                           ),

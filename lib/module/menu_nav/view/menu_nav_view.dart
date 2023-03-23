@@ -1,8 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 
 class MenuNavView extends StatefulWidget {
@@ -91,18 +89,18 @@ class MenuNavView extends StatefulWidget {
               icon: Padding(
                 padding: const EdgeInsets.only(bottom: 2),
                 child: SvgPicture.asset(
-                  "assets/icon/info.svg",
+                  "assets/icon/video_inactive.svg",
                   color: neutral200,
                 ),
               ),
               activeIcon: Padding(
                 padding: const EdgeInsets.only(bottom: 2),
                 child: SvgPicture.asset(
-                  "assets/icon/info.svg",
+                  "assets/icon/video_inactive.svg",
                   color: primaryPurple,
                 ),
               ),
-              label: 'Informasi',
+              label: 'Video',
             ),
             BottomNavigationBarItem(
               icon: Padding(

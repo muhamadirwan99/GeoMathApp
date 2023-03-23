@@ -1,5 +1,13 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="15.9581" y1="19.9583" x2="15.9581" y2="16.042" stroke="#878787" stroke-width="2.75036" stroke-linecap="round"/>
-<rect x="14.6666" y="10.6667" width="2.66667" height="2.66667" rx="1.33333" fill="#878787"/>
-<circle cx="15.9999" cy="16.0002" r="9.29149" stroke="#878787" stroke-width="2.75036"/>
+<svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<clipPath id="clip0_1021_13407">
+<rect width="21" height="21" fill="white" transform="translate(7.5 8)"/>
+</clipPath>
+</defs>
+<rect y="0.5" width="36" height="36" rx="18" fill="#FAFAFA"/>
+<g clip-path="url(#clip0_1021_13407)">
+<line x1="18.2727" y1="22.5908" x2="18.2727" y2="18.2272" stroke="#F9C14C" stroke-width="2" stroke-linecap="round"/>
+<rect x="17.3635" y="14.0455" width="1.27273" height="1.27273" rx="0.636364" fill="#F9C14C" stroke="#F9C14C" stroke-width="1.27273"/>
+<circle cx="17.9999" cy="18.5002" r="8.68182" stroke="#5C3FCB" stroke-width="3"/>
+</g>
 </svg>

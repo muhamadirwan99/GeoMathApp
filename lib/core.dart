@@ -19,6 +19,11 @@ export 'package:geomath_app/module/auth/sign_up/data_diri/widget/dialog_konfirma
 export 'package:geomath_app/module/auth/sign_up/data_diri/widget/dialog_pendaftaran_sukses.dart';
 export 'package:geomath_app/module/beranda/controller/beranda_controller.dart';
 export 'package:geomath_app/module/beranda/view/beranda_view.dart';
+export 'package:geomath_app/module/beranda/widget/content_informasi/content_kata_pengantar.dart';
+export 'package:geomath_app/module/beranda/widget/content_informasi/content_kompetensi_dasar.dart';
+export 'package:geomath_app/module/beranda/widget/content_informasi/content_petunjuk.dart';
+export 'package:geomath_app/module/beranda/widget/content_informasi/content_tentang_app.dart';
+export 'package:geomath_app/module/beranda/widget/content_informasi/content_tujuan_pembelajaran.dart';
 export 'package:geomath_app/module/evaluasi/hasil_evaluasi/controller/hasil_evaluasi_controller.dart';
 export 'package:geomath_app/module/evaluasi/hasil_evaluasi/view/hasil_evaluasi_view.dart';
 export 'package:geomath_app/module/evaluasi/main_evaluasi/controller/main_evaluasi_controller.dart';
@@ -33,8 +38,6 @@ export 'package:geomath_app/module/evaluasi/soal/soal_evaluasi_umum/controller/s
 export 'package:geomath_app/module/evaluasi/soal/soal_evaluasi_umum/view/soal_evaluasi_umum_view.dart';
 export 'package:geomath_app/module/informasi/controller/informasi_controller.dart';
 export 'package:geomath_app/module/informasi/view/informasi_view.dart';
-export 'package:geomath_app/module/informasi/widget/content_petunjuk.dart';
-export 'package:geomath_app/module/informasi/widget/content_tentang_app.dart';
 export 'package:geomath_app/module/materi/limas/bagian_limas/controller/bagian_limas_controller.dart';
 export 'package:geomath_app/module/materi/limas/bagian_limas/view/bagian_limas_view.dart';
 export 'package:geomath_app/module/materi/limas/jaring_limas/controller/jaring_limas_controller.dart';
@@ -101,4 +104,5 @@ export 'package:geomath_app/shared/widget/text_daftar_isi.dart';
 export 'package:geomath_app/shared/widget/text_number.dart';
 export 'package:geomath_app/shared/widget/video_tutorial_limas.dart';
 export 'package:geomath_app/shared/widget/video_tutorial_prisma.dart';
+export 'core_package.dart';
 export 'state_util.dart';
