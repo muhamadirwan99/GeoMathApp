@@ -49,7 +49,7 @@ class SignInController extends State<SignInView> implements MvcController {
 
       loading = false;
       update();
-      Get.offAll(const MenuNavView());
+      Get.offAll(const OnboardingView());
     } on FirebaseAuthException catch (e) {
       loading = false;
       update();
