@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:geomath_app/core.dart';
@@ -62,7 +61,7 @@ class DataDiriGoogleController extends State<DataDiriGoogleView>
         return e;
       }
 
-      Get.offAll(const MenuNavView());
+      Get.offAll(const OnboardingView());
     } on FirebaseAuthException catch (e) {
       return ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(

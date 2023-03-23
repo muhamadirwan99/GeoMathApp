@@ -61,6 +61,8 @@ export 'package:geomath_app/module/materi/prisma/rumus_prisma/view/rumus_prisma_
 export 'package:geomath_app/module/materi/prisma/rumus_prisma/widget/content_rumus_prisma.dart';
 export 'package:geomath_app/module/menu_nav/controller/menu_nav_controller.dart';
 export 'package:geomath_app/module/menu_nav/view/menu_nav_view.dart';
+export 'package:geomath_app/module/onboarding/controller/onboarding_controller.dart';
+export 'package:geomath_app/module/onboarding/view/onboarding_view.dart';
 export 'package:geomath_app/module/profil/controller/profil_controller.dart';
 export 'package:geomath_app/module/profil/view/profil_view.dart';
 export 'package:geomath_app/module/profil/widget/card_data_diri.dart';

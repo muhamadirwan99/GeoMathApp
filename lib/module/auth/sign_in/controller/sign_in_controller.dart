@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:geomath_app/core.dart';
@@ -96,7 +95,7 @@ class SignInController extends State<SignInView> implements MvcController {
       DocumentSnapshot docSnap = await col.get();
 
       docSnap.exists
-          ? Get.offAll(const MenuNavView())
+          ? Get.offAll(const OnboardingView())
           : Get.offAll(const DataDiriGoogleView());
     } catch (_) {}
   }
