@@ -48,7 +48,10 @@ class OnboardingView extends StatefulWidget {
                         ),
                       ),
                       controller.index != pagesLength - 1
-                          ? Container()
+                          ? const SizedBox(
+                              height: 48,
+                              width: 48,
+                            )
                           : controller.homeButton,
                     ],
                   ),

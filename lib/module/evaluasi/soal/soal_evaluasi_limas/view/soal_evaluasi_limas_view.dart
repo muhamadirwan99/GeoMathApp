@@ -1,9 +1,7 @@
 import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:geomath_app/common/style.dart';
-import 'package:geomath_app/core.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/material.dart';
+import 'package:geomath_app/core.dart';
 
 // ignore: must_be_immutable
 class SoalEvaluasiLimasView extends StatefulWidget {

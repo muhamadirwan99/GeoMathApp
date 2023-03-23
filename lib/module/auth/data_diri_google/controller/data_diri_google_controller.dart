@@ -53,6 +53,8 @@ class DataDiriGoogleController extends State<DataDiriGoogleView>
         nis: nis.toString(),
         kelas: kelas.toString(),
         noTel: noTel.toString(),
+        statusPretestPrisma: false,
+        statusPretestLimas: false,
       );
 
       try {

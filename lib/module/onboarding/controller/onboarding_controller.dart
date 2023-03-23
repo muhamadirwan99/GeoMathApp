@@ -107,7 +107,7 @@ class OnboardingController extends State<OnboardingView>
                           style: reguler14.copyWith(color: neutral900),
                         ),
                         const SizedBox(
-                          height: 135.0,
+                          height: 145.0,
                         ),
                       ],
                     ),

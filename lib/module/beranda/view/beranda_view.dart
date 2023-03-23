@@ -37,6 +37,9 @@ class BerandaView extends StatefulWidget {
                   String firstName = listNama[0];
                   String lastName = listNama[1];
 
+                  controller.statusPretestLimas = data["statusPretestLimas"];
+                  controller.statusPretestPrisma = data["statusPretestPrisma"];
+
                   return Padding(
                     padding: const EdgeInsets.only(left: 5),
                     child: Text(
@@ -123,7 +126,9 @@ class BerandaView extends StatefulWidget {
                             Expanded(
                               child: InkWell(
                                 onTap: () {
-                                  Get.to(const BagianPrismaView());
+                                  controller.statusPretestPrisma
+                                      ? Get.to(const BagianPrismaView())
+                                      : showPretestPrismaFirst();
                                 },
                                 child: Image.asset(
                                   "assets/illustration/prisma.png",

@@ -24,6 +24,12 @@ export 'package:geomath_app/module/beranda/widget/content_informasi/content_komp
 export 'package:geomath_app/module/beranda/widget/content_informasi/content_petunjuk.dart';
 export 'package:geomath_app/module/beranda/widget/content_informasi/content_tentang_app.dart';
 export 'package:geomath_app/module/beranda/widget/content_informasi/content_tujuan_pembelajaran.dart';
+export 'package:geomath_app/module/beranda/widget/dialog/button_dialog.dart';
+export 'package:geomath_app/module/beranda/widget/dialog/form_dialog.dart';
+export 'package:geomath_app/module/beranda/widget/dialog/prisma/prisma_pretest_first.dart';
+export 'package:geomath_app/module/beranda/widget/dialog/prisma/prisma_pretest_second.dart';
+export 'package:geomath_app/module/beranda/widget/dialog/prisma/prisma_pretest_third.dart';
+export 'package:geomath_app/module/beranda/widget/dialog/two_form_dialog.dart';
 export 'package:geomath_app/module/evaluasi/hasil_evaluasi/controller/hasil_evaluasi_controller.dart';
 export 'package:geomath_app/module/evaluasi/hasil_evaluasi/view/hasil_evaluasi_view.dart';
 export 'package:geomath_app/module/evaluasi/main_evaluasi/controller/main_evaluasi_controller.dart';

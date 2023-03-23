@@ -26,7 +26,7 @@ class BagianPrismaView extends StatefulWidget {
             color: neutral50,
           ),
           onPressed: () {
-            Get.back();
+            Get.to(const MenuNavView());
           },
         ),
       ),
