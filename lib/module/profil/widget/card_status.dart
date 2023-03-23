@@ -70,7 +70,7 @@ class _CardStatusState extends State<CardStatus> {
               ),
               Column(
                 children: [
-                  SvgPicture.asset("assets/icon/update/book.svg"),
+                  SvgPicture.asset("assets/icon/update/book_3.svg"),
                   const SizedBox(
                     height: 4.0,
                   ),
