@@ -19,25 +19,19 @@ class OnboardingController extends State<OnboardingView>
         ),
       ),
       child: InkWell(
-          onTap: () {
-            if (setIndex != null) {
-              index = 3;
-              setIndex(3);
-            }
-          },
-          child: Center(
-              child: Text(
+        onTap: () {
+          if (setIndex != null) {
+            index = 3;
+            setIndex(3);
+          }
+        },
+        child: Center(
+          child: Text(
             "Skip",
             style: semiBold12.copyWith(color: neutral50),
-          ))
-          // child: Padding(
-          //   padding: const EdgeInsets.all(8),
-          //   child: SvgPicture.asset(
-          //     "assets/icon/update/right.svg",
-          //     color: neutral50,
-          //   ),
-          // ),
           ),
+        ),
+      ),
     );
   }
 

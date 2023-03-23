@@ -48,7 +48,7 @@ class OnboardingView extends StatefulWidget {
                         ),
                       ),
                       controller.index != pagesLength - 1
-                          ? controller.skipButton(setIndex: setIndex)
+                          ? Container()
                           : controller.homeButton,
                     ],
                   ),
