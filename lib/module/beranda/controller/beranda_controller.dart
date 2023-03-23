@@ -27,6 +27,16 @@ class BerandaController extends State<BerandaView> implements MvcController {
   bool statusYaPrisma = false;
   bool statusTidakPrisma = false;
 
+  //Pretest limas 2
+  bool statusTitikSudut = false;
+  bool statusRusukLimas = false;
+  bool statusSisiAlas = false;
+  bool statusSisiTegak = false;
+
+  //Pretest limas 3
+  bool statusYaLimas = false;
+  bool statusTidakLimas = false;
+
   dynamic videos = FirebaseFirestore.instance.collection("videos").snapshots();
   dynamic user = FirebaseFirestore.instance
       .collection("users")
@@ -48,6 +58,28 @@ class BerandaController extends State<BerandaView> implements MvcController {
       }
 
       Get.offAll(const BagianPrismaView());
+    } on FirebaseAuthException catch (e) {
+      return ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(e.message.toString()),
+        ),
+      );
+    } catch (e) {
+      return e.toString();
+    }
+  }
+
+  Future updatePretestLimas() async {
+    try {
+      try {
+        await _usersCollectionReference
+            .doc(FirebaseAuth.instance.currentUser?.uid)
+            .update({'statusPretestLimas': true});
+      } catch (e) {
+        return e;
+      }
+
+      Get.offAll(const BagianLimasView());
     } on FirebaseAuthException catch (e) {
       return ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(

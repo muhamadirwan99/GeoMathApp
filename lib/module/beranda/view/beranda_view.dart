@@ -141,7 +141,9 @@ class BerandaView extends StatefulWidget {
                             Expanded(
                               child: InkWell(
                                 onTap: () {
-                                  Get.to(const BagianLimasView());
+                                  controller.statusPretestLimas
+                                      ? Get.to(const BagianLimasView())
+                                      : showPretestLimasFirst();
                                 },
                                 child: Image.asset(
                                   "assets/illustration/limas.png",
