@@ -104,7 +104,10 @@ class OnboardingController extends State<OnboardingView>
                         ),
                         Text(
                           "Aplikasi Geomath ini disusun agar Ananda lebih memahami matematika. Melalui Geomath ini, Aranda difasilitasi untuk menemukan sendiri konsep - Konsep matematika. Konsep-konsep matematika yang Ananda temukan selanjutnya dapat digunakan untuk menyelesaikan permasalahan matematika yang lain. Bagian yg juga penting dari penggunaan aplikasi Geomath ini adalah untuk meningkatkan minat belajar Ananda dalam belajar matematika. Oleh karena itu, kehadiran aplikasi Geomath ini diharapkan dapat mendorong Ananda untuk mempelajari materi matematika yang disajikan dengan penuh pemahaman dan menginspirasi Ananda untuk mempelajari topik-topik matematika lainnya secara mandiri.",
-                          style: reguler14.copyWith(color: neutral900),
+                          style: reguler14.copyWith(
+                            color: neutral900,
+                            height: 1.5,
+                          ),
                         ),
                         const SizedBox(
                           height: 145.0,
@@ -166,7 +169,10 @@ class OnboardingController extends State<OnboardingView>
                           children: [
                             Text(
                               "1.",
-                              style: reguler12.copyWith(color: blue900),
+                              style: reguler12.copyWith(
+                                color: blue900,
+                                height: 1.5,
+                              ),
                             ),
                             const SizedBox(
                               width: 8.0,
@@ -174,7 +180,10 @@ class OnboardingController extends State<OnboardingView>
                             Expanded(
                               child: Text(
                                 "Menyusun pemahaman tentang bangun ruang sisi datar (Limas & Prisma) Serta bagian bagiannya.",
-                                style: reguler12.copyWith(color: blue900),
+                                style: reguler12.copyWith(
+                                  color: blue900,
+                                  height: 1.5,
+                                ),
                               ),
                             ),
                           ],
@@ -184,7 +193,10 @@ class OnboardingController extends State<OnboardingView>
                           children: [
                             Text(
                               "2.",
-                              style: reguler12.copyWith(color: blue900),
+                              style: reguler12.copyWith(
+                                color: blue900,
+                                height: 1.5,
+                              ),
                             ),
                             const SizedBox(
                               width: 5.0,
@@ -192,7 +204,10 @@ class OnboardingController extends State<OnboardingView>
                             Expanded(
                               child: Text(
                                 "Menyelesaikan masalah yang berkaitan dengan luas permukaan dan Volume bangun ruang sisi datar (limas & Prisma).",
-                                style: reguler12.copyWith(color: blue900),
+                                style: reguler12.copyWith(
+                                  color: blue900,
+                                  height: 1.5,
+                                ),
                               ),
                             ),
                           ],
@@ -254,14 +269,20 @@ class OnboardingController extends State<OnboardingView>
                         ),
                         Text(
                           "Tujuan Pembelajaran yang ditargetkan dari penggunaan aplikasi Geomath ini adalah Ananda diharapkan mampu:",
-                          style: reguler12.copyWith(color: blue900),
+                          style: reguler12.copyWith(
+                            color: blue900,
+                            height: 1.5,
+                          ),
                         ),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               "1.",
-                              style: reguler12.copyWith(color: blue900),
+                              style: reguler12.copyWith(
+                                color: blue900,
+                                height: 1.5,
+                              ),
                             ),
                             const SizedBox(
                               width: 8.0,
@@ -269,7 +290,10 @@ class OnboardingController extends State<OnboardingView>
                             Expanded(
                               child: Text(
                                 "Menjelaskan tentang konsep bangun ruang sisi datar serta bagian-bagiannya.",
-                                style: reguler12.copyWith(color: blue900),
+                                style: reguler12.copyWith(
+                                  color: blue900,
+                                  height: 1.5,
+                                ),
                               ),
                             ),
                           ],
@@ -279,7 +303,10 @@ class OnboardingController extends State<OnboardingView>
                           children: [
                             Text(
                               "2.",
-                              style: reguler12.copyWith(color: blue900),
+                              style: reguler12.copyWith(
+                                color: blue900,
+                                height: 1.5,
+                              ),
                             ),
                             const SizedBox(
                               width: 5.0,
@@ -287,7 +314,10 @@ class OnboardingController extends State<OnboardingView>
                             Expanded(
                               child: Text(
                                 "Mendefinisikan bangun ruang sisi datar berdasarkan karakteristik yang dimiliki.",
-                                style: reguler12.copyWith(color: blue900),
+                                style: reguler12.copyWith(
+                                  color: blue900,
+                                  height: 1.5,
+                                ),
                               ),
                             ),
                           ],
@@ -297,7 +327,10 @@ class OnboardingController extends State<OnboardingView>
                           children: [
                             Text(
                               "3.",
-                              style: reguler12.copyWith(color: blue900),
+                              style: reguler12.copyWith(
+                                color: blue900,
+                                height: 1.5,
+                              ),
                             ),
                             const SizedBox(
                               width: 5.0,
@@ -305,7 +338,10 @@ class OnboardingController extends State<OnboardingView>
                             Expanded(
                               child: Text(
                                 "Menentukan luas permukaan bangun ruang sisi datar.",
-                                style: reguler12.copyWith(color: blue900),
+                                style: reguler12.copyWith(
+                                  color: blue900,
+                                  height: 1.5,
+                                ),
                               ),
                             ),
                           ],
@@ -315,7 +351,10 @@ class OnboardingController extends State<OnboardingView>
                           children: [
                             Text(
                               "4.",
-                              style: reguler12.copyWith(color: blue900),
+                              style: reguler12.copyWith(
+                                color: blue900,
+                                height: 1.5,
+                              ),
                             ),
                             const SizedBox(
                               width: 5.0,
@@ -323,7 +362,10 @@ class OnboardingController extends State<OnboardingView>
                             Expanded(
                               child: Text(
                                 "Menentukan volume bangun ruang sisi datar",
-                                style: reguler12.copyWith(color: blue900),
+                                style: reguler12.copyWith(
+                                  color: blue900,
+                                  height: 1.5,
+                                ),
                               ),
                             ),
                           ],
@@ -333,7 +375,10 @@ class OnboardingController extends State<OnboardingView>
                           children: [
                             Text(
                               "5.",
-                              style: reguler12.copyWith(color: blue900),
+                              style: reguler12.copyWith(
+                                color: blue900,
+                                height: 1.5,
+                              ),
                             ),
                             const SizedBox(
                               width: 5.0,
@@ -341,7 +386,10 @@ class OnboardingController extends State<OnboardingView>
                             Expanded(
                               child: Text(
                                 "Menyelesaikan masalah yang berkaitan dengan bangun ruang sisi datar.",
-                                style: reguler12.copyWith(color: blue900),
+                                style: reguler12.copyWith(
+                                  color: blue900,
+                                  height: 1.5,
+                                ),
                               ),
                             ),
                           ],
@@ -403,14 +451,20 @@ class OnboardingController extends State<OnboardingView>
                         ),
                         Text(
                           "Hal Hal yang perlu Ananda perhatikan dalam menggunakan Aplikasi Geomath ini adalah :",
-                          style: reguler12.copyWith(color: blue900),
+                          style: reguler12.copyWith(
+                            color: blue900,
+                            height: 1.5,
+                          ),
                         ),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               "1.",
-                              style: reguler12.copyWith(color: blue900),
+                              style: reguler12.copyWith(
+                                color: blue900,
+                                height: 1.5,
+                              ),
                             ),
                             const SizedBox(
                               width: 8.0,
@@ -418,7 +472,10 @@ class OnboardingController extends State<OnboardingView>
                             Expanded(
                               child: Text(
                                 "Sebelum memulai menggunakan aplikasi ini, Ananda harus membaca dan memahami tujuan mempelajari bangun ruang sisi datar.",
-                                style: reguler12.copyWith(color: blue900),
+                                style: reguler12.copyWith(
+                                  color: blue900,
+                                  height: 1.5,
+                                ),
                               ),
                             ),
                           ],
@@ -428,7 +485,10 @@ class OnboardingController extends State<OnboardingView>
                           children: [
                             Text(
                               "2.",
-                              style: reguler12.copyWith(color: blue900),
+                              style: reguler12.copyWith(
+                                color: blue900,
+                                height: 1.5,
+                              ),
                             ),
                             const SizedBox(
                               width: 5.0,
@@ -436,7 +496,10 @@ class OnboardingController extends State<OnboardingView>
                             Expanded(
                               child: Text(
                                 "Diharapkan Ananda membaca Keseluruhan isi Geomath (Kata Pengantar, Kompetensi dasar & Tujuan Pembelajaran) sebelum proses pembelajaran dimulai agar proses pembelajaran dapat berlangsung dengan lancar.",
-                                style: reguler12.copyWith(color: blue900),
+                                style: reguler12.copyWith(
+                                  color: blue900,
+                                  height: 1.5,
+                                ),
                               ),
                             ),
                           ],
@@ -446,7 +509,10 @@ class OnboardingController extends State<OnboardingView>
                           children: [
                             Text(
                               "3.",
-                              style: reguler12.copyWith(color: blue900),
+                              style: reguler12.copyWith(
+                                color: blue900,
+                                height: 1.5,
+                              ),
                             ),
                             const SizedBox(
                               width: 5.0,
@@ -454,7 +520,10 @@ class OnboardingController extends State<OnboardingView>
                             Expanded(
                               child: Text(
                                 "Ketika menemukan kendala dalam menggunakan Geomath, Ananda dapat berdiskusi dengan teman / bertanya pada Guru.",
-                                style: reguler12.copyWith(color: blue900),
+                                style: reguler12.copyWith(
+                                  color: blue900,
+                                  height: 1.5,
+                                ),
                               ),
                             ),
                           ],
@@ -464,7 +533,10 @@ class OnboardingController extends State<OnboardingView>
                           children: [
                             Text(
                               "4.",
-                              style: reguler12.copyWith(color: blue900),
+                              style: reguler12.copyWith(
+                                color: blue900,
+                                height: 1.5,
+                              ),
                             ),
                             const SizedBox(
                               width: 5.0,
@@ -472,7 +544,10 @@ class OnboardingController extends State<OnboardingView>
                             Expanded(
                               child: Text(
                                 "Setelah memahami setiap topik, Ananda diharuskan mengerjakan soal latihan pada setiap Sub-topik yang tersedia.",
-                                style: reguler12.copyWith(color: blue900),
+                                style: reguler12.copyWith(
+                                  color: blue900,
+                                  height: 1.5,
+                                ),
                               ),
                             ),
                           ],
@@ -482,7 +557,10 @@ class OnboardingController extends State<OnboardingView>
                           children: [
                             Text(
                               "5.",
-                              style: reguler12.copyWith(color: blue900),
+                              style: reguler12.copyWith(
+                                color: blue900,
+                                height: 1.5,
+                              ),
                             ),
                             const SizedBox(
                               width: 5.0,
@@ -490,7 +568,10 @@ class OnboardingController extends State<OnboardingView>
                             Expanded(
                               child: Text(
                                 "Apabila Ananda telah memahami isi materi Geomath secara keseluruhan, Ananda harus menyelesaikan uji kemampuan yang diberikan Guru Serta mengisi angket minat belajar.",
-                                style: reguler12.copyWith(color: blue900),
+                                style: reguler12.copyWith(
+                                  color: blue900,
+                                  height: 1.5,
+                                ),
                               ),
                             ),
                           ],
@@ -500,7 +581,10 @@ class OnboardingController extends State<OnboardingView>
                           children: [
                             Text(
                               "6.",
-                              style: reguler12.copyWith(color: blue900),
+                              style: reguler12.copyWith(
+                                color: blue900,
+                                height: 1.5,
+                              ),
                             ),
                             const SizedBox(
                               width: 5.0,
@@ -508,7 +592,10 @@ class OnboardingController extends State<OnboardingView>
                             Expanded(
                               child: Text(
                                 "Jika Ananda mampu memahami serta menyelesaikannya secara mandiri, maka Ananda dapat dikatakan berhasil dalam menggunakan aplikasi Geomath ini.",
-                                style: reguler12.copyWith(color: blue900),
+                                style: reguler12.copyWith(
+                                  color: blue900,
+                                  height: 1.5,
+                                ),
                               ),
                             ),
                           ],
