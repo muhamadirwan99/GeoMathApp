@@ -5,6 +5,7 @@ Future showPretestPrismaSecond() async {
   await showModalBottomSheet(
     context: globalContext,
     backgroundColor: Colors.transparent,
+    barrierColor: Colors.transparent,
     isScrollControlled: true,
     builder: (context) {
       return SingleChildScrollView(
@@ -38,13 +39,6 @@ Future showPretestPrismaSecond() async {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(
-                        height: 16.0,
-                      ),
-                      Text(
-                        "Pre-test",
-                        style: semiBold24.copyWith(color: blue900),
-                      ),
                       const SizedBox(
                         height: 16.0,
                       ),

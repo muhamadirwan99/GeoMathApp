@@ -42,13 +42,6 @@ Future showPretestPrismaFirst() async {
                         height: 16.0,
                       ),
                       Text(
-                        "Pre-test",
-                        style: semiBold24.copyWith(color: blue900),
-                      ),
-                      const SizedBox(
-                        height: 16.0,
-                      ),
-                      Text(
                         "Perhatikan gambar-gambar yang disajikan dibawah ini. Jelaskan ciri-ciri dari setiap gambar tersebut:",
                         style: reguler16.copyWith(color: blue900),
                       ),

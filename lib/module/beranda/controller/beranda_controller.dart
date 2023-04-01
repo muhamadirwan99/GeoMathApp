@@ -27,6 +27,18 @@ class BerandaController extends State<BerandaView> implements MvcController {
   bool statusYaPrisma = false;
   bool statusTidakPrisma = false;
 
+  //Pretest prisma 6
+  bool statusJumlahSisi = false;
+  bool statusLuasSisiAlas = false;
+  bool statusLuasSisiTegak = false;
+  bool statusLuasSisiAtas = false;
+  bool statusLuasPermukaan = false;
+
+  //Pretest prisma 8
+  bool statusJumlahSisiAlas = false;
+  bool statusJumlahSisiTinggi = false;
+  bool statusVolumePrisma = false;
+
   //Pretest limas 2
   bool statusTitikSudut = false;
   bool statusRusukLimas = false;
