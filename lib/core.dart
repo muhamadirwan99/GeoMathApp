@@ -61,6 +61,7 @@ export 'package:geomath_app/module/evaluasi/soal/soal_evaluasi_umum/controller/s
 export 'package:geomath_app/module/evaluasi/soal/soal_evaluasi_umum/view/soal_evaluasi_umum_view.dart';
 export 'package:geomath_app/module/materi/limas/bagian_limas/controller/bagian_limas_controller.dart';
 export 'package:geomath_app/module/materi/limas/bagian_limas/view/bagian_limas_view.dart';
+export 'package:geomath_app/module/materi/limas/bagian_limas/widget/content_bagian_limas.dart';
 export 'package:geomath_app/module/materi/limas/jaring_limas/controller/jaring_limas_controller.dart';
 export 'package:geomath_app/module/materi/limas/jaring_limas/view/jaring_limas_view.dart';
 export 'package:geomath_app/module/materi/limas/jaring_limas/widget/content_jaring_limas.dart';

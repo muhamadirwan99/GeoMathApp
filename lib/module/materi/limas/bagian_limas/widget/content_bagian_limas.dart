@@ -3,16 +3,16 @@
 import 'package:flutter/material.dart';
 import 'package:geomath_app/core.dart';
 
-class ContentBagianPrisma extends StatefulWidget {
-  const ContentBagianPrisma({
+class ContentBagianLimas extends StatefulWidget {
+  const ContentBagianLimas({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<ContentBagianPrisma> createState() => _ContentBagianPrismaState();
+  State<ContentBagianLimas> createState() => _ContentBagianLimasState();
 }
 
-class _ContentBagianPrismaState extends State<ContentBagianPrisma> {
+class _ContentBagianLimasState extends State<ContentBagianLimas> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -24,14 +24,14 @@ class _ContentBagianPrismaState extends State<ContentBagianPrisma> {
             height: 16.0,
           ),
           Text(
-            "Bagian - bagian Prisma",
+            "Bagian - bagian Limas",
             style: semiBold20.copyWith(color: neutral900),
           ),
           const SizedBox(
             height: 16.0,
           ),
           Text(
-            "Bagian-bagian dari prisma terdiri dari rusuk, bidang, titik sudut, diagonal sisi, diagonal ruang, dan bidang diagonal.",
+            "Bagian-bagian dari limas terdiri dari rusuk, bidang, titik sudut, diagonal sisi, diagonal ruang, dan bidang diagonal.",
             style: reguler16.copyWith(
               color: neutral900,
             ),

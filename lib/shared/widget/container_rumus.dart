@@ -35,6 +35,7 @@ class _ContainerRumusState extends State<ContainerRumus> {
         child: Center(
           child: Text(
             widget.value,
+            textAlign: TextAlign.center,
             style: semiBold16.copyWith(
               color: neutral900,
             ),

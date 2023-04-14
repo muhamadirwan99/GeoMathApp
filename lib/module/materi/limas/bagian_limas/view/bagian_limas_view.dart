@@ -1,8 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 
 class BagianLimasView extends StatefulWidget {
@@ -54,7 +52,7 @@ class BagianLimasView extends StatefulWidget {
               ),
               child: Column(
                 children: const [
-                  ContentBagianPrisma(),
+                  ContentBagianLimas(),
                   SizedBox(
                     height: 24.0,
                   ),

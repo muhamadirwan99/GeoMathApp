@@ -1,8 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 
 class LatihanLimasView extends StatefulWidget {
@@ -106,51 +104,6 @@ V = ⅓ x 80 x 12
 V = 320 cm3
               ''',
                       style: reguler16.copyWith(color: neutral900),
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      decoration: const BoxDecoration(
-                        color: blue50,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(
-                            8,
-                          ),
-                        ),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 16,
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Center(
-                              child: Text(
-                                "Volume: ⅓ x (alas) x t",
-                                style: semiBold16.copyWith(
-                                  color: neutral900,
-                                ),
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 8.0,
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 24),
-                              child: Text(
-                                '''
-V = ⅓ x (pxl) x t
-V = ⅓ x (10x8) x 12
-V = ⅓ x 80 x 12
-V = 320 cm3
-                                  ''',
-                                style: reguler16.copyWith(color: neutral900),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
                     ),
                     const SizedBox(
                       height: 36.0,

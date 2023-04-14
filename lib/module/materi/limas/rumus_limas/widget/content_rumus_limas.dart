@@ -1,7 +1,6 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
-import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 
 class ContentRumusLimas extends StatefulWidget {
@@ -60,12 +59,11 @@ class _ContentRumusLimasState extends State<ContentRumusLimas> {
           const SizedBox(
             height: 16.0,
           ),
-          const ContainerRumus(value: "Volume : ⅓ x (1,72 x s x s) x t"),
+          const ContainerRumus(value: "Volume : ⅓ x luas alas x t"),
           const SizedBox(
             height: 8.0,
           ),
-          const ContainerRumus(
-              value: "LP : (1,72 x s x s) + (5 x luas sisi tegak)"),
+          const ContainerRumus(value: "LP : luas alas + (5 x luas sisi tegak)"),
           const SizedBox(
             height: 24.0,
           ),

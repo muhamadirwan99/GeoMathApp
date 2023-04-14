@@ -1,7 +1,6 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
-import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 
 class ContentRumusPrisma extends StatefulWidget {
@@ -46,12 +45,11 @@ class _ContentRumusPrismaState extends State<ContentRumusPrisma> {
           const SizedBox(
             height: 16.0,
           ),
-          const ContainerRumus(value: "V = (1,72 x s x s) x tinggi"),
+          const ContainerRumus(value: "L = (2 x luas alas) + luas selimut"),
           const SizedBox(
             height: 8.0,
           ),
-          const ContainerRumus(
-              value: "Lp = (2x (1,72 x s x s)) + (kel alas x t)"),
+          const ContainerRumus(value: "V = luas alas x t"),
           const SizedBox(
             height: 24.0,
           ),
@@ -79,6 +77,10 @@ class _ContentRumusPrismaState extends State<ContentRumusPrisma> {
             height: 16.0,
           ),
           const ContainerRumus(value: "L = 2 x luas alas + luas selimut"),
+          const SizedBox(
+            height: 8.0,
+          ),
+          const ContainerRumus(value: "V = luas alas x tinggi"),
           const SizedBox(
             height: 24.0,
           ),
