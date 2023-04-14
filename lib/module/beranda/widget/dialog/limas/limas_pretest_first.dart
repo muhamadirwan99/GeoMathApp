@@ -42,13 +42,6 @@ Future showPretestLimasFirst() async {
                         height: 16.0,
                       ),
                       Text(
-                        "Pre-test",
-                        style: semiBold24.copyWith(color: blue900),
-                      ),
-                      const SizedBox(
-                        height: 16.0,
-                      ),
-                      Text(
                         "Sekarang, Ananda amati secara teliti bagaimana jika sebuah kubus dibagi menjadi beberapa bagian sebagaimana ilustrasi berikut.",
                         style: reguler16.copyWith(color: blue900),
                       ),

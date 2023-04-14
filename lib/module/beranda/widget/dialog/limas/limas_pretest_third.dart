@@ -5,6 +5,7 @@ Future showPretestLimasThird() async {
   await showModalBottomSheet(
     context: globalContext,
     backgroundColor: Colors.transparent,
+    barrierColor: Colors.transparent,
     isScrollControlled: true,
     builder: (context) {
       return StatefulBuilder(
@@ -40,13 +41,6 @@ Future showPretestLimasThird() async {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const SizedBox(
-                          height: 16.0,
-                        ),
-                        Text(
-                          "Pre-test",
-                          style: semiBold24.copyWith(color: blue900),
-                        ),
                         const SizedBox(
                           height: 16.0,
                         ),
@@ -138,9 +132,9 @@ Future showPretestLimasThird() async {
                           height: 193.0,
                         ),
                         ButtonDialog(
-                          value: "Selesai",
+                          value: "Selanjutnya",
                           onPressed: () {
-                            BerandaController.instance.updatePretestLimas();
+                            showPretestLimasFourth();
                           },
                           status: BerandaController.instance.statusYaLimas ||
                               BerandaController.instance.statusTidakLimas,
