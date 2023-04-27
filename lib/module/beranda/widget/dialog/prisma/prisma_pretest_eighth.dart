@@ -42,6 +42,16 @@ Future showPretestPrismaEighth() async {
                       const SizedBox(
                         height: 16.0,
                       ),
+                      Text(
+                        "Prisma terdiri atas beberapa bagian diantaranya, titik sudut, rusuk, sisi atas, sisi tegak dan sisi alas.",
+                        style: reguler16.copyWith(
+                          color: blue900,
+                          height: 1.5,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 16.0,
+                      ),
                       Center(
                         child: FancyShimmerImage(
                           imageUrl:
@@ -50,76 +60,39 @@ Future showPretestPrismaEighth() async {
                           width: MediaQuery.of(context).size.width,
                         ),
                       ),
+                      const SizedBox(
+                        height: 16.0,
+                      ),
                       Text(
-                        "Prisma memiliki :",
-                        style: reguler16.copyWith(color: blue900),
+                        "Prisma merupakan bangun ruang tiga dimensi yang dibatasi oleh sisi alas dan sisi tutup yang memiliki bentuk segi-n.",
+                        style: reguler16.copyWith(
+                          color: blue900,
+                          height: 1.5,
+                        ),
+                      ),
+                      Text(
+                        "Sementara itu, seluruh sisi-sisi tegak yang terdapat dalam prisma berbentuk persegi panjang. ",
+                        style: reguler16.copyWith(
+                          color: blue900,
+                          height: 1.5,
+                        ),
+                      ),
+                      Text(
+                        "Sebuah prisma berbentuk segi-n selanjutnya akan memiliki jumlah sisi sebanyak n+2, jumlah rusuk sebanyak 3n dan jumlah titik sudut sebanyak 2n.",
+                        style: reguler16.copyWith(
+                          color: blue900,
+                          height: 1.5,
+                        ),
                       ),
                       const SizedBox(
-                        height: 8,
-                      ),
-                      FormRightTitle(
-                        title: "Sisi Alas",
-                        hintText: "Isi Jumlah Sisi Alas",
-                        onChanged: (value) {
-                          if (value.isNotEmpty) {
-                            BerandaController.instance.statusJumlahSisiAlas =
-                                true;
-                            BerandaController.instance.update();
-                          } else {
-                            BerandaController.instance.statusJumlahSisiAlas =
-                                false;
-                            BerandaController.instance.update();
-                          }
-                        },
-                      ),
-                      const SizedBox(
-                        height: 8,
-                      ),
-                      FormRightTitle(
-                        title: "Sisi Tinggi",
-                        hintText: "Isi Jumlah Sisi Tinggi",
-                        onChanged: (value) {
-                          if (value.isNotEmpty) {
-                            BerandaController.instance.statusJumlahSisiTinggi =
-                                true;
-                            BerandaController.instance.update();
-                          } else {
-                            BerandaController.instance.statusJumlahSisiTinggi =
-                                false;
-                            BerandaController.instance.update();
-                          }
-                        },
-                      ),
-                      const SizedBox(
-                        height: 8,
-                      ),
-                      FormLeftTitle(
-                        title: "Maka, Volume Prisma =",
-                        hintText: "Isi Volume Prisma",
-                        onChanged: (value) {
-                          if (value.isNotEmpty) {
-                            BerandaController.instance.statusVolumePrisma =
-                                true;
-                            BerandaController.instance.update();
-                          } else {
-                            BerandaController.instance.statusVolumePrisma =
-                                false;
-                            BerandaController.instance.update();
-                          }
-                        },
-                      ),
-                      const SizedBox(
-                        height: 210,
+                        height: 50,
                       ),
                       ButtonDialog(
-                        value: "Selanjutnya",
+                        value: "Selesai",
                         onPressed: () {
-                          showPretestPrismaNinth();
+                          BerandaController.instance.updatePretestPrisma();
                         },
-                        status: BerandaController
-                                .instance.statusJumlahSisiAlas &&
-                            BerandaController.instance.statusJumlahSisiTinggi &&
-                            BerandaController.instance.statusVolumePrisma,
+                        status: true,
                       ),
                       const SizedBox(
                         height: 24.0,

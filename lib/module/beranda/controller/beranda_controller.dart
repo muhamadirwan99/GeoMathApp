@@ -60,6 +60,34 @@ class BerandaController extends State<BerandaView> implements MvcController {
   bool statusLuasSisiTegakLimas = false;
   bool statusLuasPermukaanLimas = false;
 
+  //New prestest
+
+  //Pretest prisma 1
+  bool statusTitikSudutPrisma = false;
+  bool statusRusukPrisma = false;
+  bool statusBidangPrisma = false;
+  bool statusDiagonalBidangPrisma = false;
+  bool statusDiagonalRuangPrisma = false;
+  bool statusBidangDiagonalPrisma = false;
+  bool statusJenisBangunRuangPrisma = false;
+
+  //Pretest prisma 2
+  bool statusYaPrismaSecond = false;
+  bool statusTidakPrismaSecond = false;
+
+  //Pretest prisma 3
+  bool statusTitikSudutPrisma3 = false;
+  bool statusRusukPrisma3 = false;
+  bool statusBidangPrisma3 = false;
+  bool statusDiagonalBidangPrisma3 = false;
+  bool statusDiagonalRuangPrisma3 = false;
+  bool statusBidangDiagonalPrisma3 = false;
+  bool statusJenisBangunRuangPrisma3 = false;
+
+  //Pretest prisma 4
+  bool statusYaPrismaFourth = false;
+  bool statusTidakPrismaFourth = false;
+
   dynamic videos = FirebaseFirestore.instance.collection("videos").snapshots();
   dynamic user = FirebaseFirestore.instance
       .collection("users")

@@ -3,99 +3,158 @@ import 'package:geomath_app/core.dart';
 
 Future showPretestPrismaSeventh() async {
   await showModalBottomSheet(
-      context: globalContext,
-      backgroundColor: Colors.transparent,
-      barrierColor: Colors.transparent,
-      isScrollControlled: true,
-      builder: (context) {
-        return SingleChildScrollView(
-          controller: ScrollController(),
-          child: ClipRRect(
-            borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(24),
-              topRight: Radius.circular(24),
-            ),
-            child: Container(
-              color: neutral50,
-              child: Column(
-                children: [
-                  const SizedBox(
-                    height: 24.0,
-                  ),
-                  Container(
-                    height: 10,
-                    width: 100,
-                    decoration: const BoxDecoration(
-                      color: neutral150,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(32),
+    context: globalContext,
+    backgroundColor: Colors.transparent,
+    barrierColor: Colors.transparent,
+    isScrollControlled: true,
+    builder: (context) {
+      return StatefulBuilder(
+        builder: (BuildContext context, StateSetter setState) {
+          return SingleChildScrollView(
+            controller: ScrollController(),
+            child: ClipRRect(
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(24),
+                topRight: Radius.circular(24),
+              ),
+              child: Container(
+                color: neutral50,
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      height: 24.0,
+                    ),
+                    Container(
+                      height: 10,
+                      width: 100,
+                      decoration: const BoxDecoration(
+                        color: neutral150,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(32),
+                        ),
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 24,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 24,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(
+                            height: 16.0,
+                          ),
+                          Text(
+                            "Cobalah Ananda perhatikan gambar prisma berikut.",
+                            style: reguler16.copyWith(color: blue900),
+                          ),
+                          const SizedBox(
+                            height: 16.0,
+                          ),
+                          Center(
+                            child: FancyShimmerImage(
+                              imageUrl:
+                                  "https://firebasestorage.googleapis.com/v0/b/geomathapp-7b721.appspot.com/o/pretest_prisma-5.png?alt=media&token=0e1005b3-19c5-4910-bc1c-1fefa677a2e3",
+                              height: 100,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 16.0,
+                          ),
+                          Text(
+                            "Apakah ciri-ciri Prisma yang Ananda sebutkan sebelumnya ada pada gambar diatas?",
+                            style: reguler16.copyWith(color: blue900),
+                          ),
+                          const SizedBox(
+                            height: 16.0,
+                          ),
+                          Row(
+                            children: [
+                              InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    BerandaController.instance.statusYaPrisma =
+                                        !BerandaController
+                                            .instance.statusYaPrisma;
+                                    BerandaController
+                                        .instance.statusTidakPrisma = false;
+                                  });
+                                },
+                                child: BerandaController.instance.statusYaPrisma
+                                    ? SvgPicture.asset(
+                                        "assets/icon/update/radio_true.svg")
+                                    : SvgPicture.asset(
+                                        "assets/icon/update/radio_false.svg"),
+                              ),
+                              const SizedBox(
+                                width: 16.0,
+                              ),
+                              Text(
+                                "Ya",
+                                style: semiBold16.copyWith(
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 16.0,
+                          ),
+                          Row(
+                            children: [
+                              InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    BerandaController
+                                            .instance.statusTidakPrisma =
+                                        !BerandaController
+                                            .instance.statusTidakPrisma;
+                                    BerandaController.instance.statusYaPrisma =
+                                        false;
+                                  });
+                                },
+                                child: BerandaController
+                                        .instance.statusTidakPrisma
+                                    ? SvgPicture.asset(
+                                        "assets/icon/update/radio_true.svg")
+                                    : SvgPicture.asset(
+                                        "assets/icon/update/radio_false.svg"),
+                              ),
+                              const SizedBox(
+                                width: 16.0,
+                              ),
+                              Text(
+                                "Tidak",
+                                style: semiBold16.copyWith(
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 193.0,
+                          ),
+                          ButtonDialog(
+                            value: "Selanjutnya",
+                            onPressed: () {
+                              showPretestPrismaEighth();
+                            },
+                            status: BerandaController.instance.statusYaPrisma ||
+                                BerandaController.instance.statusTidakPrisma,
+                          ),
+                          const SizedBox(
+                            height: 24.0,
+                          ),
+                        ],
+                      ),
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(
-                          height: 16.0,
-                        ),
-                        Text(
-                          "Selain Prisma segitiga, terdapat juga prisma yang lain seperti prisma dibawah ini :",
-                          style: reguler16.copyWith(
-                            color: blue900,
-                            height: 1.5,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 16.0,
-                        ),
-                        Center(
-                          child: FancyShimmerImage(
-                            imageUrl:
-                                "https://firebasestorage.googleapis.com/v0/b/geomathapp-7b721.appspot.com/o/pretest_prisma-8.png?alt=media&token=28f3b6f4-083a-4ddd-9d85-70068c26d4cf",
-                            height: 225,
-                            width: MediaQuery.of(context).size.width,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 16.0,
-                        ),
-                        Text(
-                          "Sehingga diperoleh Luas Permukaan Limas :",
-                          style: reguler16.copyWith(
-                            color: blue900,
-                            height: 1.5,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 16.0,
-                        ),
-                        const ContainerRumus(
-                            value:
-                                "LP = (2 x Luas Alas) + (Keliling Alas x tinggi)"),
-                        const SizedBox(
-                          height: 157,
-                        ),
-                        ButtonDialog(
-                          value: "Selanjutnya",
-                          onPressed: () {
-                            showPretestPrismaEighth();
-                          },
-                          status: true,
-                        ),
-                        const SizedBox(
-                          height: 24.0,
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-        );
-      });
+          );
+        },
+      );
+    },
+  );
 }

@@ -19,7 +19,7 @@ Future showPretestPrismaFirst() async {
             child: Column(
               children: [
                 const SizedBox(
-                  height: 24.0,
+                  height: 44.0,
                 ),
                 Container(
                   height: 10,
@@ -41,97 +41,190 @@ Future showPretestPrismaFirst() async {
                       const SizedBox(
                         height: 16.0,
                       ),
+                      Center(
+                        child:
+                            SvgPicture.asset("assets/materi/dadu_prisma.svg"),
+                      ),
+                      const SizedBox(
+                        height: 16.0,
+                      ),
                       Text(
-                        "Perhatikan gambar-gambar yang disajikan dibawah ini. Jelaskan ciri-ciri dari setiap gambar tersebut:",
+                        "Ciri - ciri bangun ruang pada gambar di atas memiliki :",
                         style: reguler16.copyWith(color: blue900),
                       ),
                       const SizedBox(
                         height: 16.0,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          FancyShimmerImage(
-                            imageUrl:
-                                "https://firebasestorage.googleapis.com/v0/b/geomathapp-7b721.appspot.com/o/pretest_prisma-1.png?alt=media&token=39ec981c-10ea-4b85-8e33-2f619b09f41c",
-                            height: 100,
-                            width: 100,
-                          ),
-                          FancyShimmerImage(
-                            imageUrl:
-                                "https://firebasestorage.googleapis.com/v0/b/geomathapp-7b721.appspot.com/o/pretest_prisma-2.png?alt=media&token=0d643999-385f-4d96-add2-5c1121859db9",
-                            height: 100,
-                            width: 100,
-                          ),
-                          FancyShimmerImage(
-                            imageUrl:
-                                "https://firebasestorage.googleapis.com/v0/b/geomathapp-7b721.appspot.com/o/pretest_prisma-3.png?alt=media&token=0033e3d5-caaf-4df9-8e10-cdcc894243a5",
-                            height: 100,
-                            width: 100,
-                          ),
-                        ],
+                      FormLeftTitleNew(
+                        title: "Titik Sudut",
+                        hintText: "Isi jumlah titik sudut",
+                        onChanged: (value) {
+                          if (value.isNotEmpty) {
+                            BerandaController.instance.statusTitikSudutPrisma =
+                                true;
+                            BerandaController.instance.update();
+                          } else {
+                            BerandaController.instance.statusTitikSudutPrisma =
+                                false;
+                            BerandaController.instance.update();
+                          }
+                        },
                       ),
                       const SizedBox(
-                        height: 16.0,
+                        height: 8.0,
+                      ),
+                      FormLeftTitleNew(
+                        title: "Rusuk",
+                        hintText: "Isi jumlah rusuk",
+                        onChanged: (value) {
+                          if (value.isNotEmpty) {
+                            BerandaController.instance.statusRusukPrisma = true;
+                            BerandaController.instance.update();
+                          } else {
+                            BerandaController.instance.statusRusukPrisma =
+                                false;
+                            BerandaController.instance.update();
+                          }
+                        },
+                      ),
+                      const SizedBox(
+                        height: 8.0,
+                      ),
+                      FormLeftTitleNew(
+                        title: "Bidang",
+                        hintText: "Isi jumlah bidang",
+                        onChanged: (value) {
+                          if (value.isNotEmpty) {
+                            BerandaController.instance.statusBidangPrisma =
+                                true;
+                            BerandaController.instance.update();
+                          } else {
+                            BerandaController.instance.statusBidangPrisma =
+                                false;
+                            BerandaController.instance.update();
+                          }
+                        },
+                      ),
+                      const SizedBox(
+                        height: 8.0,
+                      ),
+                      FormLeftTitleNew(
+                        title: "Diagonal Bidang",
+                        hintText: "Isi jumlah diagonal bidang",
+                        onChanged: (value) {
+                          if (value.isNotEmpty) {
+                            BerandaController
+                                .instance.statusDiagonalBidangPrisma = true;
+                            BerandaController.instance.update();
+                          } else {
+                            BerandaController
+                                .instance.statusDiagonalBidangPrisma = false;
+                            BerandaController.instance.update();
+                          }
+                        },
+                      ),
+                      const SizedBox(
+                        height: 8.0,
+                      ),
+                      FormLeftTitleNew(
+                        title: "Diagonal Ruang",
+                        hintText: "Isi jumlah diagonal ruang",
+                        onChanged: (value) {
+                          if (value.isNotEmpty) {
+                            BerandaController
+                                .instance.statusDiagonalRuangPrisma = true;
+                            BerandaController.instance.update();
+                          } else {
+                            BerandaController
+                                .instance.statusDiagonalRuangPrisma = false;
+                            BerandaController.instance.update();
+                          }
+                        },
+                      ),
+                      const SizedBox(
+                        height: 8.0,
+                      ),
+                      FormLeftTitleNew(
+                        title: "Bidang Diagonal",
+                        hintText: "Isi jumlah bidang diagonal",
+                        onChanged: (value) {
+                          if (value.isNotEmpty) {
+                            BerandaController
+                                .instance.statusBidangDiagonalPrisma = true;
+                            BerandaController.instance.update();
+                          } else {
+                            BerandaController
+                                .instance.statusBidangDiagonalPrisma = false;
+                            BerandaController.instance.update();
+                          }
+                        },
+                      ),
+                      const SizedBox(
+                        height: 24,
                       ),
                       Text(
-                        "Sekarang, cobalah Ananda tuliskan persamaan dan perbedaan dari ketiga gambar diatas.",
+                        "Dari gambar & ciri - ciri di atas, bangun ruang apakah aku?",
                         style: reguler16.copyWith(color: blue900),
                       ),
                       const SizedBox(
-                        height: 16.0,
-                      ),
-                      Text(
-                        "Persamaan dari ketiga gambar adalah:",
-                        style: semiBold14.copyWith(color: neutral700),
-                      ),
-                      const SizedBox(
                         height: 8.0,
                       ),
-                      FormDialog(
-                        hintText: "Isi persamaan dari gambar",
+                      TextFormField(
+                        decoration: const InputDecoration(
+                          hintText: "Isi jenis bangun ruang",
+                          isDense: true,
+                          contentPadding: EdgeInsets.only(
+                            left: 10,
+                            right: 10,
+                            bottom: 8,
+                            top: 4,
+                          ),
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: neutral500,
+                              width: 2,
+                            ),
+                          ),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: primaryPurple,
+                              width: 2,
+                            ),
+                          ),
+                        ),
                         onChanged: (value) {
                           if (value.isNotEmpty) {
-                            BerandaController.instance.statusPersamaan = true;
+                            BerandaController
+                                .instance.statusJenisBangunRuangPrisma = true;
                             BerandaController.instance.update();
                           } else {
-                            BerandaController.instance.statusPersamaan = false;
+                            BerandaController
+                                .instance.statusJenisBangunRuangPrisma = false;
                             BerandaController.instance.update();
                           }
                         },
                       ),
                       const SizedBox(
-                        height: 16.0,
-                      ),
-                      Text(
-                        "Perbedaan dari ketiga gambar adalah:",
-                        style: semiBold14.copyWith(color: neutral700),
-                      ),
-                      const SizedBox(
-                        height: 8.0,
-                      ),
-                      FormDialog(
-                        hintText: "Isi perbedaan dari gambar",
-                        onChanged: (value) {
-                          if (value.isNotEmpty) {
-                            BerandaController.instance.statusPerbedaan = true;
-                            BerandaController.instance.update();
-                          } else {
-                            BerandaController.instance.statusPerbedaan = false;
-                            BerandaController.instance.update();
-                          }
-                        },
-                      ),
-                      const SizedBox(
-                        height: 71.0,
+                        height: 29,
                       ),
                       ButtonDialog(
                         value: "Selanjutnya",
                         onPressed: () {
                           showPretestPrismaSecond();
                         },
-                        status: BerandaController.instance.statusPerbedaan &&
-                            BerandaController.instance.statusPersamaan,
+                        status: true,
+                        // status:
+                        //     BerandaController.instance.statusTitikSudutPrisma &&
+                        //         BerandaController.instance.statusRusukPrisma &&
+                        //         BerandaController.instance.statusBidangPrisma &&
+                        //         BerandaController
+                        //             .instance.statusDiagonalBidangPrisma &&
+                        //         BerandaController
+                        //             .instance.statusDiagonalRuangPrisma &&
+                        //         BerandaController
+                        //             .instance.statusBidangDiagonalPrisma &&
+                        //         BerandaController
+                        //             .instance.statusJenisBangunRuangPrisma,
                       ),
                       const SizedBox(
                         height: 24.0,

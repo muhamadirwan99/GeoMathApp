@@ -26,6 +26,7 @@ export 'package:geomath_app/module/beranda/widget/content_informasi/content_tent
 export 'package:geomath_app/module/beranda/widget/content_informasi/content_tujuan_pembelajaran.dart';
 export 'package:geomath_app/module/beranda/widget/dialog/button_dialog.dart';
 export 'package:geomath_app/module/beranda/widget/dialog/form/form_left_title.dart';
+export 'package:geomath_app/module/beranda/widget/dialog/form/form_left_title_new.dart';
 export 'package:geomath_app/module/beranda/widget/dialog/form/form_right_title.dart';
 export 'package:geomath_app/module/beranda/widget/dialog/form_dialog.dart';
 export 'package:geomath_app/module/beranda/widget/dialog/limas/limas_pretest_eighth.dart';

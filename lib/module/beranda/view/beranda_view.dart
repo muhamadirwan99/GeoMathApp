@@ -35,7 +35,8 @@ class BerandaView extends StatefulWidget {
                   String nama = data["nama"];
                   List listNama = nama.split(" ");
                   String firstName = listNama[0];
-                  String lastName = listNama[1];
+
+                  String lastName = listNama.length < 2 ? "" : listNama[1];
 
                   controller.statusPretestLimas = data["statusPretestLimas"];
                   controller.statusPretestPrisma = data["statusPretestPrisma"];
