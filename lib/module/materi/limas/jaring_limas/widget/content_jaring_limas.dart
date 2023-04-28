@@ -1,7 +1,6 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
-import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 
 class ContentJaringLimas extends StatefulWidget {
@@ -21,7 +20,9 @@ class _ContentJaringLimasState extends State<ContentJaringLimas> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset("assets/materi/materi_limas.jpg"),
+          const SizedBox(
+            height: 32.0,
+          ),
           Text(
             "Jaring - Jaring Limas Segitiga",
             style: semiBold20.copyWith(color: neutral900),

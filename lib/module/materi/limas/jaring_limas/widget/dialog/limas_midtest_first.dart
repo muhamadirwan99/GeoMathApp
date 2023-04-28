@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:geomath_app/core.dart';
 
-Future showPretestLimasSeventh() async {
+Future showMidtestLimasFirst() async {
   await showModalBottomSheet(
     context: globalContext,
     backgroundColor: Colors.transparent,
@@ -205,7 +205,7 @@ Future showPretestLimasSeventh() async {
                         ButtonDialog(
                           value: "Selanjutnya",
                           onPressed: () {
-                            showPretestLimasEighth();
+                            showMidtestLimasSecond();
                           },
                           status: BerandaController
                                   .instance.statusJumlahSisiLimas &&

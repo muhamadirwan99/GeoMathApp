@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:geomath_app/core.dart';
 
-Future showPretestLimasEighth() async {
+Future showMidtestLimasThird() async {
   await showModalBottomSheet(
     context: globalContext,
     backgroundColor: Colors.transparent,
@@ -45,42 +45,44 @@ Future showPretestLimasEighth() async {
                           height: 16.0,
                         ),
                         Text(
-                          "Jika keempat diagonal ruang kubus digambarkan, maka akan berpotongan di satu titik seperti gambar dibawah ini. Sehingga terbentuk 6 buah Limas Segiempat beraturan dengan tinggi limas (T Limas). Yaitu T.ABCD, T.BCGF, T.ADHE, T.EFGH, T.ABFE, dan T.CDHG.",
+                          "Maka dapat diambil kesimpulan bahwa :",
                           style: reguler16.copyWith(
                             color: blue900,
                           ),
                         ),
                         const SizedBox(
-                          height: 8.0,
-                        ),
-                        Center(
-                          child: FancyShimmerImage(
-                            imageUrl:
-                                "https://firebasestorage.googleapis.com/v0/b/geomathapp-7b721.appspot.com/o/pretest_limas-8.png?alt=media&token=4ccd2237-27ec-4be3-8b2d-569c764a2a82",
-                            height: 242,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 8.0,
+                          height: 16.0,
                         ),
                         Text(
-                          "Sehingga diperoleh Volume Limas :",
-                          style: reguler16.copyWith(
-                            color: blue900,
-                          ),
+                          "Volume Limas",
+                          style: semiBold16.copyWith(color: blue900),
                         ),
                         const SizedBox(
                           height: 8.0,
                         ),
                         const ContainerRumus(
-                            value: "Volume: ⅓ x alas x tinggi"),
+                          value: "Volume limas= ⅓ x luas alas x tinggi",
+                        ),
                         const SizedBox(
-                          height: 68.0,
+                          height: 16.0,
+                        ),
+                        Text(
+                          "Luas Permukaan Limas",
+                          style: semiBold16.copyWith(color: blue900),
+                        ),
+                        const SizedBox(
+                          height: 8.0,
+                        ),
+                        const ContainerRumus(
+                          value: "LP = luas alas + (jumlah luas sisi tegak)",
+                        ),
+                        const SizedBox(
+                          height: 326.0,
                         ),
                         ButtonDialog(
                           value: "Selanjutnya",
                           onPressed: () {
-                            showPretestLimasNinth();
+                            Get.to(const RumusLimasView());
                           },
                           status: true,
                         ),

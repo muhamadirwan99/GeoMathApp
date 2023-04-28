@@ -1,5 +1,3 @@
-import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:geomath_app/core.dart';
 
@@ -177,6 +175,9 @@ class SoalEvaluasiLimasView extends StatefulWidget {
                                     : neutral100,
                               ),
                             ),
+                          const SizedBox(
+                            height: 50.0,
+                          ),
                         ],
                       ),
                     ),

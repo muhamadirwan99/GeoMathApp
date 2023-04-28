@@ -1,8 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 
 class RumusLimasView extends StatefulWidget {
@@ -26,17 +24,57 @@ class RumusLimasView extends StatefulWidget {
             color: neutral50,
           ),
           onPressed: () {
-            Get.back();
+            Get.to(const JaringLimasView());
           },
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FabMateriLimas(
-        onPressedSelanjutnya: () {
-          Get.to(
-            const LatihanLimasView(),
-          );
-        },
+      floatingActionButton: Container(
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.2),
+              spreadRadius: 1,
+              blurRadius: 5,
+              offset: const Offset(0, -1),
+            ),
+          ],
+          color: neutral50,
+        ),
+        padding: const EdgeInsets.only(
+          top: 16,
+          bottom: 16,
+          right: 24,
+          left: 24,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            SizedBox(
+              height: 38,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: primaryPurple,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+                onPressed: () {
+                  Get.to(
+                    const LatihanLimasView(),
+                  );
+                },
+                child: Text(
+                  "Latihan",
+                  style: GoogleFonts.lato().copyWith(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.only(bottom: 38),
@@ -60,7 +98,7 @@ class RumusLimasView extends StatefulWidget {
                   ),
                   VideoTutorialLimas(),
                   SizedBox(
-                    height: 32.0,
+                    height: 50.0,
                   ),
                 ],
               ),

@@ -31,7 +31,7 @@ class _ContentBagianLimasState extends State<ContentBagianLimas> {
             height: 16.0,
           ),
           Text(
-            "Bagian-bagian dari limas terdiri dari rusuk, bidang, titik sudut, diagonal sisi, diagonal ruang, dan bidang diagonal.",
+            "Bagian-bagian Limas diantaranya ada titik puncak, titik sudut, rusuk, sisi tegak dan sisi alas. Secara rinci, bagian limas ditunjukan pada gambar berikut: ",
             style: reguler16.copyWith(
               color: neutral900,
             ),
@@ -39,29 +39,39 @@ class _ContentBagianLimasState extends State<ContentBagianLimas> {
           const SizedBox(
             height: 8.0,
           ),
-          const TextNumber(
-            number: "i.",
-            value: "Rusuk.",
+          Center(
+            child: FancyShimmerImage(
+              imageUrl:
+                  "https://firebasestorage.googleapis.com/v0/b/geomathapp-7b721.appspot.com/o/pretest_limas-4.png?alt=media&token=174ee587-3049-4a61-8de8-f03c0b705223",
+              height: 141,
+            ),
+          ),
+          const SizedBox(
+            height: 8.0,
           ),
           const TextNumber(
-            number: "ii.",
-            value: "Sisi/bidang.",
+            number: "1.",
+            value:
+                "Sisi : ABCD = sisi alas, sisi yang lain adalah TAB, TBC, TCD, TDA.",
           ),
           const TextNumber(
-            number: "iii.",
-            value: "Titik sudut.",
+            number: "2.",
+            value:
+                "Rusuk : TA, TB, TC dan TD adalah rusuk tegak. Rusuk yang lain AB, BC, CD dan AD.",
           ),
           const TextNumber(
-            number: "iv.",
-            value: "Diagonal bidang/sisi.",
+            number: "3.",
+            value:
+                "Titik sudut : T, A, B, C dan D merupakan titik sudut dan T dinamakan titik puncak limas.",
           ),
           const TextNumber(
-            number: "v.",
-            value: "Diagonal ruang.",
+            number: "4.",
+            value:
+                "Tinggi limas : Garis yang ditarik dari T tegak lurus bidang alas disebut tinggi limas. Pada gambar tinggi limas adalah TO.",
           ),
           const TextNumber(
-            number: "vi.",
-            value: "Bidang diagonal.",
+            number: "5.",
+            value: "Bidang Diagonal : TAC dan TBD adalah bidang diagonal.",
           ),
         ],
       ),

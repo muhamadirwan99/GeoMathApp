@@ -1,8 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 
 class JaringLimasView extends StatefulWidget {
@@ -33,9 +31,7 @@ class JaringLimasView extends StatefulWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FabMateriLimas(
         onPressedSelanjutnya: () {
-          Get.to(
-            const RumusLimasView(),
-          );
+          showMidtestLimasFirst();
         },
       ),
       body: Padding(
@@ -60,7 +56,7 @@ class JaringLimasView extends StatefulWidget {
                   ),
                   VideoTutorialLimas(),
                   SizedBox(
-                    height: 32.0,
+                    height: 50.0,
                   ),
                 ],
               ),

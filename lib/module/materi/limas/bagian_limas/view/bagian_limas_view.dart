@@ -58,7 +58,7 @@ class BagianLimasView extends StatefulWidget {
                   ),
                   VideoTutorialLimas(),
                   SizedBox(
-                    height: 32.0,
+                    height: 50.0,
                   ),
                 ],
               ),

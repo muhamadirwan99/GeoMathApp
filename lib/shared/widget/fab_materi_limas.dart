@@ -1,10 +1,7 @@
 // ignore_for_file: camel_case_types, deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class FabMateriLimas extends StatefulWidget {
   final Function() onPressedSelanjutnya;
@@ -22,7 +19,17 @@ class _FabMateriLimasState extends State<FabMateriLimas> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: neutral50,
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.2),
+            spreadRadius: 1,
+            blurRadius: 5,
+            offset: const Offset(0, -1),
+          ),
+        ],
+        color: neutral50,
+      ),
       padding: const EdgeInsets.only(
         top: 16,
         bottom: 16,
@@ -30,102 +37,8 @@ class _FabMateriLimasState extends State<FabMateriLimas> {
         left: 24,
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          SizedBox(
-            height: 38,
-            child: OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                foregroundColor: neutral50,
-                side: const BorderSide(width: 2, color: primaryPurple),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8), // <-- Radius
-                ),
-              ),
-              onPressed: () {
-                showGeneralDialog(
-                  context: context,
-                  barrierColor: Colors.black54,
-                  barrierDismissible: true,
-                  barrierLabel: 'Daftar',
-                  pageBuilder: (_, __, ___) {
-                    return Align(
-                      alignment: Alignment.bottomLeft,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 24, bottom: 84),
-                        child: Container(
-                          height: 160.0,
-                          decoration: const BoxDecoration(
-                            color: neutral50,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(
-                                8,
-                              ),
-                            ),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(16),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                TextDaftarIsi(
-                                  value: "Bagian - Bagian Limas",
-                                  onTap: () {
-                                    Get.to(
-                                      const BagianLimasView(),
-                                    );
-                                  },
-                                ),
-                                const SizedBox(
-                                  height: 16.0,
-                                ),
-                                TextDaftarIsi(
-                                  value: "Jaring - Jaring Limas",
-                                  onTap: () {
-                                    Get.to(
-                                      const JaringLimasView(),
-                                    );
-                                  },
-                                ),
-                                const SizedBox(
-                                  height: 16.0,
-                                ),
-                                TextDaftarIsi(
-                                  value: "Rumus Limas",
-                                  onTap: () {
-                                    Get.to(
-                                      const RumusLimasView(),
-                                    );
-                                  },
-                                ),
-                                const SizedBox(
-                                  height: 16.0,
-                                ),
-                                TextDaftarIsi(
-                                  value: "Latihan Soal",
-                                  onTap: () {
-                                    Get.to(
-                                      const LatihanLimasView(),
-                                    );
-                                  },
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    );
-                  },
-                );
-                // showDialogDetail(context);
-              },
-              child: SvgPicture.asset(
-                "assets/icon/daftar_isi.svg",
-                color: primaryPurple,
-              ),
-            ),
-          ),
           SizedBox(
             height: 38,
             child: ElevatedButton(

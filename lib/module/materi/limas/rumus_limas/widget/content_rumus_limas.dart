@@ -20,7 +20,25 @@ class _ContentRumusLimasState extends State<ContentRumusLimas> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset("assets/materi/materi_limas.jpg"),
+          const SizedBox(
+            height: 32.0,
+          ),
+          Text(
+            "Rumus Umum Limas",
+            style: semiBold20.copyWith(color: neutral900),
+          ),
+          const SizedBox(
+            height: 16.0,
+          ),
+          const ContainerRumus(value: "Volume : ⅓ x alas x tinggi"),
+          const SizedBox(
+            height: 8.0,
+          ),
+          const ContainerRumus(
+              value: "Luas Permukaan : luas alas + luas sisi tegak)"),
+          const SizedBox(
+            height: 24.0,
+          ),
           Text(
             "Rumus Limas Segitiga",
             style: semiBold20.copyWith(color: neutral900),

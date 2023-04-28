@@ -26,14 +26,9 @@ export 'package:geomath_app/module/beranda/widget/content_informasi/content_tent
 export 'package:geomath_app/module/beranda/widget/content_informasi/content_tujuan_pembelajaran.dart';
 export 'package:geomath_app/module/beranda/widget/dialog/button_dialog.dart';
 export 'package:geomath_app/module/beranda/widget/dialog/form_dialog.dart';
-export 'package:geomath_app/module/beranda/widget/dialog/limas/limas_pretest_eighth.dart';
-export 'package:geomath_app/module/beranda/widget/dialog/limas/limas_pretest_fifth.dart';
 export 'package:geomath_app/module/beranda/widget/dialog/limas/limas_pretest_first.dart';
 export 'package:geomath_app/module/beranda/widget/dialog/limas/limas_pretest_fourth.dart';
-export 'package:geomath_app/module/beranda/widget/dialog/limas/limas_pretest_ninth.dart';
 export 'package:geomath_app/module/beranda/widget/dialog/limas/limas_pretest_second.dart';
-export 'package:geomath_app/module/beranda/widget/dialog/limas/limas_pretest_seventh.dart';
-export 'package:geomath_app/module/beranda/widget/dialog/limas/limas_pretest_sixth.dart';
 export 'package:geomath_app/module/beranda/widget/dialog/limas/limas_pretest_third.dart';
 export 'package:geomath_app/module/beranda/widget/dialog/prisma/prisma_pretest_eighth.dart';
 export 'package:geomath_app/module/beranda/widget/dialog/prisma/prisma_pretest_fifth.dart';
@@ -62,6 +57,9 @@ export 'package:geomath_app/module/materi/limas/bagian_limas/widget/content_bagi
 export 'package:geomath_app/module/materi/limas/jaring_limas/controller/jaring_limas_controller.dart';
 export 'package:geomath_app/module/materi/limas/jaring_limas/view/jaring_limas_view.dart';
 export 'package:geomath_app/module/materi/limas/jaring_limas/widget/content_jaring_limas.dart';
+export 'package:geomath_app/module/materi/limas/jaring_limas/widget/dialog/limas_midtest_first.dart';
+export 'package:geomath_app/module/materi/limas/jaring_limas/widget/dialog/limas_midtest_second.dart';
+export 'package:geomath_app/module/materi/limas/jaring_limas/widget/dialog/limas_midtest_third.dart';
 export 'package:geomath_app/module/materi/limas/latihan_limas/controller/latihan_limas_controller.dart';
 export 'package:geomath_app/module/materi/limas/latihan_limas/view/latihan_limas_view.dart';
 export 'package:geomath_app/module/materi/limas/latihan_limas/widget/fab_evaluasi_limas.dart';
