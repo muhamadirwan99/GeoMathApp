@@ -89,9 +89,9 @@ Future showPretestLimasFourth() async {
                           height: 137.0,
                         ),
                         ButtonDialog(
-                          value: "Selanjutnya",
+                          value: "Selesai",
                           onPressed: () {
-                            showPretestLimasFifth();
+                            BerandaController.instance.updatePretestLimas();
                           },
                           status: true,
                         ),

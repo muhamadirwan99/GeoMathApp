@@ -62,8 +62,8 @@ class _ContentJaringPrismaState extends State<ContentJaringPrisma> {
           Center(
             child: FancyShimmerImage(
               imageUrl:
-                  "https://firebasestorage.googleapis.com/v0/b/geomathapp-7b721.appspot.com/o/Jaring%20prisma.png?alt=media&token=725dd616-3d35-4a4e-b5dd-0716ee3df109",
-              height: 341,
+                  "https://firebasestorage.googleapis.com/v0/b/geomathapp-7b721.appspot.com/o/Jaring%20prisma.png?alt=media&token=1e103eb0-6865-41dc-8e40-9caec8f3ec23",
+              height: 353,
               width: 379,
             ),
           ),
