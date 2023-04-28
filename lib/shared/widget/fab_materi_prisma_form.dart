@@ -3,19 +3,21 @@
 import 'package:flutter/material.dart';
 import 'package:geomath_app/core.dart';
 
-class FabMateriPrisma extends StatefulWidget {
+class FabMateriPrismaForm extends StatefulWidget {
   final Function() onPressedSelanjutnya;
+  final bool status;
 
-  const FabMateriPrisma({
+  const FabMateriPrismaForm({
     Key? key,
     required this.onPressedSelanjutnya,
+    required this.status,
   }) : super(key: key);
 
   @override
-  State<FabMateriPrisma> createState() => _FabMateriPrismaState();
+  State<FabMateriPrismaForm> createState() => _FabMateriPrismaFormState();
 }
 
-class _FabMateriPrismaState extends State<FabMateriPrisma> {
+class _FabMateriPrismaFormState extends State<FabMateriPrismaForm> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -48,7 +50,7 @@ class _FabMateriPrismaState extends State<FabMateriPrisma> {
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              onPressed: widget.onPressedSelanjutnya,
+              onPressed: widget.status ? widget.onPressedSelanjutnya : null,
               child: Row(
                 children: [
                   Text(

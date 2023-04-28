@@ -31,7 +31,7 @@ class _ContentBagianPrismaState extends State<ContentBagianPrisma> {
             height: 16.0,
           ),
           Text(
-            "Bagian-bagian dari prisma terdiri dari rusuk, bidang, titik sudut, diagonal sisi, diagonal ruang, dan bidang diagonal.",
+            "Prisma terdiri atas beberapa bagian diantaranya, titik sudut, rusuk, sisi atas, sisi tegak dan sisi alas.",
             style: reguler16.copyWith(
               color: neutral900,
             ),
@@ -39,29 +39,29 @@ class _ContentBagianPrismaState extends State<ContentBagianPrisma> {
           const SizedBox(
             height: 8.0,
           ),
-          const TextNumber(
-            number: "i.",
-            value: "Rusuk.",
+          Center(
+            child: FancyShimmerImage(
+              imageUrl:
+                  "https://firebasestorage.googleapis.com/v0/b/geomathapp-7b721.appspot.com/o/Prisma.png?alt=media&token=98b20eed-edea-4767-bf0e-4a4cc0935650",
+              height: 214,
+              width: 201.3,
+            ),
+          ),
+          const SizedBox(
+            height: 8.0,
           ),
           const TextNumber(
-            number: "ii.",
-            value: "Sisi/bidang.",
+            number: "1.",
+            value:
+                "Sisi : sisi alas ABC dan DEF. Sisi yang lain adalah ABED, BCEF dan ACDF",
           ),
           const TextNumber(
-            number: "iii.",
-            value: "Titik sudut.",
+            number: "2.",
+            value: "Rusuk : AB, AC, BC, AD, BE, CF, DF, DE dan EF",
           ),
           const TextNumber(
-            number: "iv.",
-            value: "Diagonal bidang/sisi.",
-          ),
-          const TextNumber(
-            number: "v.",
-            value: "Diagonal ruang.",
-          ),
-          const TextNumber(
-            number: "vi.",
-            value: "Bidang diagonal.",
+            number: "3.",
+            value: "Titik sudut : A, B, C, D, E dan F. ",
           ),
         ],
       ),

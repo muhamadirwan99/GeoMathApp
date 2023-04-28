@@ -108,7 +108,7 @@ class BerandaController extends State<BerandaView> implements MvcController {
         return e;
       }
 
-      Get.offAll(const BagianPrismaView());
+      Get.offAll(const BagianBangunRuangPrismaView());
     } on FirebaseAuthException catch (e) {
       return ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(

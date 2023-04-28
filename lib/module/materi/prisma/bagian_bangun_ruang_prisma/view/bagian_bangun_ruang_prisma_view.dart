@@ -1,12 +1,10 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 import 'package:geomath_app/core.dart';
 
-class JaringPrismaView extends StatefulWidget {
-  const JaringPrismaView({Key? key}) : super(key: key);
+class BagianBangunRuangPrismaView extends StatefulWidget {
+  const BagianBangunRuangPrismaView({Key? key}) : super(key: key);
 
-  Widget build(context, JaringPrismaController controller) {
+  Widget build(context, BagianBangunRuangPrismaController controller) {
     controller.view = this;
 
     return Scaffold(
@@ -24,14 +22,16 @@ class JaringPrismaView extends StatefulWidget {
             color: neutral50,
           ),
           onPressed: () {
-            Get.back();
+            Get.to(const MenuNavView());
           },
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FabMateriPrisma(
         onPressedSelanjutnya: () {
-          showMidtestPrismaFirst();
+          Get.to(
+            const KubusPrismaView(),
+          );
         },
       ),
       body: Padding(
@@ -50,13 +50,13 @@ class JaringPrismaView extends StatefulWidget {
               ),
               child: Column(
                 children: const [
-                  ContentJaringPrisma(),
+                  ContentBagianBangunRuangPrisma(),
                   SizedBox(
                     height: 24.0,
                   ),
                   VideoTutorialPrisma(),
                   SizedBox(
-                    height: 50.0,
+                    height: 50,
                   ),
                 ],
               ),
@@ -68,5 +68,6 @@ class JaringPrismaView extends StatefulWidget {
   }
 
   @override
-  State<JaringPrismaView> createState() => JaringPrismaController();
+  State<BagianBangunRuangPrismaView> createState() =>
+      BagianBangunRuangPrismaController();
 }

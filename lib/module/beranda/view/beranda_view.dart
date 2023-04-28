@@ -128,7 +128,8 @@ class BerandaView extends StatefulWidget {
                               child: InkWell(
                                 onTap: () {
                                   controller.statusPretestPrisma
-                                      ? Get.to(const BagianPrismaView())
+                                      ? Get.to(
+                                          const BagianBangunRuangPrismaView())
                                       : showPretestPrismaFirst();
                                 },
                                 child: Image.asset(

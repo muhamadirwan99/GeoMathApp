@@ -1,10 +1,7 @@
 // ignore_for_file: camel_case_types, deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class FabEvaluasiPrisma extends StatefulWidget {
   const FabEvaluasiPrisma({
@@ -19,7 +16,17 @@ class _FabEvaluasiPrismaState extends State<FabEvaluasiPrisma> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: neutral50,
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.2),
+            spreadRadius: 1,
+            blurRadius: 5,
+            offset: const Offset(0, -1),
+          ),
+        ],
+        color: neutral50,
+      ),
       padding: const EdgeInsets.only(
         top: 16,
         bottom: 16,

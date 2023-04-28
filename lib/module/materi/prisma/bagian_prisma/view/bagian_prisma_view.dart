@@ -1,8 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 
 class BagianPrismaView extends StatefulWidget {
@@ -26,7 +24,7 @@ class BagianPrismaView extends StatefulWidget {
             color: neutral50,
           ),
           onPressed: () {
-            Get.to(const MenuNavView());
+            Get.back();
           },
         ),
       ),
@@ -34,7 +32,7 @@ class BagianPrismaView extends StatefulWidget {
       floatingActionButton: FabMateriPrisma(
         onPressedSelanjutnya: () {
           Get.to(
-            const JaringPrismaView(),
+            const LatihanSoalPrismaView(),
           );
         },
       ),
@@ -60,7 +58,7 @@ class BagianPrismaView extends StatefulWidget {
                   ),
                   VideoTutorialPrisma(),
                   SizedBox(
-                    height: 32.0,
+                    height: 50.0,
                   ),
                 ],
               ),

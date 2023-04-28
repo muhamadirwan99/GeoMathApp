@@ -50,40 +50,6 @@ class _ContentRumusPrismaState extends State<ContentRumusPrisma> {
             height: 8.0,
           ),
           const ContainerRumus(value: "V = luas alas x t"),
-          const SizedBox(
-            height: 24.0,
-          ),
-          Text(
-            "Rumus Prisma Segilima",
-            style: semiBold20.copyWith(color: neutral900),
-          ),
-          const SizedBox(
-            height: 16.0,
-          ),
-          const ContainerRumus(
-              value: "L = 2 x luas alas + (keliling alas x tinggi prisma)"),
-          const SizedBox(
-            height: 8.0,
-          ),
-          const ContainerRumus(value: "V = ½ (5 x a x t) x tinggi prisma"),
-          const SizedBox(
-            height: 24.0,
-          ),
-          Text(
-            "Rumus Prisma Segienam",
-            style: semiBold20.copyWith(color: neutral900),
-          ),
-          const SizedBox(
-            height: 16.0,
-          ),
-          const ContainerRumus(value: "L = 2 x luas alas + luas selimut"),
-          const SizedBox(
-            height: 8.0,
-          ),
-          const ContainerRumus(value: "V = luas alas x tinggi"),
-          const SizedBox(
-            height: 24.0,
-          ),
         ],
       ),
     );

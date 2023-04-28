@@ -1,8 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 
 class LatihanPrismaView extends StatefulWidget {
@@ -64,7 +62,7 @@ class LatihanPrismaView extends StatefulWidget {
                       height: 32.0,
                     ),
                     Text(
-                      "Contoh Soal Volume Prisma Segiempat",
+                      "Contoh Soal Volume Prisma Segitiga",
                       style: semiBold20.copyWith(color: neutral900),
                     ),
                     const SizedBox(
@@ -105,58 +103,8 @@ Luas alas = 12 cm persegi.
 
 Keliling alas = 6 + 5 + 5 
 Keliling alas = 16 cm.
-
-Jadi, LP= (2 x 12) + (16 x 12) 
-LP = 24 + 192 
-LP = 216 cm persegi.
               ''',
                       style: reguler16.copyWith(color: neutral900),
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      decoration: const BoxDecoration(
-                        color: blue50,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(
-                            8,
-                          ),
-                        ),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 16,
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Center(
-                              child: Text(
-                                "Volume prisma = Luas alas x tinggi",
-                                style: semiBold16.copyWith(
-                                  color: neutral900,
-                                ),
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 8.0,
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 24),
-                              child: Text(
-                                '''
-V = 12 x 12 
-V = 144 cm3
-                                  ''',
-                                style: reguler16.copyWith(color: neutral900),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 36.0,
                     ),
                   ],
                 ),
