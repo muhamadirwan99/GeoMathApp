@@ -45,7 +45,7 @@ class _ContentRumusPrismaState extends State<ContentRumusPrisma> {
           const SizedBox(
             height: 16.0,
           ),
-          const ContainerRumus(value: "L = (2 x luas alas) + luas selimut"),
+          const ContainerRumus(value: "Lp = (2 x luas alas) + luas selimut"),
           const SizedBox(
             height: 8.0,
           ),

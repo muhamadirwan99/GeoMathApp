@@ -112,7 +112,7 @@ Future showMidtestLimasSecond() async {
                           },
                         ),
                         const SizedBox(
-                          height: 248.0,
+                          height: 300.0,
                         ),
                         ButtonDialog(
                           value: "Selanjutnya",

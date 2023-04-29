@@ -169,6 +169,128 @@ class SoalEvaluasiUmumView extends StatefulWidget {
                                   ],
                                 )
                               : Container(),
+                          extractedData[controller.index]["title_fourth"] !=
+                                  null
+                              ? Column(
+                                  children: [
+                                    const SizedBox(
+                                      height: 16.0,
+                                    ),
+                                    Text(
+                                      extractedData[controller.index]
+                                          ["title_fourth"],
+                                      style: reguler16.copyWith(
+                                        color: neutral850,
+                                        height: 1.5,
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              : Container(),
+                          extractedData[controller.index]["title_fifth"] != null
+                              ? Column(
+                                  children: [
+                                    const SizedBox(
+                                      height: 16.0,
+                                    ),
+                                    Text(
+                                      extractedData[controller.index]
+                                          ["title_fifth"],
+                                      style: reguler16.copyWith(
+                                        color: neutral850,
+                                        height: 1.5,
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              : Container(),
+                          extractedData[controller.index]["title_sixth"] != null
+                              ? Column(
+                                  children: [
+                                    const SizedBox(
+                                      height: 16.0,
+                                    ),
+                                    Text(
+                                      extractedData[controller.index]
+                                          ["title_sixth"],
+                                      style: reguler16.copyWith(
+                                        color: neutral850,
+                                        height: 1.5,
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              : Container(),
+                          extractedData[controller.index]["title_seventh"] !=
+                                  null
+                              ? Column(
+                                  children: [
+                                    const SizedBox(
+                                      height: 16.0,
+                                    ),
+                                    Text(
+                                      extractedData[controller.index]
+                                          ["title_seventh"],
+                                      style: reguler16.copyWith(
+                                        color: neutral850,
+                                        height: 1.5,
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              : Container(),
+                          extractedData[controller.index]["title_eighth"] !=
+                                  null
+                              ? Column(
+                                  children: [
+                                    const SizedBox(
+                                      height: 16.0,
+                                    ),
+                                    Text(
+                                      extractedData[controller.index]
+                                          ["title_eighth"],
+                                      style: reguler16.copyWith(
+                                        color: neutral850,
+                                        height: 1.5,
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              : Container(),
+                          extractedData[controller.index]["title_ninth"] != null
+                              ? Column(
+                                  children: [
+                                    const SizedBox(
+                                      height: 16.0,
+                                    ),
+                                    Text(
+                                      extractedData[controller.index]
+                                          ["title_ninth"],
+                                      style: reguler16.copyWith(
+                                        color: neutral850,
+                                        height: 1.5,
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              : Container(),
+                          extractedData[controller.index]["title_tenth"] != null
+                              ? Column(
+                                  children: [
+                                    const SizedBox(
+                                      height: 16.0,
+                                    ),
+                                    Text(
+                                      extractedData[controller.index]
+                                          ["title_tenth"],
+                                      style: reguler16.copyWith(
+                                        color: neutral850,
+                                        height: 1.5,
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              : Container(),
                           const SizedBox(
                             height: 24.0,
                           ),

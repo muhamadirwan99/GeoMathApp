@@ -35,7 +35,7 @@ class _ContentRumusLimasState extends State<ContentRumusLimas> {
             height: 8.0,
           ),
           const ContainerRumus(
-              value: "Luas Permukaan : luas alas + luas sisi tegak)"),
+              value: "Luas Permukaan : luas alas + luas sisi tegak"),
           const SizedBox(
             height: 24.0,
           ),

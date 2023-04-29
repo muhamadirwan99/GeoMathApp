@@ -50,7 +50,7 @@ Future showMidtestPrismaTwelfth() async {
                         height: 16.0,
                       ),
                       const ContainerRumus(
-                          value: "V = (½ x a x t) x tinggi prisma"),
+                          value: "V = luas alas x tinggi prisma"),
                       const SizedBox(
                         height: 16.0,
                       ),

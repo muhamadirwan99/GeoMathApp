@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
 import 'package:lottie/lottie.dart';
 
@@ -44,18 +42,37 @@ class MainEvaluasiView extends StatefulWidget {
               height: 48.0,
             ),
             Text(
-              "Apakah Anda siap?",
+              "Apakah Ananda siap?",
               style: semiBold32.copyWith(color: neutral50),
             ),
             const SizedBox(
               height: 16.0,
             ),
-            Text(
-              "Apakah Anda merasa percaya diri? Di sini kamu akan menghadapi pertanyaan yang sangat menantang",
-              style: reguler16.copyWith(color: neutral50, height: 1.5),
-            ),
+            kdMateri == 2
+                ? Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Siapkan lembar jawaban untuk mengisi jawaban dari soal yang akan ditampilkan di aplikasi. ",
+                        style:
+                            reguler16.copyWith(color: neutral50, height: 1.5),
+                      ),
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      Text(
+                        "Selamat mengerjakan.",
+                        style:
+                            reguler16.copyWith(color: neutral50, height: 1.5),
+                      ),
+                    ],
+                  )
+                : Text(
+                    "Apakah Anda merasa percaya diri? Di sini kamu akan menghadapi pertanyaan yang sangat menantang",
+                    style: reguler16.copyWith(color: neutral50, height: 1.5),
+                  ),
             const SizedBox(
-              height: 66.0,
+              height: 50,
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(

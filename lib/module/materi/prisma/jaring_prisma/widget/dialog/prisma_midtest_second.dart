@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:geomath_app/core.dart';
-import 'package:geomath_app/module/materi/prisma/jaring_prisma/widget/dialog/prisma_midtest_third.dart';
 
 Future showMidtestPrismaSecond() async {
   await showModalBottomSheet(
@@ -141,7 +140,7 @@ Future showMidtestPrismaSecond() async {
                       ),
                       TextFormField(
                         decoration: const InputDecoration(
-                          hintText: "Isi jenis bangun ruang",
+                          hintText: "Isi luas permukaan kubus",
                           isDense: true,
                           contentPadding: EdgeInsets.only(
                             left: 10,

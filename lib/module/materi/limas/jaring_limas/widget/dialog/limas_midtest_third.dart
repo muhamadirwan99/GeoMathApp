@@ -77,7 +77,7 @@ Future showMidtestLimasThird() async {
                           value: "LP = luas alas + (jumlah luas sisi tegak)",
                         ),
                         const SizedBox(
-                          height: 326.0,
+                          height: 360.0,
                         ),
                         ButtonDialog(
                           value: "Selanjutnya",
