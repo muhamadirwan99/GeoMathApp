@@ -1,11 +1,7 @@
 // ignore_for_file: must_be_immutable, deprecated_member_use
 
-import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:geomath_app/common/style.dart';
 import 'package:geomath_app/core.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SoalEvaluasiUmumView extends StatefulWidget {
   int kdMateri;
@@ -18,7 +14,7 @@ class SoalEvaluasiUmumView extends StatefulWidget {
     controller.view = this;
 
     return FutureBuilder(
-      future: controller.questions as Future<List<Question>>,
+      future: controller.questions,
       builder: (ctx, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           if (snapshot.hasError) {
@@ -26,7 +22,7 @@ class SoalEvaluasiUmumView extends StatefulWidget {
               child: Text('${snapshot.error}'),
             );
           } else if (snapshot.hasData) {
-            var extractedData = snapshot.data as List<Question>;
+            var extractedData = snapshot.data;
             return Scaffold(
               backgroundColor: neutral50,
               appBar: AppBar(
@@ -73,15 +69,12 @@ class SoalEvaluasiUmumView extends StatefulWidget {
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
-                    onPressed: controller.isAlreadySelected
-                        ? () {
-                            controller.submitAnswer(controller.answer);
-                            controller.nextQuestion(
-                              extractedData.length,
-                              kdMateri,
-                            );
-                          }
-                        : null,
+                    onPressed: () {
+                      controller.nextQuestion(
+                        extractedData.length,
+                        kdMateri,
+                      );
+                    },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -122,65 +115,63 @@ class SoalEvaluasiUmumView extends StatefulWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          FancyShimmerImage(
-                            imageUrl: extractedData[controller.index].image,
-                            boxFit: BoxFit.fitHeight,
-                            height: 250,
-                            width: MediaQuery.of(context).size.width,
-                          ),
-                          Text(
-                            extractedData[controller.index].title,
-                            style: reguler16.copyWith(
-                              color: neutral850,
-                            ),
-                          ),
+                          extractedData[controller.index]["image"] != null
+                              ? FancyShimmerImage(
+                                  imageUrl: extractedData[controller.index]
+                                      ["image"],
+                                  boxFit: BoxFit.fitHeight,
+                                  height: 250,
+                                  width: MediaQuery.of(context).size.width,
+                                )
+                              : Container(),
                           const SizedBox(
                             height: 24.0,
                           ),
-                          for (int i = 0;
-                              i <
-                                  extractedData[controller.index]
-                                      .options
-                                      .length;
-                              i++)
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 16),
-                              child: ButtonSoal(
-                                text: extractedData[controller.index]
-                                    .options
-                                    .keys
-                                    .toList()[i],
-                                onPressed: () {
-                                  controller.checkAnswerAndUpdate(
-                                      extractedData[controller.index]
-                                          .options
-                                          .values
-                                          .toList()[i],
-                                      extractedData[controller.index]
-                                          .options
-                                          .keys
-                                          .toList()[i]);
-                                },
-                                colorText: controller.isPressed
-                                    ? extractedData[controller.index]
-                                                .options
-                                                .keys
-                                                .toList()[i] ==
-                                            controller.onSelected
-                                        ? neutral100
-                                        : primaryPurple
-                                    : primaryPurple,
-                                bgColor: controller.isPressed
-                                    ? extractedData[controller.index]
-                                                .options
-                                                .keys
-                                                .toList()[i] ==
-                                            controller.onSelected
-                                        ? primaryPurple
-                                        : neutral100
-                                    : neutral100,
-                              ),
+                          Text(
+                            extractedData[controller.index]["title"],
+                            style: reguler16.copyWith(
+                              color: neutral850,
+                              height: 1.5,
                             ),
+                          ),
+                          extractedData[controller.index]["title_second"] !=
+                                  null
+                              ? Column(
+                                  children: [
+                                    const SizedBox(
+                                      height: 16.0,
+                                    ),
+                                    Text(
+                                      extractedData[controller.index]
+                                          ["title_second"],
+                                      style: reguler16.copyWith(
+                                        color: neutral850,
+                                        height: 1.5,
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              : Container(),
+                          extractedData[controller.index]["title_third"] != null
+                              ? Column(
+                                  children: [
+                                    const SizedBox(
+                                      height: 16.0,
+                                    ),
+                                    Text(
+                                      extractedData[controller.index]
+                                          ["title_third"],
+                                      style: reguler16.copyWith(
+                                        color: neutral850,
+                                        height: 1.5,
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              : Container(),
+                          const SizedBox(
+                            height: 24.0,
+                          ),
                         ],
                       ),
                     ),

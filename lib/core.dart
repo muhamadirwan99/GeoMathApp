@@ -51,6 +51,7 @@ export 'package:geomath_app/module/evaluasi/soal/soal_evaluasi_prisma/controller
 export 'package:geomath_app/module/evaluasi/soal/soal_evaluasi_prisma/view/soal_evaluasi_prisma_view.dart';
 export 'package:geomath_app/module/evaluasi/soal/soal_evaluasi_umum/controller/soal_evaluasi_umum_controller.dart';
 export 'package:geomath_app/module/evaluasi/soal/soal_evaluasi_umum/view/soal_evaluasi_umum_view.dart';
+export 'package:geomath_app/module/evaluasi/soal/soal_evaluasi_umum/widget/dialog_selesai.dart';
 export 'package:geomath_app/module/materi/limas/bagian_limas/controller/bagian_limas_controller.dart';
 export 'package:geomath_app/module/materi/limas/bagian_limas/view/bagian_limas_view.dart';
 export 'package:geomath_app/module/materi/limas/bagian_limas/widget/content_bagian_limas.dart';

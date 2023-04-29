@@ -10,66 +10,21 @@ class SoalEvaluasiUmumController extends State<SoalEvaluasiUmumView>
 
   late Future questions;
 
-  Future<List<Question>> getData() async {
-    return db.fetchQuestionsUmum();
+  Future<List<dynamic>> getData() async {
+    List<dynamic> data = await db.fetchQuestionsUmum();
+    return data;
   }
 
   int index = 0;
-  int score = 0;
-  bool isPressed = false;
-  bool isAlreadySelected = false;
 
-  bool answer = false;
-
-  String onSelected = "";
   void nextQuestion(int questionLength, int kdMateri) {
     if (index == questionLength - 1) {
-      Get.to(
-        RingkasanEvaluasiView(
-          questionLength: questionLength,
-          questionRight: score,
-          kdMateri: kdMateri,
-        ),
-      );
+      showDialogSelesai();
     } else {
-      if (isPressed) {
-        setState(() {
-          index++;
-          isPressed = false;
-          isAlreadySelected = false;
-        });
-      } else {
-        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-          content: Text('Please select any option'),
-          behavior: SnackBarBehavior.floating,
-          margin: EdgeInsets.symmetric(vertical: 20.0),
-        ));
-      }
+      setState(() {
+        index++;
+      });
     }
-  }
-
-  void submitAnswer(bool value) {
-    if (value == true) {
-      score++;
-    }
-  }
-
-  void checkAnswerAndUpdate(bool value, String key) {
-    onSelected = key;
-    isPressed = true;
-    isAlreadySelected = true;
-    answer = value;
-    update();
-  }
-
-  void startOver() {
-    setState(() {
-      index = 0;
-      score = 0;
-      isPressed = false;
-      isAlreadySelected = false;
-    });
-    Navigator.pop(context);
   }
 
   @override
