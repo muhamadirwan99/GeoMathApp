@@ -62,9 +62,31 @@ Future showMidtestPrismaTwelfth() async {
                         height: 16.0,
                       ),
                       const ContainerRumus(
-                          value: "LP = luas alas x tinggi prisma"),
+                          value: "V = luas alas x tinggi prisma"),
                       const SizedBox(
-                        height: 350,
+                        height: 16.0,
+                      ),
+                      Text(
+                        "Rumus Volume Kubus",
+                        style: semiBold20.copyWith(color: neutral900),
+                      ),
+                      const SizedBox(
+                        height: 16.0,
+                      ),
+                      const ContainerRumus(value: "V = s x s x s"),
+                      const SizedBox(
+                        height: 16.0,
+                      ),
+                      Text(
+                        "Rumus Volume Balok",
+                        style: semiBold20.copyWith(color: neutral900),
+                      ),
+                      const SizedBox(
+                        height: 16.0,
+                      ),
+                      const ContainerRumus(value: "V = p x l x t"),
+                      const SizedBox(
+                        height: 126,
                       ),
                       ButtonDialog(
                         value: "Selanjutnya",

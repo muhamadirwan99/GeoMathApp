@@ -31,7 +31,7 @@ class _ContentLatihanSoalPrismaState extends State<ContentLatihanSoalPrisma> {
             height: 16.0,
           ),
           Text(
-            "Tentukanlah unsur - unsur bangun ruang datar dengan memberikan keterangan dari gambar berikut pada kolom isian!",
+            "Tentukanlah unsur - unsur bangun ruang sisi datar dengan memberikan keterangan dari gambar berikut pada kolom isian!",
             style: reguler16.copyWith(
               color: neutral900,
             ),

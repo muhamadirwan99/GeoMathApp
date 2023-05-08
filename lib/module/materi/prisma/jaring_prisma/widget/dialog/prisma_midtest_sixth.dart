@@ -65,7 +65,30 @@ Future showMidtestPrismaSixth() async {
                       const ContainerRumus(
                           value: "LP = (2 x luas alas) + Luas Selimut"),
                       const SizedBox(
-                        height: 302,
+                        height: 16.0,
+                      ),
+                      Text(
+                        "Rumus Luas Permukaan Kubus",
+                        style: semiBold20.copyWith(color: neutral900),
+                      ),
+                      const SizedBox(
+                        height: 16.0,
+                      ),
+                      const ContainerRumus(value: "LP = 6 x s x s"),
+                      const SizedBox(
+                        height: 16.0,
+                      ),
+                      Text(
+                        "Rumus Luas Permukaan Balok",
+                        style: semiBold20.copyWith(color: neutral900),
+                      ),
+                      const SizedBox(
+                        height: 16.0,
+                      ),
+                      const ContainerRumus(
+                          value: "LP = 2 x (p x l + p x t + l x t)"),
+                      const SizedBox(
+                        height: 94,
                       ),
                       ButtonDialog(
                         value: "Selanjutnya",

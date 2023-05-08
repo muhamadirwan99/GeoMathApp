@@ -45,7 +45,7 @@ Future showPretestPrismaFourth() async {
                             height: 16.0,
                           ),
                           Text(
-                            "Sekarang, coba Ananda perhatikan gambar kubus berikut. ",
+                            "Sekarang, coba Ananda perhatikan gambar balok berikut. ",
                             style: reguler16.copyWith(color: blue900),
                           ),
                           const SizedBox(
@@ -63,7 +63,7 @@ Future showPretestPrismaFourth() async {
                             height: 16.0,
                           ),
                           Text(
-                            "Apakah ciri - ciri kubus yang Ananda sebutkan sebelumnya ada pada gambar di atas?",
+                            "Apakah ciri - ciri balok yang Ananda sebutkan sebelumnya ada pada gambar di atas?",
                             style: reguler16.copyWith(color: blue900),
                           ),
                           const SizedBox(
