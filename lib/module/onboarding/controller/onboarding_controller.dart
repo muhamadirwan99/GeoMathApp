@@ -289,7 +289,7 @@ class OnboardingController extends State<OnboardingView>
                             ),
                             Expanded(
                               child: Text(
-                                "Menjelaskan tentang konsep bangun ruang sisi datar serta bagian-bagiannya.",
+                                "Menjelaskan tentang konsep bangun ruang sisi datar serta bagian-bagiannya dengan tepat.",
                                 style: reguler12.copyWith(
                                   color: blue900,
                                   height: 1.5,
@@ -313,7 +313,7 @@ class OnboardingController extends State<OnboardingView>
                             ),
                             Expanded(
                               child: Text(
-                                "Mendefinisikan bangun ruang sisi datar berdasarkan karakteristik yang dimiliki.",
+                                "Mendefinisikan bangun ruang sisi datar berdasarkan karakteristik yang dimiliki secara benar.",
                                 style: reguler12.copyWith(
                                   color: blue900,
                                   height: 1.5,
@@ -337,7 +337,7 @@ class OnboardingController extends State<OnboardingView>
                             ),
                             Expanded(
                               child: Text(
-                                "Menentukan luas permukaan bangun ruang sisi datar.",
+                                "Menentukan luas permukaan bangun ruang sisi datar secara tepat.",
                                 style: reguler12.copyWith(
                                   color: blue900,
                                   height: 1.5,
@@ -361,7 +361,7 @@ class OnboardingController extends State<OnboardingView>
                             ),
                             Expanded(
                               child: Text(
-                                "Menentukan volume bangun ruang sisi datar",
+                                "Menentukan volume bangun ruang sisi datar secara tepat.",
                                 style: reguler12.copyWith(
                                   color: blue900,
                                   height: 1.5,
@@ -385,7 +385,7 @@ class OnboardingController extends State<OnboardingView>
                             ),
                             Expanded(
                               child: Text(
-                                "Menyelesaikan masalah yang berkaitan dengan bangun ruang sisi datar.",
+                                "Menyelesaikan masalah yang berkaitan dengan bangun ruang sisi datar secara teliti.",
                                 style: reguler12.copyWith(
                                   color: blue900,
                                   height: 1.5,

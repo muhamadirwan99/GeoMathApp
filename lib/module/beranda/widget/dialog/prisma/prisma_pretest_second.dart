@@ -134,6 +134,16 @@ Future showPretestPrismaSecond() async {
                               ),
                             ],
                           ),
+                          BerandaController.instance.statusTidakPrismaSecond
+                              ? Column(
+                                  children: const [
+                                    SizedBox(
+                                      height: 16.0,
+                                    ),
+                                    LabelSalah(),
+                                  ],
+                                )
+                              : Container(),
                           const SizedBox(
                             height: 195.67,
                           ),
@@ -142,10 +152,8 @@ Future showPretestPrismaSecond() async {
                             onPressed: () {
                               showPretestPrismaThird();
                             },
-                            status: BerandaController
-                                    .instance.statusYaPrismaSecond ||
-                                BerandaController
-                                    .instance.statusTidakPrismaSecond,
+                            status:
+                                BerandaController.instance.statusYaPrismaSecond,
                           ),
                           const SizedBox(
                             height: 24.0,

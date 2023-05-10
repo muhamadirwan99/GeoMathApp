@@ -49,28 +49,10 @@ Future showPretestPrismaFifth() async {
                         const SizedBox(
                           height: 16.0,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            FancyShimmerImage(
-                              imageUrl:
-                                  "https://firebasestorage.googleapis.com/v0/b/geomathapp-7b721.appspot.com/o/pretest_prisma-1.png?alt=media&token=39ec981c-10ea-4b85-8e33-2f619b09f41c",
-                              height: 100,
-                              width: 100,
-                            ),
-                            FancyShimmerImage(
-                              imageUrl:
-                                  "https://firebasestorage.googleapis.com/v0/b/geomathapp-7b721.appspot.com/o/pretest_prisma-2.png?alt=media&token=0d643999-385f-4d96-add2-5c1121859db9",
-                              height: 100,
-                              width: 100,
-                            ),
-                            FancyShimmerImage(
-                              imageUrl:
-                                  "https://firebasestorage.googleapis.com/v0/b/geomathapp-7b721.appspot.com/o/pretest_prisma-3.png?alt=media&token=0033e3d5-caaf-4df9-8e10-cdcc894243a5",
-                              height: 100,
-                              width: 100,
-                            ),
-                          ],
+                        FancyShimmerImage(
+                          imageUrl:
+                              "https://firebasestorage.googleapis.com/v0/b/geomathapp-7b721.appspot.com/o/Gambar%20(Download%20disini).png?alt=media&token=c47af109-10a9-4c4d-894c-e9019e22ca8c",
+                          height: 100,
                         ),
                         const SizedBox(
                           height: 16.0,

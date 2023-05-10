@@ -49,7 +49,7 @@ Future showPretestPrismaFirst() async {
                         height: 16.0,
                       ),
                       Text(
-                        "Ciri - ciri bangun ruang pada gambar di atas memiliki :",
+                        "Aku adalah sebuah bangun ruang seperti gambar di atas yang memiliki ciri-ciri berikut:",
                         style: reguler16.copyWith(color: blue900),
                       ),
                       const SizedBox(

@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "862898499355",
+    "firebase_url": "https://geomathapp-7b721-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "geomathapp-7b721",
     "storage_bucket": "geomathapp-7b721.appspot.com"
   },
@@ -14,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "862898499355-1u4bkm39rv6tubc6na70i824mnq7nlbi.apps.googleusercontent.com",
+          "client_id": "862898499355-j73ch1am84nlbrenqq0srtjdofj3fbe6.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.digital.learning.geomath.app",
-            "certificate_hash": "35c70f5989d7ed356950a02a4433a6a8714616cb"
+            "certificate_hash": "4165cc50863079b11f99d1a76547abd5f49c8c0b"
           }
         },
         {

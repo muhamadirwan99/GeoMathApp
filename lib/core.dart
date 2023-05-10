@@ -144,6 +144,7 @@ export 'package:geomath_app/shared/widget/form/form_left_title_new.dart';
 export 'package:geomath_app/shared/widget/form/form_right_title.dart';
 export 'package:geomath_app/shared/widget/form_base.dart';
 export 'package:geomath_app/shared/widget/form_password.dart';
+export 'package:geomath_app/shared/widget/label_salah.dart';
 export 'package:geomath_app/shared/widget/next_button.dart';
 export 'package:geomath_app/shared/widget/option_card.dart';
 export 'package:geomath_app/shared/widget/question_widget.dart';

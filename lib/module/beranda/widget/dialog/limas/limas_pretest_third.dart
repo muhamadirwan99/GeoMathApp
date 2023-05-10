@@ -128,6 +128,16 @@ Future showPretestLimasThird() async {
                             ),
                           ],
                         ),
+                        BerandaController.instance.statusTidakLimas
+                            ? Column(
+                                children: const [
+                                  SizedBox(
+                                    height: 16.0,
+                                  ),
+                                  LabelSalah(),
+                                ],
+                              )
+                            : Container(),
                         const SizedBox(
                           height: 193.0,
                         ),
@@ -136,8 +146,7 @@ Future showPretestLimasThird() async {
                           onPressed: () {
                             showPretestLimasFourth();
                           },
-                          status: BerandaController.instance.statusYaLimas ||
-                              BerandaController.instance.statusTidakLimas,
+                          status: BerandaController.instance.statusYaLimas,
                         ),
                         const SizedBox(
                           height: 24.0,

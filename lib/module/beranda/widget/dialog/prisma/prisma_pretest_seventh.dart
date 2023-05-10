@@ -62,7 +62,7 @@ Future showPretestPrismaSeventh() async {
                             height: 16.0,
                           ),
                           Text(
-                            "Apakah ciri-ciri Prisma yang Ananda sebutkan sebelumnya ada pada gambar diatas?",
+                            "Apakah ciri-ciri Prisma yang Ananda sebutkan sebelumnya ada pada gambar di atas?",
                             style: reguler16.copyWith(color: blue900),
                           ),
                           const SizedBox(
@@ -131,6 +131,16 @@ Future showPretestPrismaSeventh() async {
                               ),
                             ],
                           ),
+                          BerandaController.instance.statusTidakPrisma
+                              ? Column(
+                                  children: const [
+                                    SizedBox(
+                                      height: 16.0,
+                                    ),
+                                    LabelSalah(),
+                                  ],
+                                )
+                              : Container(),
                           const SizedBox(
                             height: 193.0,
                           ),
@@ -139,8 +149,7 @@ Future showPretestPrismaSeventh() async {
                             onPressed: () {
                               showPretestPrismaEighth();
                             },
-                            status: BerandaController.instance.statusYaPrisma ||
-                                BerandaController.instance.statusTidakPrisma,
+                            status: BerandaController.instance.statusYaPrisma,
                           ),
                           const SizedBox(
                             height: 24.0,

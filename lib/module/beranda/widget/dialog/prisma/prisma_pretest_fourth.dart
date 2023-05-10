@@ -134,6 +134,16 @@ Future showPretestPrismaFourth() async {
                               ),
                             ],
                           ),
+                          BerandaController.instance.statusTidakPrismaFourth
+                              ? Column(
+                                  children: const [
+                                    SizedBox(
+                                      height: 16.0,
+                                    ),
+                                    LabelSalah(),
+                                  ],
+                                )
+                              : Container(),
                           const SizedBox(
                             height: 190,
                           ),
@@ -142,10 +152,8 @@ Future showPretestPrismaFourth() async {
                             onPressed: () {
                               showPretestPrismaFifth();
                             },
-                            status: BerandaController
-                                    .instance.statusYaPrismaFourth ||
-                                BerandaController
-                                    .instance.statusTidakPrismaFourth,
+                            status:
+                                BerandaController.instance.statusYaPrismaFourth,
                           ),
                           const SizedBox(
                             height: 24.0,
