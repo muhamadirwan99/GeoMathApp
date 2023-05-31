@@ -51,8 +51,11 @@ class _ContentBagianLimasState extends State<ContentBagianLimas> {
           ),
           const TextNumber(
             number: "1.",
-            value:
-                "Sisi : ABCD = sisi alas, sisi yang lain adalah TAB, TBC, TCD, TDA.",
+            value: "Sisi : ABCD = sisi alas",
+          ),
+          const TextNumber(
+            number: "",
+            value: "TAB, TBC, TCD, TDA = sisi tegak.",
           ),
           const TextNumber(
             number: "2.",
@@ -62,16 +65,37 @@ class _ContentBagianLimasState extends State<ContentBagianLimas> {
           const TextNumber(
             number: "3.",
             value:
-                "Titik sudut : T, A, B, C dan D merupakan titik sudut dan T dinamakan titik puncak limas.",
+                "Titik Sudut : T, A, B, C dan D merupakan titik sudut dan T dinamakan titik puncak limas.",
           ),
           const TextNumber(
             number: "4.",
             value:
-                "Tinggi limas : Garis yang ditarik dari T tegak lurus bidang alas disebut tinggi limas. Pada gambar tinggi limas adalah TO.",
+                "Tinggi Limas : Garis yang ditarik dari T tegak lurus bidang alas disebut tinggi limas. Pada gambar tinggi limas adalah TO.",
           ),
           const TextNumber(
             number: "5.",
-            value: "Bidang Diagonal : TAC dan TBD adalah bidang diagonal.",
+            value:
+                "Bidang Diagonal : Suatu bidang yang dibentuk dari diagonal alas dan dua rusuk limas. Banyaknya bidang diagonal limas segi-n adalah 1/2 n buah. Limas segiempat berjumlah 1/2x4 = 2 buah.",
+          ),
+          const TextNumber(
+            number: "",
+            value: "Contoh pada gambar dibawah : bidang ACO dan BDO.",
+          ),
+          const TextNumber(
+            number: "6.",
+            value:
+                "Diagonal Sisi : Ruas garis yang menghubungkan 2 titik sudut pada suatu bidang/sisi. Contoh : AC dan BD.",
+          ),
+          const SizedBox(
+            height: 8.0,
+          ),
+          Center(
+            child: FancyShimmerImage(
+              imageUrl:
+                  "https://firebasestorage.googleapis.com/v0/b/geomathapp-7b721.appspot.com/o/Diagonal%20Sisi%20-%20limas.png?alt=media&token=33fbcaeb-9232-4dc9-9992-564fbdb2a6f1",
+              height: 180,
+              width: 180,
+            ),
           ),
         ],
       ),

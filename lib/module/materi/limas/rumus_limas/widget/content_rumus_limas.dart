@@ -30,12 +30,12 @@ class _ContentRumusLimasState extends State<ContentRumusLimas> {
           const SizedBox(
             height: 16.0,
           ),
-          const ContainerRumus(value: "Volume : ⅓ x alas x tinggi"),
+          const ContainerRumus(value: "V : ⅓ x luas alas x tinggi"),
           const SizedBox(
             height: 8.0,
           ),
           const ContainerRumus(
-              value: "Luas Permukaan : luas alas + luas sisi tegak"),
+              value: "LP : luas alas + jumlah luas sisi tegak"),
           const SizedBox(
             height: 24.0,
           ),
@@ -46,7 +46,7 @@ class _ContentRumusLimasState extends State<ContentRumusLimas> {
           const SizedBox(
             height: 16.0,
           ),
-          const ContainerRumus(value: "Volume : ⅓ x (½ x a x t) x t"),
+          const ContainerRumus(value: "V : ⅓ x (½ x a x t) x t"),
           const SizedBox(
             height: 8.0,
           ),
@@ -62,7 +62,7 @@ class _ContentRumusLimasState extends State<ContentRumusLimas> {
           const SizedBox(
             height: 16.0,
           ),
-          const ContainerRumus(value: "Volume: ⅓ x (alas) x t"),
+          const ContainerRumus(value: "V : ⅓ x luas alas x tinggi"),
           const SizedBox(
             height: 8.0,
           ),
@@ -77,7 +77,7 @@ class _ContentRumusLimasState extends State<ContentRumusLimas> {
           const SizedBox(
             height: 16.0,
           ),
-          const ContainerRumus(value: "Volume : ⅓ x luas alas x t"),
+          const ContainerRumus(value: "V : ⅓ x luas alas x tinggi"),
           const SizedBox(
             height: 8.0,
           ),

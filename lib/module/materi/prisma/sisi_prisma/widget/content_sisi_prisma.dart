@@ -55,7 +55,7 @@ class _ContentSisaPrismaState extends State<ContentSisaPrisma> {
           ),
           const TextNumber(
             number: "2.",
-            value: "Sisi Belanag : DCGH",
+            value: "Sisi Belakang : DCGH",
           ),
           const TextNumber(
             number: "3.",

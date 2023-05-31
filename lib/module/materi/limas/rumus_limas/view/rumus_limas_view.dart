@@ -24,7 +24,7 @@ class RumusLimasView extends StatefulWidget {
             color: neutral50,
           ),
           onPressed: () {
-            Get.to(const JaringLimasView());
+            Get.back();
           },
         ),
       ),
