@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:geomath_app/core.dart';
 
-class BalokPrismaView extends StatefulWidget {
-  const BalokPrismaView({Key? key}) : super(key: key);
+class SisiPrismaView extends StatefulWidget {
+  const SisiPrismaView({Key? key}) : super(key: key);
 
-  Widget build(context, BalokPrismaController controller) {
+  Widget build(context, SisiPrismaController controller) {
     controller.view = this;
 
     return Scaffold(
@@ -30,7 +30,7 @@ class BalokPrismaView extends StatefulWidget {
       floatingActionButton: FabMateriPrisma(
         onPressedSelanjutnya: () {
           Get.to(
-            const TitikSudutPrismaView(),
+            const DiagonalBidangPrismaView(),
           );
         },
       ),
@@ -50,7 +50,7 @@ class BalokPrismaView extends StatefulWidget {
               ),
               child: Column(
                 children: const [
-                  ContentBalokPrisma(),
+                  ContentSisaPrisma(),
                   SizedBox(
                     height: 24.0,
                   ),
@@ -68,5 +68,5 @@ class BalokPrismaView extends StatefulWidget {
   }
 
   @override
-  State<BalokPrismaView> createState() => BalokPrismaController();
+  State<SisiPrismaView> createState() => SisiPrismaController();
 }

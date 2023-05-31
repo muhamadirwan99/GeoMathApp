@@ -22,7 +22,7 @@ class LatihanSoalPrismaView extends StatefulWidget {
             color: neutral50,
           ),
           onPressed: () {
-            Get.to(const MenuNavView());
+            Get.back();
           },
         ),
       ),

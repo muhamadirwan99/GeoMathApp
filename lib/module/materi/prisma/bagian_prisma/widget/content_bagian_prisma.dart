@@ -63,6 +63,21 @@ class _ContentBagianPrismaState extends State<ContentBagianPrisma> {
             number: "3.",
             value: "Titik sudut : A, B, C, D, E dan F. ",
           ),
+          const TextNumber(
+            number: "4.",
+            value: "Diagonal sisi : AF, CD, BF, CE, AE dan BD. ",
+          ),
+          const SizedBox(
+            height: 8.0,
+          ),
+          Center(
+            child: FancyShimmerImage(
+              imageUrl:
+                  "https://firebasestorage.googleapis.com/v0/b/geomathapp-7b721.appspot.com/o/Diagonal%20Sisi.png?alt=media&token=c98291aa-9637-4d75-a4b3-eea5064eaf09",
+              height: 200,
+              width: 300,
+            ),
+          ),
         ],
       ),
     );
